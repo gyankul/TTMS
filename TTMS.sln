@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34330.188
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.UI", "TTMS.UI\TTMS.UI.csproj", "{442F6E4A-5F74-41B2-83C6-C5EDC827D6F4}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TTMS.DB", "TTMS.DB\TTMS.DB.sqlproj", "{C0EA8150-4E39-425C-88A4-BAC3B1017BDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.Models", "TTMS.Models\TTMS.Models.csproj", "{81994CCC-5368-433E-A4B2-C5D83DA97958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.Services", "TTMS.Services\TTMS.Services.csproj", "{E88DA90B-2633-40B9-9D3C-B85738A492D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.Repositories", "TTMS.Repositories\TTMS.Repositories.csproj", "{06BB730D-6893-4C61-8727-E8008D062190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.DataAccess", "TTMS.DataAccess\TTMS.DataAccess.csproj", "{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +31,22 @@ Global
 		{C0EA8150-4E39-425C-88A4-BAC3B1017BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0EA8150-4E39-425C-88A4-BAC3B1017BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0EA8150-4E39-425C-88A4-BAC3B1017BDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{81994CCC-5368-433E-A4B2-C5D83DA97958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81994CCC-5368-433E-A4B2-C5D83DA97958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81994CCC-5368-433E-A4B2-C5D83DA97958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81994CCC-5368-433E-A4B2-C5D83DA97958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E88DA90B-2633-40B9-9D3C-B85738A492D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E88DA90B-2633-40B9-9D3C-B85738A492D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E88DA90B-2633-40B9-9D3C-B85738A492D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E88DA90B-2633-40B9-9D3C-B85738A492D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06BB730D-6893-4C61-8727-E8008D062190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BB730D-6893-4C61-8727-E8008D062190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BB730D-6893-4C61-8727-E8008D062190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BB730D-6893-4C61-8727-E8008D062190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
