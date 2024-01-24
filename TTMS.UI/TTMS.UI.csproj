@@ -55,126 +55,118 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoIncrement.cs" />
-    <Compile Include="Credentials\frmChangePassword.cs">
+    <Compile Include="Forms\Credentials\frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Credentials\frmChangePassword.Designer.cs">
+    <Compile Include="Forms\Credentials\frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomerDetails.cs">
+    <Compile Include="Forms\Dashboard\global.cs" />
+    <Compile Include="Forms\frmCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomerDetails.Designer.cs">
+    <Compile Include="Forms\frmCustomerDetails.Designer.cs">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDashboard.cs">
+    <Compile Include="Forms\Credentials\frmForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDashboard.Designer.cs">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Credentials\frmForgotPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Credentials\frmForgotPassword.Designer.cs">
+    <Compile Include="Forms\Credentials\frmForgotPassword.Designer.cs">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoading.cs">
+    <Compile Include="Forms\frmLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoading.Designer.cs">
+    <Compile Include="Forms\frmLoading.Designer.cs">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
-    <Compile Include="Credentials\frmLogin.cs">
+    <Compile Include="Forms\Credentials\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Credentials\frmLogin.Designer.cs">
+    <Compile Include="Forms\Credentials\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainForm.cs">
+    <Compile Include="Forms\Dashboard\frmMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMainForm.Designer.cs">
+    <Compile Include="Forms\Dashboard\frmMainForm.Designer.cs">
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tours\frmTourBooking.cs">
+    <Compile Include="Forms\Tours\frmTourBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tours\frmTourBooking.Designer.cs">
+    <Compile Include="Forms\Tours\frmTourBooking.Designer.cs">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Credentials\frmSignup.cs">
+    <Compile Include="Forms\Credentials\frmSignup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Credentials\frmSignup.Designer.cs">
+    <Compile Include="Forms\Credentials\frmSignup.Designer.cs">
       <DependentUpon>frmSignup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tours\frmTourDetails.cs">
+    <Compile Include="Forms\Tours\frmTourDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tours\frmTourDetails.Designer.cs">
+    <Compile Include="Forms\Tours\frmTourDetails.Designer.cs">
       <DependentUpon>frmTourDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Travels\layoutSleeperbus.cs">
+    <Compile Include="Forms\Travels\layoutSleeperbus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Travels\layoutSleeperbus.Designer.cs">
+    <Compile Include="Forms\Travels\layoutSleeperbus.Designer.cs">
       <DependentUpon>layoutSleeperbus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Travels\layoutSittingbus.cs">
+    <Compile Include="Forms\Travels\layoutSittingbus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Travels\layoutSittingbus.Designer.cs">
+    <Compile Include="Forms\Travels\layoutSittingbus.Designer.cs">
       <DependentUpon>layoutSittingbus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Travels\frmTravelBooking.cs">
+    <Compile Include="Forms\Travels\frmTravelBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Travels\frmTravelBooking.Designer.cs">
+    <Compile Include="Forms\Travels\frmTravelBooking.Designer.cs">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tours\TourDestination.cs">
+    <Compile Include="Forms\Tours\TourDestination.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tours\TourDestination.Designer.cs">
+    <Compile Include="Forms\Tours\TourDestination.Designer.cs">
       <DependentUpon>TourDestination.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tours\TourItinerary.cs">
+    <Compile Include="Forms\Tours\TourItinerary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tours\TourItinerary.Designer.cs">
+    <Compile Include="Forms\Tours\TourItinerary.Designer.cs">
       <DependentUpon>TourItinerary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tours\TourPackage.cs">
+    <Compile Include="Forms\Tours\TourPackage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tours\TourPackage.Designer.cs">
+    <Compile Include="Forms\Tours\TourPackage.Designer.cs">
       <DependentUpon>TourPackage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Credentials\frmChangePassword.resx">
+    <EmbeddedResource Include="Forms\Credentials\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerDetails.resx">
+    <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDashboard.resx">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Credentials\frmForgotPassword.resx">
+    <EmbeddedResource Include="Forms\Credentials\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoading.resx">
+    <EmbeddedResource Include="Forms\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Credentials\frmLogin.resx">
+    <EmbeddedResource Include="Forms\Credentials\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMainForm.resx">
+    <EmbeddedResource Include="Forms\Dashboard\frmMainForm.resx">
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tours\frmTourBooking.resx">
+    <EmbeddedResource Include="Forms\Tours\frmTourBooking.resx">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -187,28 +179,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Credentials\frmSignup.resx">
+    <EmbeddedResource Include="Forms\Credentials\frmSignup.resx">
       <DependentUpon>frmSignup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tours\frmTourDetails.resx">
+    <EmbeddedResource Include="Forms\Tours\frmTourDetails.resx">
       <DependentUpon>frmTourDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Travels\layoutSleeperbus.resx">
+    <EmbeddedResource Include="Forms\Travels\layoutSleeperbus.resx">
       <DependentUpon>layoutSleeperbus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Travels\layoutSittingbus.resx">
+    <EmbeddedResource Include="Forms\Travels\layoutSittingbus.resx">
       <DependentUpon>layoutSittingbus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Travels\frmTravelBooking.resx">
+    <EmbeddedResource Include="Forms\Travels\frmTravelBooking.resx">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tours\TourDestination.resx">
+    <EmbeddedResource Include="Forms\Tours\TourDestination.resx">
       <DependentUpon>TourDestination.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tours\TourItinerary.resx">
+    <EmbeddedResource Include="Forms\Tours\TourItinerary.resx">
       <DependentUpon>TourItinerary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tours\TourPackage.resx">
+    <EmbeddedResource Include="Forms\Tours\TourPackage.resx">
       <DependentUpon>TourPackage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
@@ -331,12 +323,16 @@
     <None Include="Resources\icons8-magnifying-glass-30.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\" />
+    <ProjectReference Include="..\TTMS.CustomControls\TTMS.CustomControls.csproj">
+      <Project>{216A3A7F-9455-4C2C-A032-C70FD79996E5}</Project>
+      <Name>TTMS.CustomControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-image-plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-41.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

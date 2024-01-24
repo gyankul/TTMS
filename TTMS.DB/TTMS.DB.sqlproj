@@ -59,16 +59,10 @@
     <Folder Include="Properties" />
     <Folder Include="Tourism" />
     <Folder Include="Travel" />
+    <Folder Include="Credentials" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="TourDetails.sql" />
-    <Build Include="ScheduleDetails.sql" />
-    <Build Include="CustomerDetails.sql" />
-    <Build Include="BookingDetails.sql" />
-    <Build Include="BillDetails.sql" />
-    <Build Include="CancellationDetails.sql" />
-    <Build Include="ReceiptDetails.sql" />
-    <Build Include="SignupDetails.sql" />
     <Build Include="Travel\Travel.sql" />
     <Build Include="Travel\Vehicle.sql" />
     <Build Include="Travel\Frequency.sql" />
@@ -87,6 +81,14 @@
     <Build Include="Tourism\Guide.sql" />
     <Build Include="Tourism\Tour.sql" />
     <Build Include="Tourism\Participant.sql" />
+    <Build Include="Credentials\SignupDetails.sql" />
+    <Build Include="NewFolder1\BillDetails.sql" />
+    <Build Include="NewFolder1\BookingDetails.sql" />
+    <Build Include="NewFolder1\CancellationDetails.sql" />
+    <Build Include="NewFolder1\CustomerDetails.sql" />
+    <Build Include="NewFolder1\ReceiptDetails.sql" />
+    <Build Include="NewFolder1\ScheduleDetails.sql" />
+    <Build Include="NewFolder1\TourDetails.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TTMS.DB.refactorlog" />

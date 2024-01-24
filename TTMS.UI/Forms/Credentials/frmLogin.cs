@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using TTMS.UI.Forms.Dashboard;
 
 namespace TTMS.UI
 {
@@ -50,11 +51,22 @@ namespace TTMS.UI
                 sqlStr = "Select * from SignupDetails where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
 
                 con.Open();
+                SqlDataAdapter da = new SqlDataAdapter();
+                
+
                 SqlCommand cmd = new SqlCommand(sqlStr, con);
                 SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable(sqlStr);
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    global.username = dt.Rows[0]["Username"].ToString();
+                }
 
                 if (dr.Read())
                 {
+                    global.username = dt.Rows[0]["Username"].ToString();
                     frmMainForm main = new frmMainForm();
                     main.Show();
                 }
@@ -63,6 +75,22 @@ namespace TTMS.UI
                     MessageBox.Show("Error");
                 }
                 con.Close();
+
+                
+                
+              
+                
+                
+               
+                //con.Open();
+                //SqlDataAdapter da = new SqlDataAdapter();
+                //DataTable dt = new DataTable();
+                //da.Fill(dt);
+                //if (dt.Rows.Count > 0)
+                //{
+                //    global.username = dt.Rows[0]["Username"].ToString();
+                //}
+                //con.Close();
             }
             catch(Exception ex)
             {
@@ -128,8 +156,11 @@ namespace TTMS.UI
         }
 
 
+
+
+
         #endregion
 
-       
+        
     }
 }

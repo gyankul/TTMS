@@ -17,6 +17,9 @@ namespace TTMS.UI.Tours
             InitializeComponent();
         }
 
-        
+        private void TourItinerary_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

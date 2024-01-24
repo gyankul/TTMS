@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TTMS.UI
 {
@@ -48,8 +49,9 @@ namespace TTMS.UI
         {
             try
             {
-                string query = @"INSERT INTO SignupDetails (Role, Username, Password, SecurityQuestion, SecurityAnswer)VALUES (@Role, @Username, @Password, @SecurityQuestion, @SecurityAnswer)";
+                string query = @"INSERT INTO SignupDetails (Role, Username, Password, SecurityQuestion, SecurityAnswer, UserImage)VALUES (@Role, @Username, @Password, @SecurityQuestion, @SecurityAnswer, @UserImage)";
 
+                
                 SqlCommand command = new SqlCommand(query, con);
 
                 command.Parameters.AddWithValue("@Role", tbRole.Text);
@@ -57,6 +59,8 @@ namespace TTMS.UI
                 command.Parameters.AddWithValue("@Password", tbPassword.Text);
                 command.Parameters.AddWithValue("@SecurityQuestion", cbSecurityQuestion.Text);
                 command.Parameters.AddWithValue("@SecurityAnswer", tbSecurityAnswer.Text);
+                command.Parameters.AddWithValue("@UserImage", getImage());
+                
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -68,10 +72,37 @@ namespace TTMS.UI
             {
                 MessageBox.Show(e.Message);
             }
+            
+        }
+
+        private byte[] getImage()
+        {
+            MemoryStream stream = new MemoryStream();
+            cpbUserImage.Image.Save(stream, cpbUserImage.Image.RawFormat);
+            return stream.GetBuffer();
+
         }
         #endregion
 
         #region Buttons
+        private void btnAddImg_Click(object sender, EventArgs e)
+        {
+            string imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+                    cpbUserImage.ImageLocation = imageLocation;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnCreate_Click(object sender, EventArgs e)
         {
             InsertData();
@@ -90,6 +121,10 @@ namespace TTMS.UI
         {
             Application.Exit();
         }
+
+        
         #endregion
+
+
     }
 }

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.Repositories", "TTMS.R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.DataAccess", "TTMS.DataAccess\TTMS.DataAccess.csproj", "{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMS.CustomControls", "TTMS.CustomControls\TTMS.CustomControls.csproj", "{216A3A7F-9455-4C2C-A032-C70FD79996E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99B5E649-A493-4828-BBDE-2BF50EBF3AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216A3A7F-9455-4C2C-A032-C70FD79996E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216A3A7F-9455-4C2C-A032-C70FD79996E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216A3A7F-9455-4C2C-A032-C70FD79996E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216A3A7F-9455-4C2C-A032-C70FD79996E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,7 +36,6 @@
             this.btnAddImg = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.tbActivity = new System.Windows.Forms.RichTextBox();
-            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.picItinerary = new System.Windows.Forms.PictureBox();
             this.tbDayNumber = new System.Windows.Forms.TextBox();
@@ -48,20 +47,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tbItineraryId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpEnd = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.iblItineraryId = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItinerary)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.dtpEnd.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.iblItineraryId);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
@@ -69,7 +70,7 @@
             this.panel1.Controls.Add(this.btnAddImg);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.tbActivity);
-            this.panel1.Controls.Add(this.dtpEnd);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.dtpStart);
             this.panel1.Controls.Add(this.picItinerary);
             this.panel1.Controls.Add(this.tbDayNumber);
@@ -81,24 +82,22 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.tbItineraryId);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.dtpEnd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1068, 720);
+            this.panel1.Size = new System.Drawing.Size(1027, 657);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 531);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 453);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(939, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(968, 177);
             this.dataGridView1.TabIndex = 21;
             // 
             // btnDelete
@@ -106,9 +105,9 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnDelete.Location = new System.Drawing.Point(857, 476);
+            this.btnDelete.Location = new System.Drawing.Point(898, 378);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 32);
+            this.btnDelete.Size = new System.Drawing.Size(96, 32);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -118,7 +117,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnUpdate.Location = new System.Drawing.Point(711, 476);
+            this.btnUpdate.Location = new System.Drawing.Point(898, 315);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 32);
             this.btnUpdate.TabIndex = 20;
@@ -130,9 +129,9 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnSave.Location = new System.Drawing.Point(583, 476);
+            this.btnSave.Location = new System.Drawing.Point(898, 251);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 32);
+            this.btnSave.Size = new System.Drawing.Size(96, 32);
             this.btnSave.TabIndex = 20;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -143,9 +142,9 @@
             this.btnAddImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddImg.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.icons8_image_plus_48;
-            this.btnAddImg.Location = new System.Drawing.Point(58, 455);
+            this.btnAddImg.Location = new System.Drawing.Point(26, 375);
             this.btnAddImg.Name = "btnAddImg";
-            this.btnAddImg.Size = new System.Drawing.Size(55, 53);
+            this.btnAddImg.Size = new System.Drawing.Size(53, 51);
             this.btnAddImg.TabIndex = 20;
             this.btnAddImg.UseVisualStyleBackColor = true;
             // 
@@ -155,9 +154,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnAdd.Location = new System.Drawing.Point(459, 476);
+            this.btnAdd.Location = new System.Drawing.Point(898, 187);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 32);
+            this.btnAdd.Size = new System.Drawing.Size(96, 32);
             this.btnAdd.TabIndex = 20;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -166,41 +165,31 @@
             // 
             this.tbActivity.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbActivity.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbActivity.Location = new System.Drawing.Point(459, 297);
+            this.tbActivity.Location = new System.Drawing.Point(444, 268);
             this.tbActivity.Name = "tbActivity";
-            this.tbActivity.Size = new System.Drawing.Size(492, 158);
+            this.tbActivity.Size = new System.Drawing.Size(416, 158);
             this.tbActivity.TabIndex = 19;
             this.tbActivity.Text = "";
-            // 
-            // dtpEnd
-            // 
-            this.dtpEnd.CalendarForeColor = System.Drawing.Color.RoyalBlue;
-            this.dtpEnd.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dtpEnd.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dtpEnd.CustomFormat = "";
-            this.dtpEnd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEnd.Location = new System.Drawing.Point(650, 210);
-            this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(347, 28);
-            this.dtpEnd.TabIndex = 18;
             // 
             // dtpStart
             // 
             this.dtpStart.CalendarForeColor = System.Drawing.Color.RoyalBlue;
             this.dtpStart.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpStart.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dtpStart.CustomFormat = "";
+            this.dtpStart.CustomFormat = "dd/MM/yyyy   hh:mm:ss";
             this.dtpStart.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStart.Location = new System.Drawing.Point(650, 158);
+            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStart.Location = new System.Drawing.Point(584, 158);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(347, 28);
+            this.dtpStart.Size = new System.Drawing.Size(276, 28);
             this.dtpStart.TabIndex = 18;
+            this.dtpStart.Value = new System.DateTime(2024, 1, 24, 0, 55, 27, 0);
             // 
             // picItinerary
             // 
-            this.picItinerary.Location = new System.Drawing.Point(58, 158);
+            this.picItinerary.Location = new System.Drawing.Point(26, 158);
             this.picItinerary.Name = "picItinerary";
-            this.picItinerary.Size = new System.Drawing.Size(350, 350);
+            this.picItinerary.Size = new System.Drawing.Size(384, 268);
             this.picItinerary.TabIndex = 17;
             this.picItinerary.TabStop = false;
             // 
@@ -209,9 +198,9 @@
             this.tbDayNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDayNumber.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDayNumber.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbDayNumber.Location = new System.Drawing.Point(919, 105);
+            this.tbDayNumber.Location = new System.Drawing.Point(906, 106);
             this.tbDayNumber.Name = "tbDayNumber";
-            this.tbDayNumber.Size = new System.Drawing.Size(76, 25);
+            this.tbDayNumber.Size = new System.Drawing.Size(88, 25);
             this.tbDayNumber.TabIndex = 14;
             this.tbDayNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -220,7 +209,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(590, 260);
+            this.label7.Location = new System.Drawing.Point(540, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(242, 25);
             this.label7.TabIndex = 13;
@@ -231,20 +220,20 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(454, 212);
+            this.label5.Location = new System.Drawing.Point(452, 200);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 25);
+            this.label5.Size = new System.Drawing.Size(132, 25);
             this.label5.TabIndex = 13;
-            this.label5.Text = "End Date Time:";
+            this.label5.Text = "End Event:";
             // 
             // tbDestination
             // 
             this.tbDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDestination.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDestination.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbDestination.Location = new System.Drawing.Point(453, 104);
+            this.tbDestination.Location = new System.Drawing.Point(416, 105);
             this.tbDestination.Name = "tbDestination";
-            this.tbDestination.Size = new System.Drawing.Size(295, 25);
+            this.tbDestination.Size = new System.Drawing.Size(309, 25);
             this.tbDestination.TabIndex = 14;
             this.tbDestination.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -253,18 +242,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(441, 158);
+            this.label4.Location = new System.Drawing.Point(439, 158);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 25);
+            this.label4.Size = new System.Drawing.Size(145, 25);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Start Date Time:";
+            this.label4.Text = "Start Event:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(754, 109);
+            this.label3.Location = new System.Drawing.Point(741, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 25);
             this.label3.TabIndex = 13;
@@ -275,7 +264,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(298, 109);
+            this.label2.Location = new System.Drawing.Point(261, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 25);
             this.label2.TabIndex = 13;
@@ -285,60 +274,41 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(453, 132);
+            this.panel4.Location = new System.Drawing.Point(416, 133);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(295, 3);
+            this.panel4.Size = new System.Drawing.Size(309, 3);
             this.panel4.TabIndex = 12;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(919, 132);
+            this.panel5.Location = new System.Drawing.Point(906, 133);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(76, 3);
+            this.panel5.Size = new System.Drawing.Size(88, 3);
             this.panel5.TabIndex = 12;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(211, 131);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(76, 3);
-            this.panel3.TabIndex = 12;
-            // 
-            // tbItineraryId
-            // 
-            this.tbItineraryId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbItineraryId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbItineraryId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbItineraryId.Location = new System.Drawing.Point(211, 104);
-            this.tbItineraryId.Name = "tbItineraryId";
-            this.tbItineraryId.Size = new System.Drawing.Size(76, 25);
-            this.tbItineraryId.TabIndex = 10;
-            this.tbItineraryId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(53, 110);
+            this.label1.Location = new System.Drawing.Point(21, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Itinerary Id:";
             // 
-            // panel2
+            // dtpEnd
             // 
-            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1068, 75);
-            this.panel2.TabIndex = 0;
+            this.dtpEnd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.dtpEnd.Controls.Add(this.btnClose);
+            this.dtpEnd.Controls.Add(this.label6);
+            this.dtpEnd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEnd.Location = new System.Drawing.Point(0, 0);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(1027, 75);
+            this.dtpEnd.TabIndex = 0;
             // 
             // label6
             // 
@@ -352,20 +322,57 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "TOUR ITINERARY";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy   hh:mm:ss";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(584, 198);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(276, 28);
+            this.dateTimePicker1.TabIndex = 18;
+            // 
+            // iblItineraryId
+            // 
+            this.iblItineraryId.AutoSize = true;
+            this.iblItineraryId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.iblItineraryId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.iblItineraryId.Location = new System.Drawing.Point(169, 111);
+            this.iblItineraryId.Name = "iblItineraryId";
+            this.iblItineraryId.Size = new System.Drawing.Size(40, 25);
+            this.iblItineraryId.TabIndex = 22;
+            this.iblItineraryId.Text = "ID";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
+            this.btnClose.Location = new System.Drawing.Point(973, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(42, 39);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
             // TourItinerary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 720);
+            this.ClientSize = new System.Drawing.Size(1027, 657);
             this.Controls.Add(this.panel1);
             this.Name = "TourItinerary";
             this.Text = "TourItinerary";
+            this.Load += new System.EventHandler(this.TourItinerary_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItinerary)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.dtpEnd.ResumeLayout(false);
+            this.dtpEnd.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -373,18 +380,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel dtpEnd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox tbItineraryId;
         private System.Windows.Forms.PictureBox picItinerary;
         private System.Windows.Forms.TextBox tbDayNumber;
         private System.Windows.Forms.TextBox tbDestination;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpStart;
-        private System.Windows.Forms.DateTimePicker dtpEnd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -397,5 +401,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label iblItineraryId;
+        private System.Windows.Forms.Button btnClose;
     }
 }
