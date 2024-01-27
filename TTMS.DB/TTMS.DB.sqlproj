@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <Name>TTMS.DB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{c0ea8150-4e39-425c-88a4-bac3b1017bdd}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <ProjectGuid>{4e5ad275-b4f0-4081-9e1b-84f49d7ea0b8}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -17,7 +16,7 @@
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
@@ -57,40 +56,33 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Tourism" />
-    <Folder Include="Travel" />
     <Folder Include="Credentials" />
-    <Folder Include="NewFolder1\" />
+    <Folder Include="Tours" />
+    <Folder Include="Travels" />
+    <Folder Include="Payments" />
+    <Folder Include="Common Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Travel\Travel.sql" />
-    <Build Include="Travel\Vehicle.sql" />
-    <Build Include="Travel\Frequency.sql" />
-    <Build Include="Travel\Stops.sql" />
-    <Build Include="Travel\Driver.sql" />
-    <Build Include="Travel\Verification.sql" />
-    <Build Include="Travel\Passenger.sql" />
-    <Build Include="Travel\Customer.sql" />
-    <Build Include="Travel\Booking.sql" />
-    <Build Include="Travel\PaymentStatus.sql" />
-    <Build Include="Travel\PaymentMethod.sql" />
-    <Build Include="Travel\Billing.sql" />
-    <Build Include="Tourism\Itinerary.sql" />
-    <Build Include="Tourism\Destination.sql" />
-    <Build Include="Tourism\Package.sql" />
-    <Build Include="Tourism\Guide.sql" />
-    <Build Include="Tourism\Tour.sql" />
-    <Build Include="Tourism\Participant.sql" />
     <Build Include="Credentials\SignupDetails.sql" />
-    <Build Include="NewFolder1\BillDetails.sql" />
-    <Build Include="NewFolder1\BookingDetails.sql" />
-    <Build Include="NewFolder1\CancellationDetails.sql" />
-    <Build Include="NewFolder1\CustomerDetails.sql" />
-    <Build Include="NewFolder1\ReceiptDetails.sql" />
-    <Build Include="NewFolder1\ScheduleDetails.sql" />
-    <Build Include="NewFolder1\TourDetails.sql" />
+    <Build Include="Tours\TourBookings.sql" />
+    <Build Include="Tours\TourDestinations.sql" />
+    <Build Include="Tours\TourDetails.sql" />
+    <Build Include="Tours\TourGuides.sql" />
+    <Build Include="Tours\TourItinerary.sql" />
+    <Build Include="Tours\TourPackages.sql" />
+    <Build Include="Tours\TourParticipants.sql" />
+    <Build Include="Travels\TravelBookings.sql" />
+    <Build Include="Travels\TravelDetails.sql" />
+    <Build Include="Travels\TravelPassengers.sql" />
+    <Build Include="Travels\TravelFrequency.sql" />
+    <Build Include="Travels\TravelStops.sql" />
+    <Build Include="Payments\PaymentMethod.sql" />
+    <Build Include="Payments\PaymentStatus.sql" />
+    <Build Include="Common Tables\CustomerDetails.sql" />
   </ItemGroup>
   <ItemGroup>
-    <RefactorLog Include="TTMS.DB.refactorlog" />
+    <Build Include="Common Tables\DriverDetails.sql" />
+    <Build Include="Common Tables\VehicleDetails.sql" />
+    <Build Include="Common Tables\VerificationDetails.sql" />
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-using TTMS.UI.Forms.Dashboard;
+
 
 namespace TTMS.UI
 {
@@ -21,6 +21,8 @@ namespace TTMS.UI
         }
         
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True");
+
+        #region Load Event
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -42,64 +44,10 @@ namespace TTMS.UI
             
 
         }
-        #region Login Button
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string sqlStr = "";
-                sqlStr = "Select * from SignupDetails where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
 
-                con.Open();
-                SqlDataAdapter da = new SqlDataAdapter();
-                
-
-                SqlCommand cmd = new SqlCommand(sqlStr, con);
-                SqlDataReader dr = cmd.ExecuteReader();
-                DataTable dt = new DataTable(sqlStr);
-                da.Fill(dt);
-
-                if (dt.Rows.Count > 0)
-                {
-                    global.username = dt.Rows[0]["Username"].ToString();
-                }
-
-                if (dr.Read())
-                {
-                    global.username = dt.Rows[0]["Username"].ToString();
-                    frmMainForm main = new frmMainForm();
-                    main.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Error");
-                }
-                con.Close();
-
-                
-                
-              
-                
-                
-               
-                //con.Open();
-                //SqlDataAdapter da = new SqlDataAdapter();
-                //DataTable dt = new DataTable();
-                //da.Fill(dt);
-                //if (dt.Rows.Count > 0)
-                //{
-                //    global.username = dt.Rows[0]["Username"].ToString();
-                //}
-                //con.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-        }
         #endregion
 
+        #region KeyEvents
 
         private void txtUsername_KeyDown(object sender, KeyEventArgs e)
         {
@@ -116,8 +64,107 @@ namespace TTMS.UI
             }
         }
 
+        #endregion
 
         #region Buttons
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sqlStr = "";
+
+                string username = RetrieveUsernameFromDatabase();
+                byte[] userImage = RetrieveUserImageFromDatabase();
+
+                frmMainForm dashboardForm = new frmMainForm(username, userImage);
+
+                sqlStr = "Select * from SignupDetails where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
+
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter();
+
+
+                SqlCommand cmd = new SqlCommand(sqlStr, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    dashboardForm.Show();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Wrong");
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private string RetrieveUsernameFromDatabase()
+        {
+            string username = null;
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True"))
+            {
+                connection.Open();
+
+                // Adjust the query based on your table structure and login criteria
+                string query = "SELECT username FROM SignupDetails WHERE Username = @Username AND Password = @Password";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username",txtUsername.Text);
+                    command.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            username = reader["Username"].ToString();
+                        }
+                    }
+                }
+            }
+
+            return username;
+        }
+
+        private byte[] RetrieveUserImageFromDatabase()
+        {
+            byte[] userImage = null;
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True"))
+            {
+                connection.Open();
+
+                // Adjust the query based on your table structure and login criteria
+                string query = "SELECT UserImage FROM SignupDetails WHERE Username = @Username AND Password = @Password";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    command.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Assuming the 'userimage' column is of type varbinary
+                            userImage = (byte[])reader["UserImage"];
+                        }
+                    }
+                }
+            }
+
+            return userImage;
+        }
+
         private void btnSignup_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -154,11 +201,6 @@ namespace TTMS.UI
                 txtPassword.PasswordChar = '*';
             }
         }
-
-
-
-
-
         #endregion
 
         

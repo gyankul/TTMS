@@ -1,40 +1,77 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTMS.UI;
-using TTMS.UI.Forms.Dashboard;
+using TTMS.UI.Tours;
 
 namespace TTMS.UI
 {
     public partial class frmMainForm : Form
     {
-        public frmMainForm()
+        private string loggedInUsername;
+        private byte[] loggedInUserImage;
+
+        public frmMainForm(string username, byte[] userImage)
         {
             InitializeComponent();
+            loggedInUsername = username;
+            loggedInUserImage = userImage;
+            DisplayUserData();
 
             this.MouseDown += new MouseEventHandler(MainForm_MouseDown);
             this.MouseUp += new MouseEventHandler(MainForm_MouseUp);
             this.MouseMove += new MouseEventHandler(MainForm_MouseMove);
         }
-
         private void frmMainForm_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=True");
-
-            lblUserName.Text = global.username;
-
-            
         }
 
 
+        #region Function for Displaying Name&Image after login
+        private void DisplayUserData()
+        {
+            btnUserProfile.Text = $"{loggedInUsername}";
+            cpbUserImg.Image = ByteArrayToImage(loggedInUserImage);
+
+        }
+
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            if (byteArray == null || byteArray.Length == 0)
+            {
+                // Handle empty or null byte array, return a default image or null as needed.
+                return null;
+            }
+
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                try
+                {
+                    Image image = Image.FromStream(ms);
+                    return image;
+                }
+                catch (Exception ex)
+                {
+                    // Handle image conversion errors, log the exception, etc.
+                    Console.WriteLine("Error converting byte array to Image: " + ex.Message);
+                    return null;
+                }
+            }
+        }
+        #endregion
+
+        #region something idk
         private bool isDragging = false;
         private int xOffset;
         private int yOffset;
@@ -47,7 +84,9 @@ namespace TTMS.UI
 
         [DllImportAttribute("user32.dll")]
         private static extern bool ReleaseCapture();
+        #endregion
 
+        #region min,max,close buttons
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
@@ -70,6 +109,9 @@ namespace TTMS.UI
         {
             Application.Exit();
         }
+        #endregion
+
+        #region something idk
 
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
@@ -108,10 +150,18 @@ namespace TTMS.UI
                 SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+        #endregion
 
-
+        #region Sidebar and its button controls
 
         bool SidebarExpand;
+        bool btnMasterExpand;
+        bool btnToursExpand;
+        bool btnTravelsExpand;
+        bool btnBookingsExpand;
+        bool btnReportsExpand;
+        bool btnToolsExpand;
+
         private void SidebarTransition_Tick(object sender, EventArgs e)
         {
             if (SidebarExpand)
@@ -139,13 +189,6 @@ namespace TTMS.UI
                 }
             }
         }
-
-        bool btnMasterExpand;
-        bool btnToursExpand;
-        bool btnTravelsExpand;
-        bool btnBookingsExpand;
-        bool btnReportsExpand;
-        bool btnToolsExpand;
 
         private void btnMasterClick_Tick(object sender, EventArgs e)
         {
@@ -352,6 +395,14 @@ namespace TTMS.UI
             btnToolClick.Start();
         }
 
+       
+        private void btnTourPackage_Click(object sender, EventArgs e)
+        {
+            frmTourPackage package = new frmTourPackage();
+            package.Show();
+        }
+
+        #endregion
     }
-    
+
 }

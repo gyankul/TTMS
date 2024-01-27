@@ -61,7 +61,6 @@
     <Compile Include="Forms\Credentials\frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dashboard\global.cs" />
     <Compile Include="Forms\frmCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,23 +129,23 @@
     <Compile Include="Forms\Travels\frmTravelBooking.Designer.cs">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tours\TourDestination.cs">
+    <Compile Include="Forms\Tours\frmTourDestination.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tours\TourDestination.Designer.cs">
-      <DependentUpon>TourDestination.cs</DependentUpon>
+    <Compile Include="Forms\Tours\frmTourDestination.Designer.cs">
+      <DependentUpon>frmTourDestination.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tours\TourItinerary.cs">
+    <Compile Include="Forms\Tours\frmTourItinerary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tours\TourItinerary.Designer.cs">
-      <DependentUpon>TourItinerary.cs</DependentUpon>
+    <Compile Include="Forms\Tours\frmTourItinerary.Designer.cs">
+      <DependentUpon>frmTourItinerary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tours\TourPackage.cs">
+    <Compile Include="Forms\Tours\frmTourPackage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tours\TourPackage.Designer.cs">
-      <DependentUpon>TourPackage.cs</DependentUpon>
+    <Compile Include="Forms\Tours\frmTourPackage.Designer.cs">
+      <DependentUpon>frmTourPackage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Credentials\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
@@ -194,14 +193,14 @@
     <EmbeddedResource Include="Forms\Travels\frmTravelBooking.resx">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tours\TourDestination.resx">
-      <DependentUpon>TourDestination.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tours\frmTourDestination.resx">
+      <DependentUpon>frmTourDestination.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tours\TourItinerary.resx">
-      <DependentUpon>TourItinerary.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tours\frmTourItinerary.resx">
+      <DependentUpon>frmTourItinerary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tours\TourPackage.resx">
-      <DependentUpon>TourPackage.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tours\frmTourPackage.resx">
+      <DependentUpon>frmTourPackage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

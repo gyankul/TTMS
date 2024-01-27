@@ -45,13 +45,6 @@
     <Compile Include="CircularPicturebox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Component1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Component1.Designer.cs">
-      <DependentUpon>Component1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
