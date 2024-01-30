@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTMS.UI;
+using TTMS.UI.Forms.Tours;
 using TTMS.UI.Tours;
 
 namespace TTMS.UI
@@ -21,9 +22,10 @@ namespace TTMS.UI
         private string loggedInUsername;
         private byte[] loggedInUserImage;
 
-        public frmMainForm(string username, byte[] userImage)
-        {
-            InitializeComponent();
+        public frmMainForm(string username, byte[] userImage) 
+        {  
+
+            
             loggedInUsername = username;
             loggedInUserImage = userImage;
             DisplayUserData();
@@ -32,16 +34,22 @@ namespace TTMS.UI
             this.MouseUp += new MouseEventHandler(MainForm_MouseUp);
             this.MouseMove += new MouseEventHandler(MainForm_MouseMove);
         }
+
+        public frmMainForm()
+        {
+            InitializeComponent();
+        }
+
         private void frmMainForm_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False");
         }
 
 
         #region Function for Displaying Name&Image after login
         private void DisplayUserData()
         {
-            btnUserProfile.Text = $"{loggedInUsername}";
+            lblUserName.Text = $"{loggedInUsername}";
             cpbUserImg.Image = ByteArrayToImage(loggedInUserImage);
 
         }
@@ -152,7 +160,7 @@ namespace TTMS.UI
         }
         #endregion
 
-        #region Sidebar and its button controls
+        #region all expanding panels and their button controls
 
         bool SidebarExpand;
         bool btnMasterExpand;
@@ -161,6 +169,7 @@ namespace TTMS.UI
         bool btnBookingsExpand;
         bool btnReportsExpand;
         bool btnToolsExpand;
+        bool UserProfileExpand;
 
         private void SidebarTransition_Tick(object sender, EventArgs e)
         {
@@ -358,12 +367,39 @@ namespace TTMS.UI
             }
         }
 
+        private void UserProfileClick_Tick(object sender, EventArgs e)
+        {
+            if (UserProfileExpand)
+            {
+                if (panelUserProfile.Height == panelUserProfile.MinimumSize.Height)
+                {
+                    UserProfileExpand = false;
+                    UserProfileClick.Stop();
+                }
+                else
+                {
+                    panelUserProfile.Height -= 10;
+                }
+            }
+            else
+            {
+                if (panelUserProfile.Height == panelUserProfile.MaximumSize.Height)
+                {
+                    UserProfileExpand = true;
+                    UserProfileClick.Stop();
+                }
+                else
+                {
+                    panelUserProfile.Height += 10;
+                }
+            }
+        }
+
 
         private void pbHamburger_Click(object sender, EventArgs e)
         {
             SidebarTransition.Start();
-        }
-
+        }        
         private void btnMaster_Click(object sender, EventArgs e)
         {
             btnMasterClick.Start();
@@ -394,15 +430,27 @@ namespace TTMS.UI
             //tp.Show();
             btnToolClick.Start();
         }
-
-       
-        private void btnTourPackage_Click(object sender, EventArgs e)
+        private void cpbUserImg_Click(object sender, EventArgs e)
         {
-            frmTourPackage package = new frmTourPackage();
-            package.Show();
+            UserProfileClick.Start();
         }
 
+
+        
+
+
+
+
         #endregion
+
+        private void btnTourPackage_Click(object sender, EventArgs e)
+        {
+            frmTourPackages package = new frmTourPackages();
+            package.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(package);
+            package.BringToFront();
+            package.Show(); 
+        }
     }
 
 }

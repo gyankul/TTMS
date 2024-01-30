@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTMS.UI.Tours
+namespace TTMS.UI.Forms.Tours
 {
-    public partial class frmTourItinerary : Form
+    public partial class frmTourPackages : Form
     {
         SqlConnection con = new SqlConnection();
         SqlDataAdapter da;
@@ -20,23 +20,17 @@ namespace TTMS.UI.Tours
 
 
         DataSet ds = new DataSet();
-        public frmTourItinerary()
+
+        public frmTourPackages()
         {
             InitializeComponent();
-        }
-
-        private void TourItinerary_Load(object sender, EventArgs e)
-        {
-            con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
-
-            SelectData();
         }
 
         #region Functions
 
         private void SelectData()
         {
-            cmd = new SqlCommand("SELECT * FROM TourItinerary", con);
+            cmd = new SqlCommand("SELECT * FROM TourPackages", con);
 
             con.Open();
 
@@ -45,9 +39,9 @@ namespace TTMS.UI.Tours
 
             con.Close();
 
-            da.Fill(ds, "TourItinerary");
+            da.Fill(ds, "TourPackages");
 
-            dgvTourItinerary.DataSource = ds.Tables["TourItinerary"];
+            dgvTourPackage.DataSource = ds.Tables["TourPackages"];
         }
 
         private bool isvalidate()
@@ -81,7 +75,7 @@ namespace TTMS.UI.Tours
         private byte[] getImage() //to save the image
         {
             MemoryStream stream = new MemoryStream();
-            ImgItinerary.Image.Save(stream, ImgItinerary.Image.RawFormat);
+            ImgPackage.Image.Save(stream, ImgPackage.Image.RawFormat);
             return stream.GetBuffer();
         }
 
@@ -92,7 +86,7 @@ namespace TTMS.UI.Tours
                 try
                 {
 
-                    string query = @"INSERT INTO TourItinerary (ItineraryId, DestinationId, DayNumber, Activities, StartDateTime, EndDateTime, ItineraryImg)VALUES (@ItineraryId, @DestinationId, @DayNumber, @Activities, @StartDateTime, @EndDateTime, @ItineraryImg)";
+                    string query = @"INSERT INTO TourPackages (ItineraryId, DestinationId, DayNumber, Activities, StartDateTime, EndDateTime, ItineraryImg)VALUES (@ItineraryId, @DestinationId, @DayNumber, @Activities, @StartDateTime, @EndDateTime, @ItineraryImg)";
 
                     SqlCommand command = new SqlCommand(query, con);
 
@@ -181,82 +175,53 @@ namespace TTMS.UI.Tours
         }
         #endregion
 
+
         #region Buttons
+
+        private void lblCreateDestination_Click(object sender, EventArgs e)
+        {
+            frmTourDestinations td = new frmTourDestinations();
+            td.Show();
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AutoIncrement inc = new AutoIncrement();
-            int a;
-            inc.increment("SELECT max(ItineraryId) FROM TourItinerary");
-            if (inc.dr.Read())
-            {
-                if (inc.dr[0] != System.DBNull.Value)
-                {
-                    a = Convert.ToInt32(inc.dr[0].ToString());
-                    lblItineraryId.Text = (a + 1).ToString();
-                }
-                else
-                {
-                    lblItineraryId.Text = "1";
-                }
-            }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            InsertData();
-            SelectData();
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
-            tbDayNumber.Text = "";
-            tbActivity.Text = "";
-            ImgItinerary.Image = null;
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateData();
-            SelectData();
-
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
-            tbDayNumber.Text = "";
-            tbActivity.Text = "";
-            ImgItinerary.Image = null;
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteData();
-            SelectData();
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
-            tbDayNumber.Text = "";
-            tbActivity.Text = "";
-            ImgItinerary.Image = null;
-            btnAdd.Focus();
+
         }
 
         private void btnAddImg_Click(object sender, EventArgs e)
         {
-            string imageLocation = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    imageLocation = dialog.FileName;
-                    ImgItinerary.ImageLocation = imageLocation;
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
 
-        
+        private void frmTourPackages_Load(object sender, EventArgs e)
+        {
+            con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
+
+            SelectData();
+        }
+
+
     }
 }

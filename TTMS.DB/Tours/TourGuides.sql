@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [dbo].[TourGuides]
 (
-	[Id] INT NOT NULL PRIMARY KEY
+	[GuideId] INT NOT NULL PRIMARY KEY, 
+    [GuideName] VARCHAR(30) NOT NULL
 )

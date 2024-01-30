@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTMS.UI.Tours
+namespace TTMS.UI.Forms.Tours
 {
-    public partial class frmTourItinerary : Form
+    public partial class frmTourDestinations : Form
     {
         SqlConnection con = new SqlConnection();
         SqlDataAdapter da;
@@ -20,23 +20,17 @@ namespace TTMS.UI.Tours
 
 
         DataSet ds = new DataSet();
-        public frmTourItinerary()
+
+        public frmTourDestinations()
         {
             InitializeComponent();
-        }
-
-        private void TourItinerary_Load(object sender, EventArgs e)
-        {
-            con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
-
-            SelectData();
         }
 
         #region Functions
 
         private void SelectData()
         {
-            cmd = new SqlCommand("SELECT * FROM TourItinerary", con);
+            cmd = new SqlCommand("SELECT * FROM TourDestionations", con);
 
             con.Open();
 
@@ -45,9 +39,9 @@ namespace TTMS.UI.Tours
 
             con.Close();
 
-            da.Fill(ds, "TourItinerary");
+            da.Fill(ds, "TourDestionations");
 
-            dgvTourItinerary.DataSource = ds.Tables["TourItinerary"];
+            dgvTourDestination.DataSource = ds.Tables["TourDestionations"];
         }
 
         private bool isvalidate()
@@ -81,7 +75,7 @@ namespace TTMS.UI.Tours
         private byte[] getImage() //to save the image
         {
             MemoryStream stream = new MemoryStream();
-            ImgItinerary.Image.Save(stream, ImgItinerary.Image.RawFormat);
+            ImgDestination.Image.Save(stream, ImgDestination.Image.RawFormat);
             return stream.GetBuffer();
         }
 
@@ -92,23 +86,20 @@ namespace TTMS.UI.Tours
                 try
                 {
 
-                    string query = @"INSERT INTO TourItinerary (ItineraryId, DestinationId, DayNumber, Activities, StartDateTime, EndDateTime, ItineraryImg)VALUES (@ItineraryId, @DestinationId, @DayNumber, @Activities, @StartDateTime, @EndDateTime, @ItineraryImg)";
+                    string query = @"INSERT INTO TourDestionations (ItineraryId, DestinationId, DayNumber, Activities, StartDateTime, EndDateTime, ItineraryImg)VALUES (@ItineraryId, @DestinationId, @DayNumber, @Activities, @StartDateTime, @EndDateTime, @ItineraryImg)";
 
                     SqlCommand command = new SqlCommand(query, con);
 
-                    command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
-                    command.Parameters.AddWithValue("@DestinationId", tbDestination.Text);
-                    command.Parameters.AddWithValue("@DayNumber", tbDayNumber.Text);
-                    command.Parameters.AddWithValue("@Activities", tbActivity.Text);
-                    command.Parameters.AddWithValue("@StartDateTime", dtpStart.Value);
-                    command.Parameters.AddWithValue("@EndDateTime", dtpEnd.Value);
-                    command.Parameters.AddWithValue("@ItineraryImg", getImage());
+                    command.Parameters.AddWithValue("@ItineraryId", lblDestinationId.Text);
+                    command.Parameters.AddWithValue("@DestinationId", tbDestinationName.Text);
+                    command.Parameters.AddWithValue("@DayNumber", tbDestinationDesc.Text);
+                    command.Parameters.AddWithValue("@Activities", getImage());
 
                     con.Open();
                     command.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("New Itinerary Saved Successfully");
+                    MessageBox.Show("New Destination Saved Successfully");
                 }
                 catch (Exception e)
                 {
@@ -181,82 +172,33 @@ namespace TTMS.UI.Tours
         }
         #endregion
 
+
         #region Buttons
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AutoIncrement inc = new AutoIncrement();
-            int a;
-            inc.increment("SELECT max(ItineraryId) FROM TourItinerary");
-            if (inc.dr.Read())
-            {
-                if (inc.dr[0] != System.DBNull.Value)
-                {
-                    a = Convert.ToInt32(inc.dr[0].ToString());
-                    lblItineraryId.Text = (a + 1).ToString();
-                }
-                else
-                {
-                    lblItineraryId.Text = "1";
-                }
-            }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            InsertData();
-            SelectData();
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
-            tbDayNumber.Text = "";
-            tbActivity.Text = "";
-            ImgItinerary.Image = null;
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateData();
-            SelectData();
-
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
-            tbDayNumber.Text = "";
-            tbActivity.Text = "";
-            ImgItinerary.Image = null;
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteData();
-            SelectData();
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
-            tbDayNumber.Text = "";
-            tbActivity.Text = "";
-            ImgItinerary.Image = null;
-            btnAdd.Focus();
+
         }
 
         private void btnAddImg_Click(object sender, EventArgs e)
         {
-            string imageLocation = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    imageLocation = dialog.FileName;
-                    ImgItinerary.ImageLocation = imageLocation;
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
 
-        
+        }
+
+        #endregion
     }
 }

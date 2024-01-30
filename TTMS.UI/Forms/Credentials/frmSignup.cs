@@ -26,8 +26,10 @@ namespace TTMS.UI
 
         private void Signup_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ttmsDBDataSet.StaffTypes' table. You can move, or remove it, as needed.
+            this.staffTypesTableAdapter.Fill(this.ttmsDBDataSet.StaffTypes);
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True";
-            this.ActiveControl = tbRole;
+            //this.ActiveControl = tbRole;
         }
 
         #region Functions
@@ -49,12 +51,12 @@ namespace TTMS.UI
         {
             try
             {
-                string query = @"INSERT INTO SignupDetails (Role, Username, Password, SecurityQuestion, SecurityAnswer, UserImage)VALUES (@Role, @Username, @Password, @SecurityQuestion, @SecurityAnswer, @UserImage)";
+                string query = @"INSERT INTO SignupDetails (StaffTypeId, Username, Password, SecurityQuestion, SecurityAnswer, UserImage)VALUES (@StaffTypeId, @Username, @Password, @SecurityQuestion, @SecurityAnswer, @UserImage)";
 
                 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@Role", tbRole.Text);
+                command.Parameters.AddWithValue("@StaffTypeId", cbStaffType.Text);
                 command.Parameters.AddWithValue("@Username", tbUsername.Text);
                 command.Parameters.AddWithValue("@Password", tbPassword.Text);
                 command.Parameters.AddWithValue("@SecurityQuestion", cbSecurityQuestion.Text);
@@ -82,6 +84,33 @@ namespace TTMS.UI
             return stream.GetBuffer();
 
         }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+            UpdatePasswordMatchStatus();
+        }
+
+        private void tbConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+            UpdatePasswordMatchStatus();
+        }
+
+        private void UpdatePasswordMatchStatus()
+        {
+            string password = tbPassword.Text;
+            string confirmPassword = tbConfirmPassword.Text;
+
+            if (password == confirmPassword && !string.IsNullOrEmpty(password))
+            {
+                cpbConfirmPassword.Image = Properties.Resources.icons8_tick_30__1_;
+
+            }
+            else
+            {
+                cpbConfirmPassword.Image = Properties.Resources.icons8_railroad_crossing_30;
+            }
+        }
+
         #endregion
 
         #region Buttons
@@ -122,9 +151,10 @@ namespace TTMS.UI
             Application.Exit();
         }
 
-        
+
+
         #endregion
 
-
+        
     }
 }

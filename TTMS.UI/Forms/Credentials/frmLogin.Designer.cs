@@ -37,7 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.cbRole = new System.Windows.Forms.ComboBox();
             this.btnShowpass = new System.Windows.Forms.Button();
             this.btnHidepass = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -126,7 +125,6 @@
             // 
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.cbRole);
             this.panel2.Controls.Add(this.btnShowpass);
             this.panel2.Controls.Add(this.btnHidepass);
             this.panel2.Controls.Add(this.label3);
@@ -148,7 +146,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(177, 246);
+            this.panel4.Location = new System.Drawing.Point(181, 229);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(260, 3);
             this.panel4.TabIndex = 14;
@@ -157,28 +155,17 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(178, 189);
+            this.panel6.Location = new System.Drawing.Point(182, 172);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(260, 3);
             this.panel6.TabIndex = 14;
-            // 
-            // cbRole
-            // 
-            this.cbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRole.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.cbRole.FormattingEnabled = true;
-            this.cbRole.Location = new System.Drawing.Point(149, 98);
-            this.cbRole.Name = "cbRole";
-            this.cbRole.Size = new System.Drawing.Size(160, 28);
-            this.cbRole.TabIndex = 11;
-            this.cbRole.Text = "  - Select Role -";
             // 
             // btnShowpass
             // 
             this.btnShowpass.FlatAppearance.BorderSize = 0;
             this.btnShowpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowpass.Image = global::TTMS.UI.Properties.Resources.icons8_show_password_25;
-            this.btnShowpass.Location = new System.Drawing.Point(404, 217);
+            this.btnShowpass.Location = new System.Drawing.Point(408, 200);
             this.btnShowpass.Name = "btnShowpass";
             this.btnShowpass.Size = new System.Drawing.Size(34, 29);
             this.btnShowpass.TabIndex = 10;
@@ -190,7 +177,7 @@
             this.btnHidepass.FlatAppearance.BorderSize = 0;
             this.btnHidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHidepass.Image = global::TTMS.UI.Properties.Resources.icons8_hide_password_25__1_;
-            this.btnHidepass.Location = new System.Drawing.Point(404, 217);
+            this.btnHidepass.Location = new System.Drawing.Point(408, 200);
             this.btnHidepass.Name = "btnHidepass";
             this.btnHidepass.Size = new System.Drawing.Size(33, 29);
             this.btnHidepass.TabIndex = 10;
@@ -202,7 +189,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(27, 224);
+            this.label3.Location = new System.Drawing.Point(31, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 25);
             this.label3.TabIndex = 7;
@@ -213,7 +200,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(27, 167);
+            this.label2.Location = new System.Drawing.Point(31, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 7;
@@ -236,7 +223,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtUsername.Location = new System.Drawing.Point(177, 166);
+            this.txtUsername.Location = new System.Drawing.Point(181, 149);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(260, 23);
             this.txtUsername.TabIndex = 1;
@@ -261,7 +248,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtPassword.Location = new System.Drawing.Point(178, 223);
+            this.txtPassword.Location = new System.Drawing.Point(182, 206);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(260, 23);
@@ -274,7 +261,7 @@
             this.btnSignup.BackColor = System.Drawing.Color.White;
             this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignup.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnSignup.Location = new System.Drawing.Point(32, 368);
+            this.btnSignup.Location = new System.Drawing.Point(36, 351);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(203, 39);
             this.btnSignup.TabIndex = 2;
@@ -290,7 +277,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(32, 295);
+            this.btnLogin.Location = new System.Drawing.Point(36, 278);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(403, 51);
             this.btnLogin.TabIndex = 2;
@@ -303,11 +290,11 @@
             this.btnForgotpassword.BackColor = System.Drawing.Color.White;
             this.btnForgotpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgotpassword.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnForgotpassword.Location = new System.Drawing.Point(241, 368);
+            this.btnForgotpassword.Location = new System.Drawing.Point(245, 351);
             this.btnForgotpassword.Name = "btnForgotpassword";
             this.btnForgotpassword.Size = new System.Drawing.Size(194, 39);
             this.btnForgotpassword.TabIndex = 2;
-            this.btnForgotpassword.Text = "Forgot Password";
+            this.btnForgotpassword.Text = "Forgot Password ?";
             this.btnForgotpassword.UseVisualStyleBackColor = false;
             this.btnForgotpassword.Click += new System.EventHandler(this.btnForgotpassword_Click);
             // 
@@ -354,7 +341,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnShowpass;
         private System.Windows.Forms.Button btnHidepass;
-        private System.Windows.Forms.ComboBox cbRole;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
     }

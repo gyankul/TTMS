@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [dbo].[PaymentMethod]
 (
-	[Id] INT NOT NULL PRIMARY KEY
+	[PaymentMethodId] INT NOT NULL PRIMARY KEY, 
+    [MethodName] NCHAR(10) NOT NULL
 )

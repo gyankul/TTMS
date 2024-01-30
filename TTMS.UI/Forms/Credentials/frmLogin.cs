@@ -36,11 +36,11 @@ namespace TTMS.UI
             sqlCommand.ExecuteNonQuery();
             con.Close();
 
-            cbRole.Items.Add(new {Text = "-Select-",Value = -1});
-            cbRole.DataSource = ds.Tables[0];
-            cbRole.DisplayMember = "Role";
+            //cbRole.Items.Add(new {Text = "-Select-",Value = -1});
+            //cbRole.DataSource = ds.Tables[0];
+            //cbRole.DisplayMember = "Role";
 
-            cbRole.DisplayMember = Text;
+            //cbRole.DisplayMember = Text;
             
 
         }
@@ -77,7 +77,7 @@ namespace TTMS.UI
                 string username = RetrieveUsernameFromDatabase();
                 byte[] userImage = RetrieveUserImageFromDatabase();
 
-                frmMainForm dashboardForm = new frmMainForm(username, userImage);
+                frmMainForm dashboardForm = new frmMainForm( username, userImage);
 
                 sqlStr = "Select * from SignupDetails where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
 
@@ -110,7 +110,7 @@ namespace TTMS.UI
         {
             string username = null;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False"))
             {
                 connection.Open();
 

@@ -74,15 +74,19 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.SidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.cpbUserImg = new TTMS.CustomControls.CircularPicturebox();
-            this.btnUserProfile = new System.Windows.Forms.Button();
             this.btnMasterClick = new System.Windows.Forms.Timer(this.components);
             this.btnToursClick = new System.Windows.Forms.Timer(this.components);
             this.btnTravelsClick = new System.Windows.Forms.Timer(this.components);
             this.btnBookingsClick = new System.Windows.Forms.Timer(this.components);
             this.btnReportsClick = new System.Windows.Forms.Timer(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelMainformCenterRegion = new System.Windows.Forms.Panel();
+            this.panelUserProfile = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.btnToolClick = new System.Windows.Forms.Timer(this.components);
+            this.UserProfileClick = new System.Windows.Forms.Timer(this.components);
             this.panelSidebar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelReports.SuspendLayout();
@@ -97,7 +101,10 @@
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).BeginInit();
+            this.panelMainformCenterRegion.SuspendLayout();
+            this.panelUserProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -826,36 +833,33 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cpbUserImg);
-            this.panel1.Controls.Add(this.btnUserProfile);
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(285, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1056, 41);
             this.panel1.TabIndex = 2;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.cpbUserImg);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(1015, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(41, 41);
+            this.panel8.TabIndex = 0;
+            // 
             // cpbUserImg
             // 
+            this.cpbUserImg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cpbUserImg.Image = global::TTMS.UI.Properties.Resources.icons8_user_41;
-            this.cpbUserImg.Location = new System.Drawing.Point(1015, 0);
+            this.cpbUserImg.Location = new System.Drawing.Point(0, 0);
             this.cpbUserImg.Name = "cpbUserImg";
             this.cpbUserImg.Size = new System.Drawing.Size(41, 41);
             this.cpbUserImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpbUserImg.TabIndex = 0;
             this.cpbUserImg.TabStop = false;
-            // 
-            // btnUserProfile
-            // 
-            this.btnUserProfile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnUserProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUserProfile.Location = new System.Drawing.Point(912, 0);
-            this.btnUserProfile.Name = "btnUserProfile";
-            this.btnUserProfile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnUserProfile.Size = new System.Drawing.Size(144, 41);
-            this.btnUserProfile.TabIndex = 0;
-            this.btnUserProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserProfile.UseVisualStyleBackColor = true;
+            this.cpbUserImg.Click += new System.EventHandler(this.cpbUserImg_Click);
             // 
             // btnMasterClick
             // 
@@ -882,26 +886,68 @@
             this.btnReportsClick.Interval = 5;
             this.btnReportsClick.Tick += new System.EventHandler(this.btnReportsClick_Tick);
             // 
-            // panel3
+            // panelMainformCenterRegion
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(285, 82);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1056, 643);
-            this.panel3.TabIndex = 3;
+            this.panelMainformCenterRegion.BackColor = System.Drawing.Color.White;
+            this.panelMainformCenterRegion.Controls.Add(this.panelUserProfile);
+            this.panelMainformCenterRegion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainformCenterRegion.Location = new System.Drawing.Point(285, 82);
+            this.panelMainformCenterRegion.Name = "panelMainformCenterRegion";
+            this.panelMainformCenterRegion.Size = new System.Drawing.Size(1056, 643);
+            this.panelMainformCenterRegion.TabIndex = 3;
+            // 
+            // panelUserProfile
+            // 
+            this.panelUserProfile.BackColor = System.Drawing.Color.LightBlue;
+            this.panelUserProfile.Controls.Add(this.button4);
+            this.panelUserProfile.Controls.Add(this.lblUserName);
+            this.panelUserProfile.Location = new System.Drawing.Point(876, 0);
+            this.panelUserProfile.MaximumSize = new System.Drawing.Size(180, 200);
+            this.panelUserProfile.MinimumSize = new System.Drawing.Size(180, 0);
+            this.panelUserProfile.Name = "panelUserProfile";
+            this.panelUserProfile.Size = new System.Drawing.Size(180, 0);
+            this.panelUserProfile.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Snow;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::TTMS.UI.Properties.Resources.icons8_logout_30;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.Location = new System.Drawing.Point(3, 154);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(174, 43);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "LOGOUT";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Futura Md BT", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(41, 11);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(98, 20);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "AYESH123";
             // 
             // btnToolClick
             // 
             this.btnToolClick.Interval = 5;
             this.btnToolClick.Tick += new System.EventHandler(this.btnToolClick_Tick);
             // 
+            // UserProfileClick
+            // 
+            this.UserProfileClick.Interval = 5;
+            this.UserProfileClick.Tick += new System.EventHandler(this.UserProfileClick_Tick);
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1341, 725);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelMainformCenterRegion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelSidebar);
@@ -929,7 +975,11 @@
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).EndInit();
+            this.panelMainformCenterRegion.ResumeLayout(false);
+            this.panelUserProfile.ResumeLayout(false);
+            this.panelUserProfile.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -984,10 +1034,14 @@
         private System.Windows.Forms.Timer btnTravelsClick;
         private System.Windows.Forms.Timer btnBookingsClick;
         private System.Windows.Forms.Timer btnReportsClick;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelMainformCenterRegion;
         private System.Windows.Forms.Timer btnToolClick;
         private System.Windows.Forms.Panel panel6;
         private CustomControls.CircularPicturebox cpbUserImg;
-        private System.Windows.Forms.Button btnUserProfile;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelUserProfile;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Timer UserProfileClick;
     }
 }

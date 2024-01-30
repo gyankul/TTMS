@@ -60,7 +60,8 @@
     <Folder Include="Tours" />
     <Folder Include="Travels" />
     <Folder Include="Payments" />
-    <Folder Include="Common Tables" />
+    <Folder Include="Customer" />
+    <Folder Include="Driver and Vehicle" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Credentials\SignupDetails.sql" />
@@ -78,11 +79,13 @@
     <Build Include="Travels\TravelStops.sql" />
     <Build Include="Payments\PaymentMethod.sql" />
     <Build Include="Payments\PaymentStatus.sql" />
-    <Build Include="Common Tables\CustomerDetails.sql" />
+    <Build Include="Customer\CustomerDetails.sql" />
+    <Build Include="Driver and Vehicle\DriverDetails.sql" />
+    <Build Include="Driver and Vehicle\VehicleDetails.sql" />
+    <Build Include="Credentials\VerificationDetails.sql" />
+    <Build Include="Credentials\StaffTypes.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Common Tables\DriverDetails.sql" />
-    <Build Include="Common Tables\VehicleDetails.sql" />
-    <Build Include="Common Tables\VerificationDetails.sql" />
+    <RefactorLog Include="TTMS.DB.refactorlog" />
   </ItemGroup>
 </Project>

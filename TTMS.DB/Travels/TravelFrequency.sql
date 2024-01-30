@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [dbo].[TravelFrequency]
 (
-	[Id] INT NOT NULL PRIMARY KEY
+	[FrequencyId] INT NOT NULL PRIMARY KEY, 
+    [FrequencyType] VARCHAR(30) NOT NULL
 )

@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [dbo].[PaymentStatus]
 (
-	[Id] INT NOT NULL PRIMARY KEY
+	[PaymentStatusId] INT NOT NULL PRIMARY KEY, 
+    [StatusName] NCHAR(10) NOT NULL
 )

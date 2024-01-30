@@ -8,18 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTMS.UI.Tours
+namespace TTMS.UI.Forms.Tours
 {
-    public partial class frmTourDestination : Form
+    public partial class frmPackageList : Form
     {
-        public frmTourDestination()
+        public frmPackageList()
         {
             InitializeComponent();
         }
 
-        private void frmTourDestination_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

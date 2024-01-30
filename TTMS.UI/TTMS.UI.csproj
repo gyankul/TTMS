@@ -61,6 +61,12 @@
     <Compile Include="Forms\Credentials\frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Credentials\frmStaffType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Credentials\frmStaffType.Designer.cs">
+      <DependentUpon>frmStaffType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,10 +79,10 @@
     <Compile Include="Forms\Credentials\frmForgotPassword.Designer.cs">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLoading.cs">
+    <Compile Include="Forms\Dashboard\frmLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLoading.Designer.cs">
+    <Compile Include="Forms\Dashboard\frmLoading.Designer.cs">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Credentials\frmLogin.cs">
@@ -96,6 +102,24 @@
     </Compile>
     <Compile Include="Forms\Tours\frmTourBooking.Designer.cs">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tours\frmPackageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tours\frmPackageList.Designer.cs">
+      <DependentUpon>frmPackageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tours\frmTourDestinations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tours\frmTourDestinations.Designer.cs">
+      <DependentUpon>frmTourDestinations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tours\frmTourPackages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tours\frmTourPackages.Designer.cs">
+      <DependentUpon>frmTourPackages.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,26 +153,22 @@
     <Compile Include="Forms\Travels\frmTravelBooking.Designer.cs">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tours\frmTourDestination.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Tours\frmTourDestination.Designer.cs">
-      <DependentUpon>frmTourDestination.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Tours\frmTourItinerary.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tours\frmTourItinerary.Designer.cs">
       <DependentUpon>frmTourItinerary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tours\frmTourPackage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Tours\frmTourPackage.Designer.cs">
-      <DependentUpon>frmTourPackage.cs</DependentUpon>
+    <Compile Include="ttmsDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Credentials\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Credentials\frmStaffType.resx">
+      <DependentUpon>frmStaffType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
@@ -156,7 +176,7 @@
     <EmbeddedResource Include="Forms\Credentials\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLoading.resx">
+    <EmbeddedResource Include="Forms\Dashboard\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credentials\frmLogin.resx">
@@ -167,6 +187,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmTourBooking.resx">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tours\frmPackageList.resx">
+      <DependentUpon>frmPackageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tours\frmTourDestinations.resx">
+      <DependentUpon>frmTourDestinations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tours\frmTourPackages.resx">
+      <DependentUpon>frmTourPackages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,14 +222,8 @@
     <EmbeddedResource Include="Forms\Travels\frmTravelBooking.resx">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tours\frmTourDestination.resx">
-      <DependentUpon>frmTourDestination.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmTourItinerary.resx">
       <DependentUpon>frmTourItinerary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tours\frmTourPackage.resx">
-      <DependentUpon>frmTourPackage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -212,6 +235,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ttmsDBDataSet.xsc">
+      <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ttmsDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ttmsDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ttmsDBDataSet.xss">
+      <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -332,6 +366,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-user-41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tick-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-railroad-crossing-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
