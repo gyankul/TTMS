@@ -84,6 +84,7 @@
     <Build Include="Driver and Vehicle\VehicleDetails.sql" />
     <Build Include="Credentials\VerificationDetails.sql" />
     <Build Include="Credentials\StaffTypes.sql" />
+    <Build Include="Customer\CountryDetails.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TTMS.DB.refactorlog" />

@@ -67,11 +67,11 @@
     <Compile Include="Forms\Credentials\frmStaffType.Designer.cs">
       <DependentUpon>frmStaffType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCustomerDetails.cs">
+    <Compile Include="Forms\formCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCustomerDetails.Designer.cs">
-      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    <Compile Include="Forms\formCustomerDetails.Designer.cs">
+      <DependentUpon>formCustomerDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Credentials\frmForgotPassword.cs">
       <SubType>Form</SubType>
@@ -96,6 +96,24 @@
     </Compile>
     <Compile Include="Forms\Dashboard\frmMainForm.Designer.cs">
       <DependentUpon>frmMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomerDetails.Designer.cs">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payments\frmPaymentStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payments\frmPaymentStatus.Designer.cs">
+      <DependentUpon>frmPaymentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payments\Payment Method.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payments\Payment Method.Designer.cs">
+      <DependentUpon>Payment Method.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tours\frmTourBooking.cs">
       <SubType>Form</SubType>
@@ -164,14 +182,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ttmsDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Credentials\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credentials\frmStaffType.resx">
       <DependentUpon>frmStaffType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
-      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\formCustomerDetails.resx">
+      <DependentUpon>formCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credentials\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
@@ -184,6 +207,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard\frmMainForm.resx">
       <DependentUpon>frmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payments\frmPaymentStatus.resx">
+      <DependentUpon>frmPaymentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payments\Payment Method.resx">
+      <DependentUpon>Payment Method.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmTourBooking.resx">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
@@ -245,6 +277,17 @@
     </None>
     <None Include="ttmsDBDataSet.xss">
       <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ttmsDBDataSet1.xsc">
+      <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ttmsDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ttmsDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ttmsDBDataSet1.xss">
+      <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

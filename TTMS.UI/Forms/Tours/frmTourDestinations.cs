@@ -47,22 +47,22 @@ namespace TTMS.UI.Forms.Tours
         private bool isvalidate()
         {
 
-            if (lblItineraryId.Text != "")
-            {
-                return false;
-            }
-            else if (tbDestination.Text != "")
-            {
-                return false;
-            }
-            else if (tbDayNumber.Text != "")
-            {
-                return false;
-            }
-            else if (tbActivity.Text != "")
-            {
-                return false;
-            }
+            //if (lblItineraryId.Text != "")
+            //{
+            //    return false;
+            //}
+            //else if (tbDestination.Text != "")
+            //{
+            //    return false;
+            //}
+            //else if (tbDayNumber.Text != "")
+            //{
+            //    return false;
+            //}
+            //else if (tbActivity.Text != "")
+            //{
+            //    return false;
+            //}
 
             //else if (dtpStart.Value >= dtpEnd.Value)
             //{
@@ -120,11 +120,11 @@ namespace TTMS.UI.Forms.Tours
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
-                command.Parameters.AddWithValue("@DestinationId", tbDestination.Text);
-                command.Parameters.AddWithValue("@DayNumber", tbDayNumber.Text);
-                command.Parameters.AddWithValue("@Activities", tbActivity.Text);
-                command.Parameters.AddWithValue("@StartDateTime", dtpStart.Text);
+                //command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
+                //command.Parameters.AddWithValue("@DestinationId", tbDestination.Text);
+                //command.Parameters.AddWithValue("@DayNumber", tbDayNumber.Text);
+                //command.Parameters.AddWithValue("@Activities", tbActivity.Text);
+                //command.Parameters.AddWithValue("@StartDateTime", dtpStart.Text);
                 command.Parameters.AddWithValue("@EndDateTime", panel.Text);
                 command.Parameters.AddWithValue("@ItineraryImg", getImage());
 
@@ -148,7 +148,7 @@ namespace TTMS.UI.Forms.Tours
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
+                //command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -166,8 +166,8 @@ namespace TTMS.UI.Forms.Tours
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvTourItinerary.Rows[e.RowIndex];
-                lblItineraryId.Text = row.Cells[0].Value.ToString();
+                //DataGridViewRow row = dgvTourItinerary.Rows[e.RowIndex];
+                //lblItineraryId.Text = row.Cells[0].Value.ToString();
             }
         }
         #endregion
