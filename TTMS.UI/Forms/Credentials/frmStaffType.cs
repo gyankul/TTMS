@@ -73,12 +73,11 @@ namespace TTMS.UI.Forms.Credentials
             }
 
         }
-
         private void DeleteData()
         {
             try
             {
-                string query = @"DELETE FROM StaffTypes WHERE StaffTypeId = @StaffTypeIdStaffTypeId";
+                string query = @"DELETE FROM StaffTypes WHERE StaffTypeId = @StaffTypeId";
 
                 SqlCommand command = new SqlCommand(query, con);
 

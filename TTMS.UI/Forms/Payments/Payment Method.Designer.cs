@@ -77,6 +77,7 @@
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // tbMethodTypeName
             // 
@@ -155,6 +156,7 @@
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -168,6 +170,7 @@
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnADD
             // 
@@ -181,6 +184,7 @@
             this.btnADD.TabIndex = 16;
             this.btnADD.Text = "ADD";
             this.btnADD.UseVisualStyleBackColor = false;
+            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
             // dgvPaymentMethodTypes
             // 
@@ -221,6 +225,7 @@
             this.btnClose.Size = new System.Drawing.Size(42, 39);
             this.btnClose.TabIndex = 19;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Payment_Method
             // 
@@ -234,6 +239,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Payment_Method";
             this.Text = "Payment_Method";
+            this.Load += new System.EventHandler(this.Payment_Method_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentMethodTypes)).EndInit();

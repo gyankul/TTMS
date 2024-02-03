@@ -36,6 +36,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.countryDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ttmsDBDataSet1 = new TTMS.UI.ttmsDBDataSet1();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -68,14 +70,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.ttmsDBDataSet1 = new TTMS.UI.ttmsDBDataSet1();
-            this.countryDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countryDetailsTableAdapter = new TTMS.UI.ttmsDBDataSet1TableAdapters.CountryDetailsTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ttmsDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ttmsDBDataSet1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -194,6 +194,16 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(242, 33);
             this.comboBox2.TabIndex = 55;
+            // 
+            // countryDetailsBindingSource
+            // 
+            this.countryDetailsBindingSource.DataMember = "CountryDetails";
+            this.countryDetailsBindingSource.DataSource = this.ttmsDBDataSet1;
+            // 
+            // ttmsDBDataSet1
+            // 
+            this.ttmsDBDataSet1.DataSetName = "ttmsDBDataSet1";
+            this.ttmsDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBox1
             // 
@@ -521,7 +531,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
-            this.btnClose.Location = new System.Drawing.Point(818, 25);
+            this.btnClose.Location = new System.Drawing.Point(937, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
             this.btnClose.TabIndex = 13;
@@ -533,21 +543,11 @@
             this.label6.BackColor = System.Drawing.Color.RoyalBlue;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(269, 9);
+            this.label6.Location = new System.Drawing.Point(241, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(503, 50);
             this.label6.TabIndex = 12;
             this.label6.Text = "CUSTOMER DETAILS";
-            // 
-            // ttmsDBDataSet1
-            // 
-            this.ttmsDBDataSet1.DataSetName = "ttmsDBDataSet1";
-            this.ttmsDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // countryDetailsBindingSource
-            // 
-            this.countryDetailsBindingSource.DataMember = "CountryDetails";
-            this.countryDetailsBindingSource.DataSource = this.ttmsDBDataSet1;
             // 
             // countryDetailsTableAdapter
             // 
@@ -559,16 +559,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 635);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCustomerDetails";
-            this.Text = "pan";
             this.Load += new System.EventHandler(this.frmCustomerDetails_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ttmsDBDataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ttmsDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countryDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
