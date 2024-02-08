@@ -240,6 +240,9 @@
     <EmbeddedResource Include="Forms\Tours\frmTourPackages.resx">
       <DependentUpon>frmTourPackages.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Travels\frmTravelDetails.resx">
+      <DependentUpon>frmTravelDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

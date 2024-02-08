@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using TTMS.UI.Forms;
 using TTMS.UI.Forms.Credentials;
 using TTMS.UI.Forms.Tours;
+using TTMS.UI.Forms.Travels;
 using TTMS.UI.Tours;
 
 namespace TTMS.UI
@@ -20,7 +21,7 @@ namespace TTMS.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTourBooking());
+            Application.Run(new frmTravelDetails());
             
         }
     }

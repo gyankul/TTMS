@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblItineraryId = new System.Windows.Forms.Label();
             this.dgvTourItinerary = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -53,6 +52,8 @@
             this.panel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblItineraryId = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgItinerary)).BeginInit();
@@ -63,6 +64,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblItineraryId);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dgvTourItinerary);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
@@ -89,18 +91,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(997, 570);
             this.panel1.TabIndex = 0;
-            // 
-            // lblItineraryId
-            // 
-            this.lblItineraryId.AutoSize = true;
-            this.lblItineraryId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.lblItineraryId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblItineraryId.Location = new System.Drawing.Point(169, 88);
-            this.lblItineraryId.Name = "lblItineraryId";
-            this.lblItineraryId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblItineraryId.Size = new System.Drawing.Size(82, 25);
-            this.lblItineraryId.TabIndex = 22;
-            this.lblItineraryId.Text = "          ";
             // 
             // dgvTourItinerary
             // 
@@ -368,6 +358,26 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "TOUR ITINERARY";
             // 
+            // lblItineraryId
+            // 
+            this.lblItineraryId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblItineraryId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItineraryId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblItineraryId.Location = new System.Drawing.Point(168, 83);
+            this.lblItineraryId.Name = "lblItineraryId";
+            this.lblItineraryId.Size = new System.Drawing.Size(93, 25);
+            this.lblItineraryId.TabIndex = 23;
+            this.lblItineraryId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(168, 111);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(93, 3);
+            this.panel2.TabIndex = 22;
+            // 
             // frmTourItinerary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -413,7 +423,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvTourItinerary;
         private System.Windows.Forms.DateTimePicker dtpEnd;
-        private System.Windows.Forms.Label lblItineraryId;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox lblItineraryId;
+        private System.Windows.Forms.Panel panel2;
     }
 }
