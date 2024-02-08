@@ -7,6 +7,7 @@ using TTMS.UI.Forms;
 using TTMS.UI.Forms.Credentials;
 using TTMS.UI.Forms.Tours;
 using TTMS.UI.Forms.Travels;
+using TTMS.UI.Forms.Vehicle___Driver;
 using TTMS.UI.Tours;
 
 namespace TTMS.UI
@@ -21,7 +22,7 @@ namespace TTMS.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTravelDetails());
+            Application.Run(new frmDriverDetails());
             
         }
     }

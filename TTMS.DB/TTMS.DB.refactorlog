@@ -168,4 +168,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="CountryId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="99d2f59b-e895-4814-b528-0fa528f85672" ChangeDateTime="02/08/2024 10:07:05">
+    <Property Name="ElementName" Value="[dbo].[DriverDetails].[LicenceImg]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DriverDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Experience" />
+  </Operation>
 </Operations>
