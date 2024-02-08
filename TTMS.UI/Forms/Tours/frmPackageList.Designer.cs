@@ -30,24 +30,24 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.BookPackage = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cbPackageName = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.cbPackageName.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +77,16 @@
             this.BookPackage.Text = "Book\r\nPackage";
             this.BookPackage.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(976, 547);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -87,6 +97,18 @@
             this.panel5.Size = new System.Drawing.Size(35, 547);
             this.panel5.TabIndex = 5;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::TTMS.UI.Properties.Resources.icons8_chevron_48;
+            this.button2.Location = new System.Drawing.Point(0, 229);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 67);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -96,6 +118,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(35, 547);
             this.panel4.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::TTMS.UI.Properties.Resources.icons8_chevron_48__1_;
+            this.button1.Location = new System.Drawing.Point(0, 229);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 67);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -108,6 +142,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1046, 35);
             this.panel3.TabIndex = 3;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FloralWhite;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::TTMS.UI.Properties.Resources.icons8_search_28;
+            this.button3.Location = new System.Drawing.Point(954, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(57, 35);
+            this.button3.TabIndex = 8;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -140,64 +186,6 @@
             this.cbPackageName.Size = new System.Drawing.Size(1046, 58);
             this.cbPackageName.TabIndex = 0;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(388, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(278, 50);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "PACKAGES";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 93);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(976, 547);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::TTMS.UI.Properties.Resources.icons8_chevron_48;
-            this.button2.Location = new System.Drawing.Point(0, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 67);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::TTMS.UI.Properties.Resources.icons8_chevron_48__1_;
-            this.button1.Location = new System.Drawing.Point(0, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 67);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FloralWhite;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::TTMS.UI.Properties.Resources.icons8_search_28;
-            this.button3.Location = new System.Drawing.Point(954, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 35);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
@@ -210,24 +198,36 @@
             this.btnClose.TabIndex = 14;
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // PackageList
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(388, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(278, 50);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "PACKAGES";
+            // 
+            // frmPackageList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 640);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PackageList";
+            this.Name = "frmPackageList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PackageList";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.cbPackageName.ResumeLayout(false);
             this.cbPackageName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

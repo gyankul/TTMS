@@ -30,8 +30,29 @@ namespace TTMS.UI.Forms
         private void frmCustomerDetails_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ttmsDBDataSet1.CountryDetails' table. You can move, or remove it, as needed.
-            this.countryDetailsTableAdapter.Fill(this.ttmsDBDataSet1.CountryDetails);
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

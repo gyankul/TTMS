@@ -133,7 +133,7 @@
             this.panelTools.Controls.Add(this.button16);
             this.panelTools.Controls.Add(this.btnTools);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTools.Location = new System.Drawing.Point(0, 539);
+            this.panelTools.Location = new System.Drawing.Point(0, 489);
             this.panelTools.MaximumSize = new System.Drawing.Size(0, 200);
             this.panelTools.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelTools.Name = "panelTools";
@@ -230,7 +230,7 @@
             this.panelReports.Controls.Add(this.button13);
             this.panelReports.Controls.Add(this.btnReports);
             this.panelReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReports.Location = new System.Drawing.Point(0, 489);
+            this.panelReports.Location = new System.Drawing.Point(0, 439);
             this.panelReports.MaximumSize = new System.Drawing.Size(0, 200);
             this.panelReports.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelReports.Name = "panelReports";
@@ -325,11 +325,11 @@
             this.panelBookings.Controls.Add(this.btnTourBkg);
             this.panelBookings.Controls.Add(this.btnBookings);
             this.panelBookings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBookings.Location = new System.Drawing.Point(0, 439);
+            this.panelBookings.Location = new System.Drawing.Point(0, 289);
             this.panelBookings.MaximumSize = new System.Drawing.Size(0, 150);
             this.panelBookings.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelBookings.Name = "panelBookings";
-            this.panelBookings.Size = new System.Drawing.Size(285, 50);
+            this.panelBookings.Size = new System.Drawing.Size(285, 150);
             this.panelBookings.TabIndex = 4;
             // 
             // btnTravelBkg
@@ -371,6 +371,7 @@
             this.btnTourBkg.TabIndex = 2;
             this.btnTourBkg.Text = "   TOUR";
             this.btnTourBkg.UseVisualStyleBackColor = false;
+            this.btnTourBkg.Click += new System.EventHandler(this.btnTourBkg_Click);
             // 
             // btnBookings
             // 
@@ -401,7 +402,7 @@
             this.panelTravels.Controls.Add(this.button7);
             this.panelTravels.Controls.Add(this.btnTravels);
             this.panelTravels.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTravels.Location = new System.Drawing.Point(0, 389);
+            this.panelTravels.Location = new System.Drawing.Point(0, 239);
             this.panelTravels.MaximumSize = new System.Drawing.Size(0, 200);
             this.panelTravels.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelTravels.Name = "panelTravels";
@@ -501,7 +502,7 @@
             this.panelTours.MaximumSize = new System.Drawing.Size(0, 200);
             this.panelTours.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelTours.Name = "panelTours";
-            this.panelTours.Size = new System.Drawing.Size(285, 200);
+            this.panelTours.Size = new System.Drawing.Size(285, 50);
             this.panelTours.TabIndex = 2;
             // 
             // button6

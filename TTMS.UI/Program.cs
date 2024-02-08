@@ -20,7 +20,7 @@ namespace TTMS.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCustomerDetails());
+            Application.Run(new frmTourBooking());
             
         }
     }

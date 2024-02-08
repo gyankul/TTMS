@@ -58,13 +58,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.cpbConfirmPassword = new TTMS.CustomControls.CircularPicturebox();
             this.cpbUserImage = new TTMS.CustomControls.CircularPicturebox();
-            this.ttmsDBDataSet = new TTMS.UI.ttmsDBDataSet();
             this.staffTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.staffTypesTableAdapter = new TTMS.UI.ttmsDBDataSetTableAdapters.StaffTypesTableAdapter();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbConfirmPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpbUserImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ttmsDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffTypesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -423,17 +420,13 @@
             // 
             // ttmsDBDataSet
             // 
-            this.ttmsDBDataSet.DataSetName = "ttmsDBDataSet";
-            this.ttmsDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // staffTypesBindingSource
             // 
             this.staffTypesBindingSource.DataMember = "StaffTypes";
-            this.staffTypesBindingSource.DataSource = this.ttmsDBDataSet;
             // 
             // staffTypesTableAdapter
             // 
-            this.staffTypesTableAdapter.ClearBeforeFill = true;
             // 
             // frmSignup
             // 
@@ -454,7 +447,6 @@
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbConfirmPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpbUserImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ttmsDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffTypesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -492,8 +484,6 @@
         private System.Windows.Forms.Label label8;
         private CustomControls.CircularPicturebox cpbConfirmPassword;
         private System.Windows.Forms.ComboBox cbStaffType;
-        private ttmsDBDataSet ttmsDBDataSet;
         private System.Windows.Forms.BindingSource staffTypesBindingSource;
-        private ttmsDBDataSetTableAdapters.StaffTypesTableAdapter staffTypesTableAdapter;
     }
 }

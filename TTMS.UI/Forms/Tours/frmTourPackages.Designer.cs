@@ -53,6 +53,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.tbTotalSeats = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourPackage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgPackage)).BeginInit();
@@ -62,6 +65,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tbTotalSeats);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.lblCreateDestination);
             this.panel1.Controls.Add(this.dgvTourPackage);
             this.panel1.Controls.Add(this.lblPrice);
@@ -94,7 +100,7 @@
             this.lblCreateDestination.AutoSize = true;
             this.lblCreateDestination.Font = new System.Drawing.Font("Sylfaen", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateDestination.ForeColor = System.Drawing.Color.Black;
-            this.lblCreateDestination.Location = new System.Drawing.Point(449, 160);
+            this.lblCreateDestination.Location = new System.Drawing.Point(431, 160);
             this.lblCreateDestination.Name = "lblCreateDestination";
             this.lblCreateDestination.Size = new System.Drawing.Size(184, 22);
             this.lblCreateDestination.TabIndex = 45;
@@ -117,7 +123,7 @@
             this.lblPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblPrice.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.lblPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblPrice.Location = new System.Drawing.Point(698, 163);
+            this.lblPrice.Location = new System.Drawing.Point(741, 129);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblPrice.Size = new System.Drawing.Size(117, 25);
@@ -129,7 +135,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(693, 129);
+            this.label5.Location = new System.Drawing.Point(658, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 25);
             this.label5.TabIndex = 42;
@@ -230,11 +236,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(521, 199);
+            this.label7.Location = new System.Drawing.Point(431, 204);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(249, 25);
+            this.label7.Size = new System.Drawing.Size(209, 20);
             this.label7.TabIndex = 33;
             this.label7.Text = "Package Description:";
             // 
@@ -279,9 +285,9 @@
             this.tbPackageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPackageName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPackageName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbPackageName.Location = new System.Drawing.Point(495, 89);
+            this.tbPackageName.Location = new System.Drawing.Point(464, 89);
             this.tbPackageName.Name = "tbPackageName";
-            this.tbPackageName.Size = new System.Drawing.Size(334, 25);
+            this.tbPackageName.Size = new System.Drawing.Size(346, 25);
             this.tbPackageName.TabIndex = 29;
             this.tbPackageName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -290,7 +296,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(305, 89);
+            this.label2.Location = new System.Drawing.Point(274, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 25);
             this.label2.TabIndex = 27;
@@ -300,9 +306,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(495, 114);
+            this.panel4.Location = new System.Drawing.Point(464, 114);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(334, 3);
+            this.panel4.Size = new System.Drawing.Size(346, 3);
             this.panel4.TabIndex = 24;
             // 
             // label1
@@ -333,7 +339,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(825, 12);
+            this.btnClose.Location = new System.Drawing.Point(839, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
             this.btnClose.TabIndex = 13;
@@ -351,6 +357,37 @@
             this.label6.Size = new System.Drawing.Size(423, 50);
             this.label6.TabIndex = 12;
             this.label6.Text = "TOUR PACKAGES";
+            // 
+            // tbTotalSeats
+            // 
+            this.tbTotalSeats.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTotalSeats.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTotalSeats.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbTotalSeats.Location = new System.Drawing.Point(794, 163);
+            this.tbTotalSeats.Name = "tbTotalSeats";
+            this.tbTotalSeats.Size = new System.Drawing.Size(63, 25);
+            this.tbTotalSeats.TabIndex = 48;
+            this.tbTotalSeats.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(639, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 25);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Total Seats:";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel5.Location = new System.Drawing.Point(794, 188);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(63, 3);
+            this.panel5.TabIndex = 46;
             // 
             // frmTourPackages
             // 
@@ -398,5 +435,8 @@
         private System.Windows.Forms.DataGridView dgvTourPackage;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblCreateDestination;
+        private System.Windows.Forms.TextBox tbTotalSeats;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

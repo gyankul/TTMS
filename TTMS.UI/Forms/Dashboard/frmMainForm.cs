@@ -451,6 +451,12 @@ namespace TTMS.UI
             package.BringToFront();
             package.Show(); 
         }
+
+        private void btnTourBkg_Click(object sender, EventArgs e)
+        {
+            frmTourBooking tourbkg = new frmTourBooking();
+            tourbkg.TopLevel = false;
+        }
     }
 
 }

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace TTMS.UI {
+namespace TTMS.UI.Dataset {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace TTMS.UI {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ttmsDBDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ttmsDBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ttmsDBDataSet1 : global::System.Data.DataSet {
+    public partial class ttmsDBDataSet : global::System.Data.DataSet {
         
-        private CountryDetailsDataTable tableCountryDetails;
+        private StaffTypesDataTable tableStaffTypes;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ttmsDBDataSet1() {
+        public ttmsDBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TTMS.UI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected ttmsDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ttmsDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TTMS.UI {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["CountryDetails"] != null)) {
-                    base.Tables.Add(new CountryDetailsDataTable(ds.Tables["CountryDetails"]));
+                if ((ds.Tables["StaffTypes"] != null)) {
+                    base.Tables.Add(new StaffTypesDataTable(ds.Tables["StaffTypes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TTMS.UI {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CountryDetailsDataTable CountryDetails {
+        public StaffTypesDataTable StaffTypes {
             get {
-                return this.tableCountryDetails;
+                return this.tableStaffTypes;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TTMS.UI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ttmsDBDataSet1 cln = ((ttmsDBDataSet1)(base.Clone()));
+            ttmsDBDataSet cln = ((ttmsDBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TTMS.UI {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["CountryDetails"] != null)) {
-                    base.Tables.Add(new CountryDetailsDataTable(ds.Tables["CountryDetails"]));
+                if ((ds.Tables["StaffTypes"] != null)) {
+                    base.Tables.Add(new StaffTypesDataTable(ds.Tables["StaffTypes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TTMS.UI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCountryDetails = ((CountryDetailsDataTable)(base.Tables["CountryDetails"]));
+            this.tableStaffTypes = ((StaffTypesDataTable)(base.Tables["StaffTypes"]));
             if ((initTable == true)) {
-                if ((this.tableCountryDetails != null)) {
-                    this.tableCountryDetails.InitVars();
+                if ((this.tableStaffTypes != null)) {
+                    this.tableStaffTypes.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TTMS.UI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ttmsDBDataSet1";
+            this.DataSetName = "ttmsDBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ttmsDBDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/ttmsDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCountryDetails = new CountryDetailsDataTable();
-            base.Tables.Add(this.tableCountryDetails);
+            this.tableStaffTypes = new StaffTypesDataTable();
+            base.Tables.Add(this.tableStaffTypes);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeCountryDetails() {
+        private bool ShouldSerializeStaffTypes() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TTMS.UI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ttmsDBDataSet1 ds = new ttmsDBDataSet1();
+            ttmsDBDataSet ds = new ttmsDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,21 +270,21 @@ namespace TTMS.UI {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void CountryDetailsRowChangeEventHandler(object sender, CountryDetailsRowChangeEvent e);
+        public delegate void StaffTypesRowChangeEventHandler(object sender, StaffTypesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CountryDetailsDataTable : global::System.Data.TypedTableBase<CountryDetailsRow> {
+        public partial class StaffTypesDataTable : global::System.Data.TypedTableBase<StaffTypesRow> {
             
-            private global::System.Data.DataColumn columnCountryName;
+            private global::System.Data.DataColumn columnStaffTypeName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsDataTable() {
-                this.TableName = "CountryDetails";
+            public StaffTypesDataTable() {
+                this.TableName = "StaffTypes";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +292,7 @@ namespace TTMS.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CountryDetailsDataTable(global::System.Data.DataTable table) {
+            internal StaffTypesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +309,16 @@ namespace TTMS.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected CountryDetailsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected StaffTypesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CountryNameColumn {
+            public global::System.Data.DataColumn StaffTypeNameColumn {
                 get {
-                    return this.columnCountryName;
+                    return this.columnStaffTypeName;
                 }
             }
             
@@ -333,45 +333,45 @@ namespace TTMS.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow this[int index] {
+            public StaffTypesRow this[int index] {
                 get {
-                    return ((CountryDetailsRow)(this.Rows[index]));
+                    return ((StaffTypesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowChanging;
+            public event StaffTypesRowChangeEventHandler StaffTypesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowChanged;
+            public event StaffTypesRowChangeEventHandler StaffTypesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowDeleting;
+            public event StaffTypesRowChangeEventHandler StaffTypesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowDeleted;
+            public event StaffTypesRowChangeEventHandler StaffTypesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddCountryDetailsRow(CountryDetailsRow row) {
+            public void AddStaffTypesRow(StaffTypesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow AddCountryDetailsRow(string CountryName) {
-                CountryDetailsRow rowCountryDetailsRow = ((CountryDetailsRow)(this.NewRow()));
+            public StaffTypesRow AddStaffTypesRow(string StaffTypeName) {
+                StaffTypesRow rowStaffTypesRow = ((StaffTypesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        CountryName};
-                rowCountryDetailsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCountryDetailsRow);
-                return rowCountryDetailsRow;
+                        StaffTypeName};
+                rowStaffTypesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowStaffTypesRow);
+                return rowStaffTypesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CountryDetailsDataTable cln = ((CountryDetailsDataTable)(base.Clone()));
+                StaffTypesDataTable cln = ((StaffTypesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,48 +379,48 @@ namespace TTMS.UI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CountryDetailsDataTable();
+                return new StaffTypesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnCountryName = base.Columns["CountryName"];
+                this.columnStaffTypeName = base.Columns["StaffTypeName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnCountryName = new global::System.Data.DataColumn("CountryName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCountryName);
-                this.columnCountryName.AllowDBNull = false;
-                this.columnCountryName.MaxLength = 50;
+                this.columnStaffTypeName = new global::System.Data.DataColumn("StaffTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStaffTypeName);
+                this.columnStaffTypeName.AllowDBNull = false;
+                this.columnStaffTypeName.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow NewCountryDetailsRow() {
-                return ((CountryDetailsRow)(this.NewRow()));
+            public StaffTypesRow NewStaffTypesRow() {
+                return ((StaffTypesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CountryDetailsRow(builder);
+                return new StaffTypesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CountryDetailsRow);
+                return typeof(StaffTypesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CountryDetailsRowChanged != null)) {
-                    this.CountryDetailsRowChanged(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.StaffTypesRowChanged != null)) {
+                    this.StaffTypesRowChanged(this, new StaffTypesRowChangeEvent(((StaffTypesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -428,8 +428,8 @@ namespace TTMS.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CountryDetailsRowChanging != null)) {
-                    this.CountryDetailsRowChanging(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.StaffTypesRowChanging != null)) {
+                    this.StaffTypesRowChanging(this, new StaffTypesRowChangeEvent(((StaffTypesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -437,8 +437,8 @@ namespace TTMS.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CountryDetailsRowDeleted != null)) {
-                    this.CountryDetailsRowDeleted(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.StaffTypesRowDeleted != null)) {
+                    this.StaffTypesRowDeleted(this, new StaffTypesRowChangeEvent(((StaffTypesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -446,14 +446,14 @@ namespace TTMS.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CountryDetailsRowDeleting != null)) {
-                    this.CountryDetailsRowDeleting(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.StaffTypesRowDeleting != null)) {
+                    this.StaffTypesRowDeleting(this, new StaffTypesRowChangeEvent(((StaffTypesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveCountryDetailsRow(CountryDetailsRow row) {
+            public void RemoveStaffTypesRow(StaffTypesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -462,7 +462,7 @@ namespace TTMS.UI {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ttmsDBDataSet1 ds = new ttmsDBDataSet1();
+                ttmsDBDataSet ds = new ttmsDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -480,7 +480,7 @@ namespace TTMS.UI {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CountryDetailsDataTable";
+                attribute2.FixedValue = "StaffTypesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -524,25 +524,25 @@ namespace TTMS.UI {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CountryDetailsRow : global::System.Data.DataRow {
+        public partial class StaffTypesRow : global::System.Data.DataRow {
             
-            private CountryDetailsDataTable tableCountryDetails;
+            private StaffTypesDataTable tableStaffTypes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CountryDetailsRow(global::System.Data.DataRowBuilder rb) : 
+            internal StaffTypesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCountryDetails = ((CountryDetailsDataTable)(this.Table));
+                this.tableStaffTypes = ((StaffTypesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CountryName {
+            public string StaffTypeName {
                 get {
-                    return ((string)(this[this.tableCountryDetails.CountryNameColumn]));
+                    return ((string)(this[this.tableStaffTypes.StaffTypeNameColumn]));
                 }
                 set {
-                    this[this.tableCountryDetails.CountryNameColumn] = value;
+                    this[this.tableStaffTypes.StaffTypeNameColumn] = value;
                 }
             }
         }
@@ -551,22 +551,22 @@ namespace TTMS.UI {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class CountryDetailsRowChangeEvent : global::System.EventArgs {
+        public class StaffTypesRowChangeEvent : global::System.EventArgs {
             
-            private CountryDetailsRow eventRow;
+            private StaffTypesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRowChangeEvent(CountryDetailsRow row, global::System.Data.DataRowAction action) {
+            public StaffTypesRowChangeEvent(StaffTypesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow Row {
+            public StaffTypesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -582,7 +582,7 @@ namespace TTMS.UI {
         }
     }
 }
-namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
+namespace TTMS.UI.Dataset.ttmsDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -594,7 +594,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CountryDetailsTableAdapter : global::System.ComponentModel.Component {
+    public partial class StaffTypesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -608,7 +608,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public CountryDetailsTableAdapter() {
+        public StaffTypesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -705,8 +705,8 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "CountryDetails";
-            tableMapping.ColumnMappings.Add("CountryName", "CountryName");
+            tableMapping.DataSetTable = "StaffTypes";
+            tableMapping.ColumnMappings.Add("StaffTypeName", "StaffTypeName");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -723,7 +723,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CountryName FROM dbo.CountryDetails";
+            this._commandCollection[0].CommandText = "SELECT StaffTypeName FROM dbo.StaffTypes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -731,7 +731,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ttmsDBDataSet1.CountryDetailsDataTable dataTable) {
+        public virtual int Fill(ttmsDBDataSet.StaffTypesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -744,9 +744,9 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ttmsDBDataSet1.CountryDetailsDataTable GetData() {
+        public virtual ttmsDBDataSet.StaffTypesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ttmsDBDataSet1.CountryDetailsDataTable dataTable = new ttmsDBDataSet1.CountryDetailsDataTable();
+            ttmsDBDataSet.StaffTypesDataTable dataTable = new ttmsDBDataSet.StaffTypesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -820,7 +820,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(ttmsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ttmsDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -830,7 +830,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(ttmsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ttmsDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -840,7 +840,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(ttmsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ttmsDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -874,7 +874,7 @@ namespace TTMS.UI.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(ttmsDBDataSet1 dataSet) {
+        public virtual int UpdateAll(ttmsDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

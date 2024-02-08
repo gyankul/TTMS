@@ -141,7 +141,7 @@
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel.Location = new System.Drawing.Point(0, 58);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(622, 269);
+            this.panel.Size = new System.Drawing.Size(619, 269);
             this.panel.TabIndex = 11;
             // 
             // btnSave
@@ -232,7 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(622, 327);
+            this.ClientSize = new System.Drawing.Size(619, 327);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel);

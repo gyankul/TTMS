@@ -27,7 +27,6 @@ namespace TTMS.UI
         private void Signup_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ttmsDBDataSet.StaffTypes' table. You can move, or remove it, as needed.
-            this.staffTypesTableAdapter.Fill(this.ttmsDBDataSet.StaffTypes);
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True";
             //this.ActiveControl = tbRole;
         }

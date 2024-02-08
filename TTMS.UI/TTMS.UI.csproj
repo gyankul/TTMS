@@ -67,12 +67,6 @@
     <Compile Include="Forms\Credentials\frmStaffType.Designer.cs">
       <DependentUpon>frmStaffType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\formCustomerDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\formCustomerDetails.Designer.cs">
-      <DependentUpon>formCustomerDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Credentials\frmForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,10 +91,10 @@
     <Compile Include="Forms\Dashboard\frmMainForm.Designer.cs">
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCustomerDetails.cs">
+    <Compile Include="Forms\Customer\frmCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCustomerDetails.Designer.cs">
+    <Compile Include="Forms\Customer\frmCustomerDetails.Designer.cs">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Payments\frmPaymentStatus.cs">
@@ -114,6 +108,12 @@
     </Compile>
     <Compile Include="Forms\Payments\Payment Method.Designer.cs">
       <DependentUpon>Payment Method.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tours\frmTourBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tours\frmTourBilling.Designer.cs">
+      <DependentUpon>frmTourBilling.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tours\frmTourBooking.cs">
       <SubType>Form</SubType>
@@ -138,6 +138,12 @@
     </Compile>
     <Compile Include="Forms\Tours\frmTourPackages.Designer.cs">
       <DependentUpon>frmTourPackages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Travels\frmTravelDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Travels\frmTravelDetails.Designer.cs">
+      <DependentUpon>frmTravelDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,24 +183,26 @@
     <Compile Include="Forms\Tours\frmTourItinerary.Designer.cs">
       <DependentUpon>frmTourItinerary.cs</DependentUpon>
     </Compile>
-    <Compile Include="ttmsDBDataSet.Designer.cs">
+    <Compile Include="Dataset\ttmsDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ttmsDBDataSet1.Designer.cs">
+    <Compile Include="Dataset\ttmsDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\VerificationDetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Credentials\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credentials\frmStaffType.resx">
       <DependentUpon>frmStaffType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\formCustomerDetails.resx">
-      <DependentUpon>formCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credentials\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
@@ -208,7 +216,7 @@
     <EmbeddedResource Include="Forms\Dashboard\frmMainForm.resx">
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
+    <EmbeddedResource Include="Forms\Customer\frmCustomerDetails.resx">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payments\frmPaymentStatus.resx">
@@ -216,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payments\Payment Method.resx">
       <DependentUpon>Payment Method.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tours\frmTourBilling.resx">
+      <DependentUpon>frmTourBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmTourBooking.resx">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
@@ -267,27 +278,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ttmsDBDataSet.xsc">
+    <None Include="Dataset\ttmsDBDataSet.xsc">
       <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ttmsDBDataSet.xsd">
+    <None Include="Dataset\ttmsDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ttmsDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ttmsDBDataSet.xss">
+    <None Include="Dataset\ttmsDBDataSet.xss">
       <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ttmsDBDataSet1.xsc">
+    <None Include="Dataset\ttmsDBDataSet1.xsc">
       <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="ttmsDBDataSet1.xsd">
+    <None Include="Dataset\ttmsDBDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ttmsDBDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ttmsDBDataSet1.xss">
+    <None Include="Dataset\ttmsDBDataSet1.xss">
       <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\VerificationDetailsDataSet.xsc">
+      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\VerificationDetailsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VerificationDetailsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\VerificationDetailsDataSet.xss">
+      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -439,6 +461,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-railroad-crossing-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-replace-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-billing-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-45.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
