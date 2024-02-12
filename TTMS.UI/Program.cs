@@ -22,7 +22,7 @@ namespace TTMS.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDriverDetails());
+            Application.Run(new frmTourItinerary());
             
         }
     }

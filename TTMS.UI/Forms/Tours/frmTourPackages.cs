@@ -180,8 +180,8 @@ namespace TTMS.UI.Forms.Tours
 
         private void lblCreateDestination_Click(object sender, EventArgs e)
         {
-            //frmTourDestinations td = new frmTourDestinations();
-            //td.Show();
+            frmTourDestinations td = new frmTourDestinations();
+            td.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -211,7 +211,7 @@ namespace TTMS.UI.Forms.Tours
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
         #endregion
 

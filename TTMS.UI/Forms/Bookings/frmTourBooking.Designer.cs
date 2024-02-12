@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddPackage = new System.Windows.Forms.Button();
@@ -52,6 +52,16 @@
             this.dtpBookingDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvParticipants = new System.Windows.Forms.DataGridView();
+            this.clmAction = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.clmSerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmVerificationType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clmVerificationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmVerificationImg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteParticipant = new System.Windows.Forms.Button();
             this.btnAddParticipant = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,23 +75,13 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.verificationDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvParticipants = new System.Windows.Forms.DataGridView();
-            this.clmSerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmVerificationType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.clmVerificationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmVerificationImg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmAction = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipants)).BeginInit();
             this.panelTourBookingTitlebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipants)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,14 +152,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(17, 444);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -312,6 +312,116 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Participants";
             // 
+            // dgvParticipants
+            // 
+            this.dgvParticipants.AllowUserToAddRows = false;
+            this.dgvParticipants.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvParticipants.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParticipants.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParticipants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmAction,
+            this.clmSerialNo,
+            this.clmName,
+            this.clmAge,
+            this.clmGender,
+            this.clmPhoneNo,
+            this.clmVerificationType,
+            this.clmVerificationNumber,
+            this.clmVerificationImg});
+            this.dgvParticipants.Location = new System.Drawing.Point(16, 31);
+            this.dgvParticipants.Name = "dgvParticipants";
+            this.dgvParticipants.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvParticipants.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvParticipants.RowTemplate.Height = 24;
+            this.dgvParticipants.Size = new System.Drawing.Size(888, 181);
+            this.dgvParticipants.TabIndex = 3;
+            this.dgvParticipants.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParticipants_CellContentClick_1);
+            // 
+            // clmAction
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.clmAction.DefaultCellStyle = dataGridViewCellStyle3;
+            this.clmAction.HeaderText = "Action";
+            this.clmAction.MinimumWidth = 6;
+            this.clmAction.Name = "clmAction";
+            this.clmAction.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmAction.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clmAction.Text = "DELETE";
+            this.clmAction.UseColumnTextForButtonValue = true;
+            this.clmAction.Width = 125;
+            // 
+            // clmSerialNo
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.clmSerialNo.DefaultCellStyle = dataGridViewCellStyle4;
+            this.clmSerialNo.HeaderText = "Sr. No";
+            this.clmSerialNo.MinimumWidth = 6;
+            this.clmSerialNo.Name = "clmSerialNo";
+            this.clmSerialNo.Width = 50;
+            // 
+            // clmName
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.clmName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.clmName.HeaderText = "Name";
+            this.clmName.MinimumWidth = 6;
+            this.clmName.Name = "clmName";
+            this.clmName.Width = 200;
+            // 
+            // clmAge
+            // 
+            this.clmAge.HeaderText = "Age";
+            this.clmAge.MinimumWidth = 6;
+            this.clmAge.Name = "clmAge";
+            this.clmAge.Width = 75;
+            // 
+            // clmGender
+            // 
+            this.clmGender.HeaderText = "Gender";
+            this.clmGender.MinimumWidth = 6;
+            this.clmGender.Name = "clmGender";
+            this.clmGender.Width = 110;
+            // 
+            // clmPhoneNo
+            // 
+            this.clmPhoneNo.HeaderText = "Phone No";
+            this.clmPhoneNo.MinimumWidth = 6;
+            this.clmPhoneNo.Name = "clmPhoneNo";
+            this.clmPhoneNo.Width = 150;
+            // 
+            // clmVerificationType
+            // 
+            this.clmVerificationType.HeaderText = "Verification Type";
+            this.clmVerificationType.MinimumWidth = 6;
+            this.clmVerificationType.Name = "clmVerificationType";
+            this.clmVerificationType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmVerificationType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clmVerificationType.Width = 150;
+            // 
+            // clmVerificationNumber
+            // 
+            this.clmVerificationNumber.HeaderText = "Verification No";
+            this.clmVerificationNumber.MinimumWidth = 6;
+            this.clmVerificationNumber.Name = "clmVerificationNumber";
+            this.clmVerificationNumber.Width = 150;
+            // 
+            // clmVerificationImg
+            // 
+            this.clmVerificationImg.HeaderText = "Verification Image";
+            this.clmVerificationImg.MinimumWidth = 6;
+            this.clmVerificationImg.Name = "clmVerificationImg";
+            this.clmVerificationImg.Width = 150;
+            // 
             // btnDeleteParticipant
             // 
             this.btnDeleteParticipant.Image = global::TTMS.UI.Properties.Resources.icons8_remove_401;
@@ -447,115 +557,6 @@
             // 
             this.verificationDetailsBindingSource.DataMember = "VerificationDetails";
             // 
-            // dgvParticipants
-            // 
-            this.dgvParticipants.AllowUserToAddRows = false;
-            this.dgvParticipants.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvParticipants.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParticipants.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParticipants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmSerialNo,
-            this.clmName,
-            this.clmAge,
-            this.clmGender,
-            this.clmPhoneNo,
-            this.clmVerificationType,
-            this.clmVerificationNumber,
-            this.clmVerificationImg,
-            this.clmAction});
-            this.dgvParticipants.Location = new System.Drawing.Point(16, 31);
-            this.dgvParticipants.Name = "dgvParticipants";
-            this.dgvParticipants.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.dgvParticipants.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvParticipants.RowTemplate.Height = 24;
-            this.dgvParticipants.Size = new System.Drawing.Size(888, 181);
-            this.dgvParticipants.TabIndex = 3;
-            // 
-            // clmSerialNo
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.clmSerialNo.DefaultCellStyle = dataGridViewCellStyle9;
-            this.clmSerialNo.HeaderText = "Sr. No";
-            this.clmSerialNo.MinimumWidth = 6;
-            this.clmSerialNo.Name = "clmSerialNo";
-            this.clmSerialNo.Width = 50;
-            // 
-            // clmName
-            // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.clmName.DefaultCellStyle = dataGridViewCellStyle10;
-            this.clmName.HeaderText = "Name";
-            this.clmName.MinimumWidth = 6;
-            this.clmName.Name = "clmName";
-            this.clmName.Width = 200;
-            // 
-            // clmAge
-            // 
-            this.clmAge.HeaderText = "Age";
-            this.clmAge.MinimumWidth = 6;
-            this.clmAge.Name = "clmAge";
-            this.clmAge.Width = 75;
-            // 
-            // clmGender
-            // 
-            this.clmGender.HeaderText = "Gender";
-            this.clmGender.MinimumWidth = 6;
-            this.clmGender.Name = "clmGender";
-            this.clmGender.Width = 110;
-            // 
-            // clmPhoneNo
-            // 
-            this.clmPhoneNo.HeaderText = "Phone No";
-            this.clmPhoneNo.MinimumWidth = 6;
-            this.clmPhoneNo.Name = "clmPhoneNo";
-            this.clmPhoneNo.Width = 150;
-            // 
-            // clmVerificationType
-            // 
-            this.clmVerificationType.HeaderText = "Verification Type";
-            this.clmVerificationType.MinimumWidth = 6;
-            this.clmVerificationType.Name = "clmVerificationType";
-            this.clmVerificationType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmVerificationType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.clmVerificationType.Width = 150;
-            // 
-            // clmVerificationNumber
-            // 
-            this.clmVerificationNumber.HeaderText = "Verification No";
-            this.clmVerificationNumber.MinimumWidth = 6;
-            this.clmVerificationNumber.Name = "clmVerificationNumber";
-            this.clmVerificationNumber.Width = 150;
-            // 
-            // clmVerificationImg
-            // 
-            this.clmVerificationImg.HeaderText = "Verification Image";
-            this.clmVerificationImg.MinimumWidth = 6;
-            this.clmVerificationImg.Name = "clmVerificationImg";
-            this.clmVerificationImg.Width = 150;
-            // 
-            // clmAction
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.clmAction.DefaultCellStyle = dataGridViewCellStyle11;
-            this.clmAction.HeaderText = "Action";
-            this.clmAction.MinimumWidth = 6;
-            this.clmAction.Name = "clmAction";
-            this.clmAction.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmAction.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.clmAction.Text = "DELETE";
-            this.clmAction.UseColumnTextForButtonValue = true;
-            this.clmAction.Width = 125;
-            // 
             // frmTourBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -570,11 +571,11 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipants)).EndInit();
             this.panelTourBookingTitlebar.ResumeLayout(false);
             this.panelTourBookingTitlebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipants)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -612,6 +613,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource verificationDetailsBindingSource;
         private System.Windows.Forms.DataGridView dgvParticipants;
+        private System.Windows.Forms.DataGridViewButtonColumn clmAction;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSerialNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmAge;
@@ -620,6 +622,5 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn clmVerificationType;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmVerificationNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmVerificationImg;
-        private System.Windows.Forms.DataGridViewButtonColumn clmAction;
     }
 }

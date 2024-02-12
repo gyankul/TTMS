@@ -62,6 +62,7 @@
     <Folder Include="Payments" />
     <Folder Include="Customer" />
     <Folder Include="Driver and Vehicle" />
+    <Folder Include="Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Credentials\SignupDetails.sql" />
@@ -85,6 +86,7 @@
     <Build Include="Credentials\VerificationDetails.sql" />
     <Build Include="Credentials\StaffTypes.sql" />
     <Build Include="Customer\CountryDetails.sql" />
+    <Build Include="Credentials\UserPersonalInfo.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TTMS.DB.refactorlog" />

@@ -50,33 +50,33 @@ namespace TTMS.UI.Tours
             dgvTourItinerary.DataSource = ds.Tables["TourItinerary"];
         }
 
-        private bool isvalidate()
-        {
+        //private bool isvalidate()
+        //{
 
-            if (lblItineraryId.Text != "")
-            {
-                return false;
-            }
-            else if (tbDestination.Text != "")
-            {
-                return false;
-            }
-            else if (tbDayNumber.Text != "")
-            {
-                return false;
-            }
-            else if (tbActivity.Text != "")
-            {
-                return false;
-            }
+        //    if (lblItineraryId.Text != "")
+        //    {
+        //        return false;
+        //    }
+        //    else if (tbDestination.Text != "")
+        //    {
+        //        return false;
+        //    }
+        //    else if (tbDayNumber.Text != "")
+        //    {
+        //        return false;
+        //    }
+        //    else if (tbActivity.Text != "")
+        //    {
+        //        return false;
+        //    }
 
-            //else if (dtpStart.Value >= dtpEnd.Value)
-            //{
-            //    return false;
-            //}
+        //    //else if (dtpStart.Value >= dtpEnd.Value)
+        //    //{
+        //    //    return false;
+        //    //}
 
-            return true;
-        }
+        //    return true;
+        //}
 
         private byte[] getImage() //to save the image
         {
@@ -87,8 +87,8 @@ namespace TTMS.UI.Tours
 
         private void InsertData()
         {
-            if (isvalidate())
-            {
+            //if (isvalidate())
+            //{
                 try
                 {
 
@@ -114,11 +114,11 @@ namespace TTMS.UI.Tours
                 {
                     MessageBox.Show(e.Message);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please Enter All the Fields......", "Registeration Failed!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
+            //else
+            //{
+            //    MessageBox.Show("Please Enter All the Fields......", "Registeration Failed!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void UpdateData()

@@ -60,7 +60,7 @@ namespace TTMS.UI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnLogin_Click(sender, e); ;
+                btnLogin_Click(sender, e); 
             }
         }
 

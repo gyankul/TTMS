@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,9 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,8 +49,6 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.checkedListBox1);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label2);
@@ -66,33 +62,36 @@
             this.panel1.Size = new System.Drawing.Size(1261, 710);
             this.panel1.TabIndex = 0;
             // 
-            // checkedListBox1
+            // textBox3
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"});
-            this.checkedListBox1.Location = new System.Drawing.Point(163, 150);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(135, 22);
-            this.checkedListBox1.TabIndex = 31;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.textBox3.Location = new System.Drawing.Point(189, 149);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(285, 25);
+            this.textBox3.TabIndex = 34;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label3
+            // panel5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(21, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 25);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Frequency:";
+            this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel5.Location = new System.Drawing.Point(189, 177);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(285, 3);
+            this.panel5.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(21, 149);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 25);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Vehicle Type:";
             // 
             // textBox2
             // 
@@ -181,37 +180,6 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "TRAVEL DETAILS";
             // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.textBox3.Location = new System.Drawing.Point(486, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 25);
-            this.textBox3.TabIndex = 34;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(486, 175);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(285, 3);
-            this.panel5.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(318, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 25);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Vehicle Type:";
-            // 
             // frmTravelDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,8 +207,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;

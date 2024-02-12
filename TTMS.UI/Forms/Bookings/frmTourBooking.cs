@@ -59,6 +59,13 @@ namespace TTMS.UI
         }
         #endregion
 
+
+        // Method to update tour package textbox
+        public void UpdateTourPackageTextbox(string selectedPackage)
+        {
+            tbPackageName.Text = selectedPackage; // Update the tour package textbox
+        }
+
         #region Buttons & Click events
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -100,7 +107,15 @@ namespace TTMS.UI
 
         private void btnAddPackage_Click(object sender, EventArgs e)
         {
+            frmPackageList tourPackageListForm = new frmPackageList();
+            tourPackageListForm.ShowDialog(); // Open TourPackageList form as a dialog
 
+            // Check if a package was selected
+            if (!string.IsNullOrEmpty(tourPackageListForm.SelectedPackage))
+            {
+                // Call the method to update tour package textbox
+                UpdateTourPackageTextbox(tourPackageListForm.SelectedPackage);
+            }
         }
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
@@ -137,6 +152,22 @@ namespace TTMS.UI
         {
             // TODO: This line of code loads data into the 'verificationDetailsDataSet.VerificationDetails' table. You can move, or remove it, as needed.
 
+        }
+
+        private void dgvParticipants_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if(e.ColumnIndex == dgvParticipants.Columns["clmUpdate"].Index && e.RowIndex >= 0)
+                {
+                    string name = dgvParticipants.Rows[e.RowIndex].Cells["clmName"].Value.ToString();
+                    MessageBox.Show($"{name}");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -30,6 +30,8 @@ namespace TTMS.UI.Forms.Credentials
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
 
             SelectData();
+
+            btnADD.Focus();
         }
 
         #region Functions
@@ -148,5 +150,26 @@ namespace TTMS.UI.Forms.Credentials
         }
         #endregion
 
+        #region Key Event
+
+
+
+        #endregion
+
+        private void tbStaffTypeId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbStaffTypeName.Focus();
+            }
+        }
+
+        private void tbStaffTypeName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
+        }
     }
 }

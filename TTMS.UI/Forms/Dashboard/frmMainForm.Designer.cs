@@ -906,7 +906,7 @@
             this.panelUserProfile.MaximumSize = new System.Drawing.Size(180, 200);
             this.panelUserProfile.MinimumSize = new System.Drawing.Size(180, 0);
             this.panelUserProfile.Name = "panelUserProfile";
-            this.panelUserProfile.Size = new System.Drawing.Size(180, 0);
+            this.panelUserProfile.Size = new System.Drawing.Size(180, 200);
             this.panelUserProfile.TabIndex = 0;
             // 
             // button4
@@ -927,11 +927,11 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Futura Md BT", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(41, 11);
+            this.lblUserName.Location = new System.Drawing.Point(34, 11);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(98, 20);
+            this.lblUserName.Size = new System.Drawing.Size(118, 20);
             this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "AYESH123";
+            this.lblUserName.Text = "-USERNAME-";
             // 
             // btnToolClick
             // 

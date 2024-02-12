@@ -26,9 +26,14 @@ namespace TTMS.UI
 
         private void Signup_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'verificationDataSet.VerificationDetails' table. You can move, or remove it, as needed.
+            this.verificationDetailsTableAdapter.Fill(this.verificationDataSet.VerificationDetails);
+            // TODO: This line of code loads data into the 'staffTypeDataSet.StaffTypes' table. You can move, or remove it, as needed.
+            this.staffTypesTableAdapter.Fill(this.staffTypeDataSet.StaffTypes);
             // TODO: This line of code loads data into the 'ttmsDBDataSet.StaffTypes' table. You can move, or remove it, as needed.
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True";
-            //this.ActiveControl = tbRole;
+
+            ActiveControl = cbStaffType;
         }
 
         #region Functions
@@ -73,7 +78,34 @@ namespace TTMS.UI
             {
                 MessageBox.Show(e.Message);
             }
-            
+
+            try
+            {
+                string query = @"INSERT INTO UserPersonalInfo (Id, Name, DOB, Gender, PhoneNo, Email, VerificationId, VerifiactionImg)VALUES (@Id, @Name, @DOB, @Gender, @PhoneNo, @Email, @VerificationId, @VerifiactionImg)";
+
+
+                SqlCommand command = new SqlCommand(query, con);
+
+                
+                command.Parameters.AddWithValue("@Name", tbName.Text);
+                command.Parameters.AddWithValue("@DOB", dtpDOB.Value);
+                command.Parameters.AddWithValue("@Gender", cbSecurityQuestion.Text);
+                command.Parameters.AddWithValue("@Email", tbSecurityAnswer.Text);
+                command.Parameters.AddWithValue("@VerificationId", tbSecurityAnswer.Text);
+                command.Parameters.AddWithValue("@VerifiactionImg", tbSecurityAnswer.Text);
+                
+
+                con.Open();
+                command.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("New User's Signup Details are Saved Successfully");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
         }
 
         private byte[] getImage()
@@ -151,6 +183,66 @@ namespace TTMS.UI
         }
 
 
+
+        #endregion
+
+        #region Key Events
+
+        private void cbStaffType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbUsername.Focus();
+            }
+        }
+
+        private void tbUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbName.Focus();
+            }
+        }
+
+        private void tbName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbPassword.Focus();
+            }
+        }
+
+        private void tbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbConfirmPassword.Focus();
+            }
+        }
+
+        private void tbConfirmPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cbSecurityQuestion.Focus();
+            }
+        }
+
+        private void cbSecurityQuestion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbSecurityAnswer.Focus();
+            }
+        }
+
+        private void tbSecurityAnswer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAddImg.Focus();
+            }
+        }
 
         #endregion
 

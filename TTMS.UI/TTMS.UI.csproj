@@ -55,12 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoIncrement.cs" />
-    <Compile Include="Forms\Credentials\frmChangePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Credentials\frmChangePassword.Designer.cs">
-      <DependentUpon>frmChangePassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Credentials\frmStaffType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,10 +109,10 @@
     <Compile Include="Forms\Tours\frmTourBilling.Designer.cs">
       <DependentUpon>frmTourBilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tours\frmTourBooking.cs">
+    <Compile Include="Forms\Bookings\frmTourBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tours\frmTourBooking.Designer.cs">
+    <Compile Include="Forms\Bookings\frmTourBooking.Designer.cs">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tours\frmPackageList.cs">
@@ -183,10 +177,10 @@
     <Compile Include="Forms\Travels\layoutSittingbus.Designer.cs">
       <DependentUpon>layoutSittingbus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Travels\frmTravelBooking.cs">
+    <Compile Include="Forms\Bookings\frmTravelBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Travels\frmTravelBooking.Designer.cs">
+    <Compile Include="Forms\Bookings\frmTravelBooking.Designer.cs">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tours\frmTourItinerary.cs">
@@ -210,9 +204,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Credentials\frmChangePassword.resx">
-      <DependentUpon>frmChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Dataset\StaffTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaffTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\VerificationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerificationDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Credentials\frmStaffType.resx">
       <DependentUpon>frmStaffType.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,7 +241,7 @@
     <EmbeddedResource Include="Forms\Tours\frmTourBilling.resx">
       <DependentUpon>frmTourBilling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tours\frmTourBooking.resx">
+    <EmbeddedResource Include="Forms\Bookings\frmTourBooking.resx">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmPackageList.resx">
@@ -283,7 +284,7 @@
     <EmbeddedResource Include="Forms\Travels\layoutSittingbus.resx">
       <DependentUpon>layoutSittingbus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Travels\frmTravelBooking.resx">
+    <EmbeddedResource Include="Forms\Bookings\frmTravelBooking.resx">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmTourItinerary.resx">
@@ -331,6 +332,28 @@
     </None>
     <None Include="Dataset\VerificationDetailsDataSet.xss">
       <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\StaffTypeDataSet.xsc">
+      <DependentUpon>StaffTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\StaffTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StaffTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\StaffTypeDataSet.xss">
+      <DependentUpon>StaffTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\VerificationDataSet.xsc">
+      <DependentUpon>VerificationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\VerificationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VerificationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\VerificationDataSet.xss">
+      <DependentUpon>VerificationDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -512,6 +535,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-booking-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
