@@ -60,7 +60,7 @@ SELECT VerificationId, VerificationName FROM VerificationDetails WHERE (Verifica
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="VerificationDetailsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="VerificationDetailsDataSet" msprop:Generator_DataSetName="VerificationDetailsDataSet">
+  <xs:element name="VerificationDetailsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="VerificationDetailsDataSet" msprop:Generator_DataSetName="VerificationDetailsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="VerificationDetails" msprop:Generator_RowEvHandlerName="VerificationDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="VerificationDetailsRowDeleted" msprop:Generator_RowDeletingName="VerificationDetailsRowDeleting" msprop:Generator_RowEvArgName="VerificationDetailsRowChangeEvent" msprop:Generator_TablePropName="VerificationDetails" msprop:Generator_RowChangedName="VerificationDetailsRowChanged" msprop:Generator_RowChangingName="VerificationDetailsRowChanging" msprop:Generator_TableClassName="VerificationDetailsDataTable" msprop:Generator_RowClassName="VerificationDetailsRow" msprop:Generator_TableVarName="tableVerificationDetails" msprop:Generator_UserTableName="VerificationDetails">

@@ -36,10 +36,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnAddImg = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dtpEnd = new System.Windows.Forms.RichTextBox();
-            this.ImgDestination = new System.Windows.Forms.PictureBox();
             this.tbPackageName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbDestinationName = new System.Windows.Forms.TextBox();
@@ -52,9 +50,14 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDeleteItinerary = new System.Windows.Forms.Button();
+            this.btnAddItinerary = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dgvTourItinerary = new System.Windows.Forms.DataGridView();
+            this.btnAddImg = new System.Windows.Forms.Button();
+            this.ImgDestination = new System.Windows.Forms.PictureBox();
+            this.clmSRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmItineraryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDayNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,22 +66,22 @@
             this.clmImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourDestination)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgDestination)).BeginInit();
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgDestination)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(251, 9);
+            this.label6.Location = new System.Drawing.Point(384, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(493, 50);
+            this.label6.Size = new System.Drawing.Size(349, 35);
             this.label6.TabIndex = 11;
             this.label6.Text = "TOUR DESTINATION";
             // 
@@ -88,7 +91,7 @@
             this.lblDestinationId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblDestinationId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.lblDestinationId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDestinationId.Location = new System.Drawing.Point(196, 88);
+            this.lblDestinationId.Location = new System.Drawing.Point(208, 88);
             this.lblDestinationId.Name = "lblDestinationId";
             this.lblDestinationId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblDestinationId.Size = new System.Drawing.Size(82, 25);
@@ -144,19 +147,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnAddImg
-            // 
-            this.btnAddImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddImg.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.icons8_image_plus_48;
-            this.btnAddImg.Location = new System.Drawing.Point(26, 281);
-            this.btnAddImg.Name = "btnAddImg";
-            this.btnAddImg.Size = new System.Drawing.Size(53, 51);
-            this.btnAddImg.TabIndex = 20;
-            this.btnAddImg.UseVisualStyleBackColor = true;
-            this.btnAddImg.Click += new System.EventHandler(this.btnAddImg_Click);
-            // 
             // btnAdd
             // 
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
@@ -180,16 +170,6 @@
             this.dtpEnd.Size = new System.Drawing.Size(401, 76);
             this.dtpEnd.TabIndex = 19;
             this.dtpEnd.Text = "";
-            // 
-            // ImgDestination
-            // 
-            this.ImgDestination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ImgDestination.Location = new System.Drawing.Point(26, 127);
-            this.ImgDestination.Name = "ImgDestination";
-            this.ImgDestination.Size = new System.Drawing.Size(407, 205);
-            this.ImgDestination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImgDestination.TabIndex = 17;
-            this.ImgDestination.TabStop = false;
             // 
             // tbPackageName
             // 
@@ -218,7 +198,7 @@
             this.tbDestinationName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDestinationName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDestinationName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbDestinationName.Location = new System.Drawing.Point(439, 83);
+            this.tbDestinationName.Location = new System.Drawing.Point(451, 83);
             this.tbDestinationName.Name = "tbDestinationName";
             this.tbDestinationName.Size = new System.Drawing.Size(258, 25);
             this.tbDestinationName.TabIndex = 14;
@@ -240,7 +220,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(284, 88);
+            this.label2.Location = new System.Drawing.Point(296, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 25);
             this.label2.TabIndex = 13;
@@ -250,7 +230,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(439, 111);
+            this.panel4.Location = new System.Drawing.Point(451, 111);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 3);
             this.panel4.TabIndex = 12;
@@ -283,7 +263,7 @@
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1128, 66);
+            this.panel.Size = new System.Drawing.Size(1128, 50);
             this.panel.TabIndex = 0;
             // 
             // btnClose
@@ -324,12 +304,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1128, 737);
+            this.panel1.Size = new System.Drawing.Size(1128, 739);
             this.panel1.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.Controls.Add(this.btnDeleteItinerary);
+            this.groupBox1.Controls.Add(this.btnAddItinerary);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.dtpStart);
             this.groupBox1.Controls.Add(this.dgvTourItinerary);
@@ -340,6 +322,26 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add  Itineraries";
+            // 
+            // btnDeleteItinerary
+            // 
+            this.btnDeleteItinerary.Image = global::TTMS.UI.Properties.Resources.icons8_remove_401;
+            this.btnDeleteItinerary.Location = new System.Drawing.Point(1024, 128);
+            this.btnDeleteItinerary.Name = "btnDeleteItinerary";
+            this.btnDeleteItinerary.Size = new System.Drawing.Size(42, 42);
+            this.btnDeleteItinerary.TabIndex = 28;
+            this.btnDeleteItinerary.UseVisualStyleBackColor = true;
+            this.btnDeleteItinerary.Click += new System.EventHandler(this.btnDeleteItinerary_Click);
+            // 
+            // btnAddItinerary
+            // 
+            this.btnAddItinerary.Image = global::TTMS.UI.Properties.Resources.icons8_plus_40;
+            this.btnAddItinerary.Location = new System.Drawing.Point(1024, 44);
+            this.btnAddItinerary.Name = "btnAddItinerary";
+            this.btnAddItinerary.Size = new System.Drawing.Size(42, 42);
+            this.btnAddItinerary.TabIndex = 27;
+            this.btnAddItinerary.UseVisualStyleBackColor = true;
+            this.btnAddItinerary.Click += new System.EventHandler(this.btnAddItinerary_Click);
             // 
             // dateTimePicker1
             // 
@@ -385,6 +387,7 @@
             this.dgvTourItinerary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTourItinerary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTourItinerary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmSRNO,
             this.clmItineraryName,
             this.clmDayNo,
             this.clmActivity,
@@ -394,13 +397,44 @@
             this.Column5});
             this.dgvTourItinerary.Location = new System.Drawing.Point(10, 33);
             this.dgvTourItinerary.Name = "dgvTourItinerary";
+            this.dgvTourItinerary.RowHeadersVisible = false;
             this.dgvTourItinerary.RowHeadersWidth = 51;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.dgvTourItinerary.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTourItinerary.RowTemplate.Height = 24;
-            this.dgvTourItinerary.Size = new System.Drawing.Size(1059, 162);
+            this.dgvTourItinerary.Size = new System.Drawing.Size(1008, 162);
             this.dgvTourItinerary.TabIndex = 23;
             this.dgvTourItinerary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTourItinerary_CellContentClick);
+            // 
+            // btnAddImg
+            // 
+            this.btnAddImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddImg.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.icons8_image_plus_48;
+            this.btnAddImg.Location = new System.Drawing.Point(26, 281);
+            this.btnAddImg.Name = "btnAddImg";
+            this.btnAddImg.Size = new System.Drawing.Size(53, 51);
+            this.btnAddImg.TabIndex = 20;
+            this.btnAddImg.UseVisualStyleBackColor = true;
+            this.btnAddImg.Click += new System.EventHandler(this.btnAddImg_Click);
+            // 
+            // ImgDestination
+            // 
+            this.ImgDestination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ImgDestination.Location = new System.Drawing.Point(26, 127);
+            this.ImgDestination.Name = "ImgDestination";
+            this.ImgDestination.Size = new System.Drawing.Size(407, 205);
+            this.ImgDestination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgDestination.TabIndex = 17;
+            this.ImgDestination.TabStop = false;
+            // 
+            // clmSRNO
+            // 
+            this.clmSRNO.HeaderText = "Sr. No.";
+            this.clmSRNO.MinimumWidth = 6;
+            this.clmSRNO.Name = "clmSRNO";
+            this.clmSRNO.Width = 50;
             // 
             // clmItineraryName
             // 
@@ -449,25 +483,26 @@
             this.Column5.HeaderText = "Action";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.UseColumnTextForButtonValue = true;
             this.Column5.Width = 80;
             // 
             // frmTourDestinations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 737);
+            this.ClientSize = new System.Drawing.Size(1128, 739);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTourDestinations";
             this.Text = "TourDestinations";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourDestination)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgDestination)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgDestination)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,6 +534,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnAddItinerary;
+        private System.Windows.Forms.Button btnDeleteItinerary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmSRNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmItineraryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDayNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmActivity;

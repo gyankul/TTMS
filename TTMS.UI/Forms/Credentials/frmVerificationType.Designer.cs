@@ -1,6 +1,6 @@
-﻿namespace TTMS.UI.Forms.Payments
+﻿namespace TTMS.UI.Forms.Credentials
 {
-    partial class frmPaymentStatus
+    partial class frmVerificationType
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
-            this.tbStatusTypeName = new System.Windows.Forms.TextBox();
+            this.tbVerificationName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,11 +40,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnADD = new System.Windows.Forms.Button();
-            this.dgvPaymentStatus = new System.Windows.Forms.DataGridView();
-            this.tbStatusTypeId = new System.Windows.Forms.TextBox();
+            this.dgvVerificationdetails = new System.Windows.Forms.DataGridView();
+            this.tbVerificationId = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerificationdetails)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,16 +79,16 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // tbStatusTypeName
+            // tbVerificationName
             // 
-            this.tbStatusTypeName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbStatusTypeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStatusTypeName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbStatusTypeName.Location = new System.Drawing.Point(38, 137);
-            this.tbStatusTypeName.Name = "tbStatusTypeName";
-            this.tbStatusTypeName.Size = new System.Drawing.Size(200, 20);
-            this.tbStatusTypeName.TabIndex = 1;
-            this.tbStatusTypeName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbVerificationName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbVerificationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbVerificationName.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbVerificationName.Location = new System.Drawing.Point(38, 137);
+            this.tbVerificationName.Name = "tbVerificationName";
+            this.tbVerificationName.Size = new System.Drawing.Size(200, 20);
+            this.tbVerificationName.TabIndex = 1;
+            this.tbVerificationName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -97,9 +97,9 @@
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(34, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 20);
+            this.label2.Size = new System.Drawing.Size(186, 20);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Satus Type Name:";
+            this.label2.Text = "Verification Name:";
             // 
             // label1
             // 
@@ -108,9 +108,9 @@
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(34, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 20);
+            this.label1.Size = new System.Drawing.Size(153, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Status Type Id:";
+            this.label1.Text = "Verification Id:";
             // 
             // label6
             // 
@@ -118,11 +118,11 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(12, 3);
+            this.label6.Location = new System.Drawing.Point(2, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(281, 43);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Payment Status";
+            this.label6.Size = new System.Drawing.Size(347, 43);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Verification details";
             // 
             // panel
             // 
@@ -130,19 +130,19 @@
             this.panel.Controls.Add(this.btnSave);
             this.panel.Controls.Add(this.btnDelete);
             this.panel.Controls.Add(this.btnADD);
-            this.panel.Controls.Add(this.dgvPaymentStatus);
-            this.panel.Controls.Add(this.tbStatusTypeId);
+            this.panel.Controls.Add(this.dgvVerificationdetails);
+            this.panel.Controls.Add(this.tbVerificationId);
             this.panel.Controls.Add(this.panel2);
             this.panel.Controls.Add(this.panel3);
             this.panel.Controls.Add(this.btnClear);
-            this.panel.Controls.Add(this.tbStatusTypeName);
+            this.panel.Controls.Add(this.tbVerificationName);
             this.panel.Controls.Add(this.label2);
             this.panel.Controls.Add(this.label1);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel.Location = new System.Drawing.Point(0, 54);
+            this.panel.Location = new System.Drawing.Point(0, 53);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(614, 268);
-            this.panel.TabIndex = 14;
+            this.panel.Size = new System.Drawing.Size(614, 267);
+            this.panel.TabIndex = 17;
             // 
             // btnSave
             // 
@@ -186,33 +186,33 @@
             this.btnADD.UseVisualStyleBackColor = false;
             this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
-            // dgvPaymentStatus
+            // dgvVerificationdetails
             // 
-            this.dgvPaymentStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaymentStatus.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPaymentStatus.Location = new System.Drawing.Point(287, 23);
-            this.dgvPaymentStatus.Name = "dgvPaymentStatus";
-            this.dgvPaymentStatus.RowHeadersWidth = 51;
-            this.dgvPaymentStatus.Size = new System.Drawing.Size(297, 136);
-            this.dgvPaymentStatus.TabIndex = 15;
+            this.dgvVerificationdetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerificationdetails.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvVerificationdetails.Location = new System.Drawing.Point(287, 23);
+            this.dgvVerificationdetails.Name = "dgvVerificationdetails";
+            this.dgvVerificationdetails.RowHeadersWidth = 51;
+            this.dgvVerificationdetails.Size = new System.Drawing.Size(297, 136);
+            this.dgvVerificationdetails.TabIndex = 15;
             // 
-            // tbStatusTypeId
+            // tbVerificationId
             // 
-            this.tbStatusTypeId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbStatusTypeId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStatusTypeId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbStatusTypeId.Location = new System.Drawing.Point(38, 57);
-            this.tbStatusTypeId.Name = "tbStatusTypeId";
-            this.tbStatusTypeId.Size = new System.Drawing.Size(136, 20);
-            this.tbStatusTypeId.TabIndex = 14;
-            this.tbStatusTypeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbVerificationId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbVerificationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbVerificationId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbVerificationId.Location = new System.Drawing.Point(38, 57);
+            this.tbVerificationId.Name = "tbVerificationId";
+            this.tbVerificationId.Size = new System.Drawing.Size(136, 20);
+            this.tbVerificationId.TabIndex = 14;
+            this.tbVerificationId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnClose
             // 
@@ -220,29 +220,28 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_25__1_;
-            this.btnClose.Location = new System.Drawing.Point(568, 3);
+            this.btnClose.Location = new System.Drawing.Point(572, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(42, 39);
-            this.btnClose.TabIndex = 16;
+            this.btnClose.Size = new System.Drawing.Size(42, 38);
+            this.btnClose.TabIndex = 19;
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // frmPaymentStatus
+            // frmVerificationType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(614, 322);
+            this.ClientSize = new System.Drawing.Size(614, 320);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPaymentStatus";
-            this.Text = "frmPaymentStatus";
-            this.Load += new System.EventHandler(this.frmPaymentStatus_Load);
+            this.Name = "frmVerificationType";
+            this.Text = "frmVerificationType";
+            this.Load += new System.EventHandler(this.frmVerificationType_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerificationdetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,7 +252,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TextBox tbStatusTypeName;
+        private System.Windows.Forms.TextBox tbVerificationName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
@@ -261,8 +260,8 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnADD;
-        private System.Windows.Forms.DataGridView dgvPaymentStatus;
-        private System.Windows.Forms.TextBox tbStatusTypeId;
+        private System.Windows.Forms.DataGridView dgvVerificationdetails;
+        private System.Windows.Forms.TextBox tbVerificationId;
         private System.Windows.Forms.Button btnClose;
     }
 }

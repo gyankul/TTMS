@@ -21,28 +21,24 @@ namespace TTMS.UI.Forms.Tours
 
         DataSet ds = new DataSet();
 
+
+
         public frmTourPackages()
         {
             InitializeComponent();
         }
+        private void frmTourPackages_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'packageDataSet.TourDestinations' table. You can move, or remove it, as needed.
+            this.tourDestinationsTableAdapter.Fill(this.packageDataSet.TourDestinations);
+            con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
 
+            SelectDataForpackage();
+            DestinationDataSave();
+        }
         #region Functions
 
-        private void SelectData()
-        {
-            cmd = new SqlCommand("SELECT * FROM TourPackages", con);
-
-            con.Open();
-
-            ds.Clear();
-            da = new SqlDataAdapter(cmd);
-
-            con.Close();
-
-            da.Fill(ds, "TourPackages");
-
-            dgvTourPackage.DataSource = ds.Tables["TourPackages"];
-        }
+        #region Functions for Package
 
         private bool isvalidate()
         {
@@ -72,37 +68,46 @@ namespace TTMS.UI.Forms.Tours
             return true;
         }
 
-        private byte[] getImage() //to save the image
+        private void SelectDataForpackage()
         {
-            MemoryStream stream = new MemoryStream();
-            ImgPackage.Image.Save(stream, ImgPackage.Image.RawFormat);
-            return stream.GetBuffer();
+            cmd = new SqlCommand("SELECT * FROM TourPackages", con);
+
+            con.Open();
+
+            ds.Clear();
+            da = new SqlDataAdapter(cmd);
+
+            con.Close();
+
+            da.Fill(ds, "TourPackages");
+
+            dgvTourPackage.DataSource = ds.Tables["TourPackages"];
         }
 
-        private void InsertData()
+        private void InsertDataForPackage()
         {
             if (isvalidate())
             {
                 try
                 {
 
-                    string query = @"INSERT INTO TourPackages (ItineraryId, DestinationId, DayNumber, Activities, StartDateTime, EndDateTime, ItineraryImg)VALUES (@ItineraryId, @DestinationId, @DayNumber, @Activities, @StartDateTime, @EndDateTime, @ItineraryImg)";
+                    string query = @"INSERT INTO TourPackages (PackageId, PackageName, Description, PackageImage, Seats, Price)VALUES (@PackageId, @PackageName, @Description, @PackageImage, @Seats, @Price)";
 
                     SqlCommand command = new SqlCommand(query, con);
 
-                    //command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
-                    //command.Parameters.AddWithValue("@DestinationId", tbDestination.Text);
-                    //command.Parameters.AddWithValue("@DayNumber", tbDayNumber.Text);
-                    //command.Parameters.AddWithValue("@Activities", tbActivity.Text);
-                    //command.Parameters.AddWithValue("@StartDateTime", dtpStart.Value);
-                    //command.Parameters.AddWithValue("@EndDateTime", dtpEnd.Value);
-                    command.Parameters.AddWithValue("@ItineraryImg", getImage());
+                    command.Parameters.AddWithValue("@PackageId", lblPackageId.Text);
+                    command.Parameters.AddWithValue("@PackageName", tbPackageName.Text);
+                    command.Parameters.AddWithValue("@Description", tbPackageDesc.Text);
+                    command.Parameters.AddWithValue("@PackageImage", getImage());
+                    command.Parameters.AddWithValue("@Seats", tbTotalSeats.Text);
+                    command.Parameters.AddWithValue("@Price", lblPrice.Text);
+                    command.Parameters.AddWithValue("@Price", tbPrice.Text);
 
                     con.Open();
                     command.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("New Itinerary Saved Successfully");
+                    MessageBox.Show("New Package Saved Successfully");
                 }
                 catch (Exception e)
                 {
@@ -114,28 +119,34 @@ namespace TTMS.UI.Forms.Tours
                 MessageBox.Show("Please Enter All the Fields......", "Registeration Failed!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private byte[] getImage() //to save the image
+        {
+            MemoryStream stream = new MemoryStream();
+            pbPackageImg.Image.Save(stream, pbPackageImg.Image.RawFormat);
+            return stream.GetBuffer();
+        }
 
-        private void UpdateData()
+        private void UpdateDataForPackage()
         {
             try
             {
-                string query = @"UPDATE TourItinerary SET DestinationId=@DestinationId, DayNumber=@DayNumber, Activities=@Activities, StartDateTime=@StartDateTime, EndDateTime=@EndDateTime, ItineraryImg=@ItineraryImg WHERE ItineraryId=@ItineraryId";
+                string query = @"UPDATE TourPackages SET PackageName=@PackageName, Description=@Description, PackageImage=@PackageImage, Seats=@Seats, Price=@Price WHERE PackageId=@PackageId";
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                //command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
-                //command.Parameters.AddWithValue("@DestinationId", tbDestination.Text);
-                //command.Parameters.AddWithValue("@DayNumber", tbDayNumber.Text);
-                //command.Parameters.AddWithValue("@Activities", tbActivity.Text);
-                //command.Parameters.AddWithValue("@StartDateTime", dtpStart.Text);
-                //command.Parameters.AddWithValue("@EndDateTime", panel.Text);
-                command.Parameters.AddWithValue("@ItineraryImg", getImage());
+                command.Parameters.AddWithValue("@PackageId", lblPackageId.Text);
+                command.Parameters.AddWithValue("@PackageName", tbPackageName.Text);
+                command.Parameters.AddWithValue("@Description", tbPackageDesc.Text);
+                command.Parameters.AddWithValue("@PackageImage", getImage());
+                command.Parameters.AddWithValue("@Seats", tbTotalSeats.Text);
+                command.Parameters.AddWithValue("@Price", lblPrice.Text);
+                command.Parameters.AddWithValue("@Price", tbPrice.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Itinerary updated Successfully");
+                MessageBox.Show("Package updated Successfully");
             }
             catch (Exception e)
             {
@@ -143,21 +154,21 @@ namespace TTMS.UI.Forms.Tours
             }
         }
 
-        private void DeleteData()
+        private void DeleteDataForPackage()
         {
             try
             {
-                string query = @"DELETE FROM TourItinerary WHERE ItineraryId = @ItineraryId";
+                string query = @"DELETE FROM TourPackages WHERE PackageId = @PackageId";
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                //command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
+                command.Parameters.AddWithValue("@PackageId", lblPackageId.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Itinerary Deleted Successfully");
+                MessageBox.Show("Package Deleted Successfully");
             }
             catch (Exception e)
             {
@@ -165,14 +176,55 @@ namespace TTMS.UI.Forms.Tours
             }
         }
 
-        private void dgvTourItinerary_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+
+        #endregion
+
+        #region Functions for Destination
+
+        private void DestinationDataSave()
         {
-            if (e.RowIndex >= 0)
+            foreach (DataGridViewRow row in dgvDestination.Rows)
             {
-                //DataGridViewRow row = dgvTourItinerary.Rows[e.RowIndex];
-                //lblItineraryId.Text = row.Cells[0].Value.ToString();
+                // Check if the row is not empty
+                if (!row.IsNewRow)
+                {
+                    // Extract data from DataGridView cells
+                    string DestNo = row.Cells["clmDestNo"].Value.ToString();
+                    string DestinationId = row.Cells["clmDestName"].Selected.ToString();
+
+                    SaveDestinationToDB(DestNo, DestinationId);
+                }
+            }
+
+            // Optionally, show a message indicating successful save
+            MessageBox.Show("Itinerary saved successfully!");
+        }
+
+        private void SaveDestinationToDB(string DestNo, string DestinationId)
+        {
+            string connectionString = "ttmsDBConnectionString";
+
+            string query = "INSERT INTO TourPackage (DestinationNo, DestinationId) VALUES (@DestinationNo, @DestinationId)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Add parameters to the command
+
+                    command.Parameters.AddWithValue("@DestinationId", DestNo);
+                    command.Parameters.AddWithValue("@DestinationId",DestinationId);
+
+                    // Execute the command
+                    command.ExecuteNonQuery();
+                }
             }
         }
+        #endregion
+
         #endregion
 
 
@@ -186,27 +238,67 @@ namespace TTMS.UI.Forms.Tours
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            lblPackageId.Text = "";
+            tbPackageName.Text = "";
+            tbPackageDesc.Text = "";
+            pbPackageImg.Image = null;
+            tbTotalSeats.Text = "";
+            lblPrice.Text = "";
+            tbPrice.Text = "";
 
+            AutoIncrement inc = new AutoIncrement();
+            int a;
+            inc.increment("SELECT max(PackageId) FROM TourPackages");
+            if (inc.dr.Read())
+            {
+                if (inc.dr[0] != System.DBNull.Value)
+                {
+                    a = Convert.ToInt32(inc.dr[0].ToString());
+                    lblPackageId.Text = (a + 1).ToString();
+                }
+                else
+                {
+                    lblPackageId.Text = "1";
+                }
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            InsertDataForPackage();
+            SelectDataForpackage();
+            DestinationDataSave();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            UpdateDataForPackage();
+            SelectDataForpackage();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            DeleteDataForPackage();
+            SelectDataForpackage();
         }
 
         private void btnAddImg_Click(object sender, EventArgs e)
         {
-
+            string imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+                    pbPackageImg.ImageLocation = imageLocation;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -215,13 +307,20 @@ namespace TTMS.UI.Forms.Tours
         }
         #endregion
 
-        private void frmTourPackages_Load(object sender, EventArgs e)
+        private void btnAddItinerary_Click(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
-
-            SelectData();
+            dgvDestination.Rows.Add();
         }
 
+        private void btnDeleteItinerary_Click(object sender, EventArgs e)
+        {
+            if (dgvDestination.Rows.Count > 0)
+            {
+                int lastIndex = dgvDestination.Rows.Count - 1;
+                dgvDestination.Rows.RemoveAt(lastIndex);
+            }
+        }
 
+       
     }
 }

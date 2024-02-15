@@ -9,33 +9,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTMS.UI.Forms.Payments
+namespace TTMS.UI.Forms.Credentials
 {
-    public partial class frmPaymentStatus : Form
+    public partial class frmVerificationType : Form
     {
         SqlConnection con = new SqlConnection();
         SqlDataAdapter da;
         SqlCommand cmd;
-
         DataSet ds = new DataSet();
 
-        public frmPaymentStatus()
+        public frmVerificationType()
         {
             InitializeComponent();
         }
 
-        private void frmPaymentStatus_Load(object sender, EventArgs e)
+        private void frmVerificationType_Load(object sender, EventArgs e)
         {
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
 
             SelectData();
         }
 
-        #region Functions
-
         private void SelectData()
         {
-            cmd = new SqlCommand("SELECT * FROM PaymentStatus", con);
+            cmd = new SqlCommand("SELECT * FROM VerificationDetails", con);
 
             con.Open();
 
@@ -44,27 +41,27 @@ namespace TTMS.UI.Forms.Payments
 
             con.Close();
 
-            da.Fill(ds, "PaymentStatus");
+            da.Fill(ds, "VerificationDetails");
 
-            dgvPaymentStatus.DataSource = ds.Tables["PaymentStatus"];
+            dgvVerificationdetails.DataSource = ds.Tables["VerificationDetails"];
         }
         private void InsertData()
         {
             try
             {
-                string query = @"INSERT INTO PaymentStatus (PaymentStatusId, StatusName)VALUES (@PaymentStatusId, @StatusName)";
+                string query = @"INSERT INTO VerificationDetails (VerificationId, VerificationName)VALUES (@VerificationId, @VerificationName)";
 
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@PaymentStatusId", tbStatusTypeId.Text);
-                command.Parameters.AddWithValue("@StatusName", tbStatusTypeName.Text);
+                command.Parameters.AddWithValue("@VerificationId", tbVerificationId.Text);
+                command.Parameters.AddWithValue("@VerificationName", tbVerificationName.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("New Payment Status Type Detail is Saved Successfully");
+                MessageBox.Show("New Verification Type Detail is Saved Successfully");
             }
             catch (Exception e)
             {
@@ -76,17 +73,17 @@ namespace TTMS.UI.Forms.Payments
         {
             try
             {
-                string query = @"DELETE FROM PaymentStatus WHERE PaymentStatusId = @PaymentStatusId";
+                string query = @"DELETE FROM VerificationDetails WHERE VerificationId = @VerificationId";
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@PaymentStatusId", tbStatusTypeId.Text);
+                command.Parameters.AddWithValue("@VerificationId", tbVerificationId.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Payment Status Type is Deleted Successfully");
+                MessageBox.Show("Verification Type is Deleted Successfully");
             }
             catch (Exception e)
             {
@@ -94,59 +91,43 @@ namespace TTMS.UI.Forms.Payments
             }
         }
 
-        #endregion
-
-        #region Buttons
         private void btnADD_Click(object sender, EventArgs e)
         {
-            tbStatusTypeId.Focus();
-            tbStatusTypeName.Text = "";
+            tbVerificationId.Focus();
+            tbVerificationName.Text = "";
 
             AutoIncrement inc = new AutoIncrement();
             int a;
-            inc.increment("SELECT max(PaymentStatusId) FROM PaymentStatus");
+            inc.increment("SELECT max(VerificationId) FROM VerificationDetails");
             if (inc.dr.Read())
             {
                 if (inc.dr[0] != System.DBNull.Value)
                 {
                     a = Convert.ToInt32(inc.dr[0].ToString());
-                    tbStatusTypeId.Text = (a + 1).ToString();
+                    tbVerificationId.Text = (a + 1).ToString();
                 }
                 else
                 {
-                    tbStatusTypeId.Text = "1";
+                    tbVerificationName.Text = "1";
                 }
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            SelectData();
             DeleteData();
-            tbStatusTypeId.Text = "";
-            tbStatusTypeName.Text = "";
+            SelectData();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             InsertData();
             SelectData();
-            tbStatusTypeId.Text = "";
-            tbStatusTypeName.Text = "";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            tbStatusTypeId.Text = "";
-            tbStatusTypeName.Text = "";
+
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        #endregion
-
     }
 }

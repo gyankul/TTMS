@@ -175,4 +175,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Experience" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="2dc54e76-ab2f-4c07-b414-e0817d508b0d" ChangeDateTime="02/14/2024 11:22:02">
+    <Property Name="ElementName" Value="[dbo].[DriverDetails].[LicenceNo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DriverDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VerificationTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2be3025b-9215-46cc-be99-c122513cf020" ChangeDateTime="02/14/2024 14:44:58">
+    <Property Name="ElementName" Value="[dbo].[DriverDetails].[VerificationTypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DriverDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VerificationId" />
+  </Operation>
 </Operations>

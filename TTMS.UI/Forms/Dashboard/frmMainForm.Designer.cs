@@ -58,7 +58,7 @@
             this.panelMaster = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnMaster = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pbHamburger = new System.Windows.Forms.PictureBox();
@@ -68,10 +68,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.SidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -83,7 +79,7 @@
             this.btnReportsClick = new System.Windows.Forms.Timer(this.components);
             this.panelMainformCenterRegion = new System.Windows.Forms.Panel();
             this.panelUserProfile = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.btnToolClick = new System.Windows.Forms.Timer(this.components);
             this.UserProfileClick = new System.Windows.Forms.Timer(this.components);
@@ -98,8 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbHamburger)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).BeginInit();
@@ -133,7 +127,7 @@
             this.panelTools.Controls.Add(this.button16);
             this.panelTools.Controls.Add(this.btnTools);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTools.Location = new System.Drawing.Point(0, 489);
+            this.panelTools.Location = new System.Drawing.Point(0, 389);
             this.panelTools.MaximumSize = new System.Drawing.Size(0, 200);
             this.panelTools.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelTools.Name = "panelTools";
@@ -230,7 +224,7 @@
             this.panelReports.Controls.Add(this.button13);
             this.panelReports.Controls.Add(this.btnReports);
             this.panelReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReports.Location = new System.Drawing.Point(0, 439);
+            this.panelReports.Location = new System.Drawing.Point(0, 339);
             this.panelReports.MaximumSize = new System.Drawing.Size(0, 200);
             this.panelReports.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelReports.Name = "panelReports";
@@ -329,7 +323,7 @@
             this.panelBookings.MaximumSize = new System.Drawing.Size(0, 150);
             this.panelBookings.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelBookings.Name = "panelBookings";
-            this.panelBookings.Size = new System.Drawing.Size(285, 150);
+            this.panelBookings.Size = new System.Drawing.Size(285, 50);
             this.panelBookings.TabIndex = 4;
             // 
             // btnTravelBkg
@@ -592,7 +586,7 @@
             this.panelMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
             this.panelMaster.Controls.Add(this.button3);
             this.panelMaster.Controls.Add(this.button2);
-            this.panelMaster.Controls.Add(this.button1);
+            this.panelMaster.Controls.Add(this.btnCustomer);
             this.panelMaster.Controls.Add(this.btnMaster);
             this.panelMaster.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMaster.Location = new System.Drawing.Point(0, 139);
@@ -642,25 +636,26 @@
             this.button2.Text = "   MASTER";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnCustomer
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 50);
-            this.button1.MaximumSize = new System.Drawing.Size(285, 50);
-            this.button1.MinimumSize = new System.Drawing.Size(285, 50);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(285, 50);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "   MASTER";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 50);
+            this.btnCustomer.MaximumSize = new System.Drawing.Size(285, 50);
+            this.btnCustomer.MinimumSize = new System.Drawing.Size(285, 50);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(285, 50);
+            this.btnCustomer.TabIndex = 2;
+            this.btnCustomer.Text = "      CUSTOMER";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnMaster
             // 
@@ -761,70 +756,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(285, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1056, 41);
             this.panel2.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnMinimize);
-            this.panel6.Controls.Add(this.btnMaximize);
-            this.panel6.Controls.Add(this.btnClose);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(933, 0);
-            this.panel6.MaximumSize = new System.Drawing.Size(123, 41);
-            this.panel6.MinimumSize = new System.Drawing.Size(123, 41);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(123, 41);
-            this.panel6.TabIndex = 1;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Image = global::TTMS.UI.Properties.Resources.icons8_minimize_25;
-            this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimize.Location = new System.Drawing.Point(-4, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(43, 41);
-            this.btnMinimize.TabIndex = 0;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Image = global::TTMS.UI.Properties.Resources.icons8_toggle_full_screen_25;
-            this.btnMaximize.Location = new System.Drawing.Point(39, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(43, 41);
-            this.btnMaximize.TabIndex = 0;
-            this.btnMaximize.UseVisualStyleBackColor = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_25;
-            this.btnClose.Location = new System.Drawing.Point(82, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(41, 41);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // SidebarTransition
             // 
@@ -889,7 +826,7 @@
             // 
             // panelMainformCenterRegion
             // 
-            this.panelMainformCenterRegion.BackColor = System.Drawing.Color.White;
+            this.panelMainformCenterRegion.BackColor = System.Drawing.Color.Gainsboro;
             this.panelMainformCenterRegion.Controls.Add(this.panelUserProfile);
             this.panelMainformCenterRegion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainformCenterRegion.Location = new System.Drawing.Point(285, 82);
@@ -899,8 +836,9 @@
             // 
             // panelUserProfile
             // 
+            this.panelUserProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelUserProfile.BackColor = System.Drawing.Color.LightBlue;
-            this.panelUserProfile.Controls.Add(this.button4);
+            this.panelUserProfile.Controls.Add(this.btnLogout);
             this.panelUserProfile.Controls.Add(this.lblUserName);
             this.panelUserProfile.Location = new System.Drawing.Point(876, 0);
             this.panelUserProfile.MaximumSize = new System.Drawing.Size(180, 200);
@@ -909,19 +847,20 @@
             this.panelUserProfile.Size = new System.Drawing.Size(180, 200);
             this.panelUserProfile.TabIndex = 0;
             // 
-            // button4
+            // btnLogout
             // 
-            this.button4.BackColor = System.Drawing.Color.Snow;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::TTMS.UI.Properties.Resources.icons8_logout_30;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(3, 154);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 43);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "LOGOUT";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnLogout.BackColor = System.Drawing.Color.Snow;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Image = global::TTMS.UI.Properties.Resources.icons8_logout_30;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.Location = new System.Drawing.Point(3, 154);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(174, 43);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblUserName
             // 
@@ -952,14 +891,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelSidebar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.frmMainForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
             this.panelSidebar.ResumeLayout(false);
             this.panelTools.ResumeLayout(false);
             this.panelReports.ResumeLayout(false);
@@ -973,8 +908,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).EndInit();
@@ -993,9 +926,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelTTMS;
-        private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Button btnMaximize;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnMaster;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBookings;
@@ -1015,7 +945,7 @@
         private System.Windows.Forms.Panel panelMaster;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnTourPackage;
@@ -1037,12 +967,11 @@
         private System.Windows.Forms.Timer btnReportsClick;
         private System.Windows.Forms.Panel panelMainformCenterRegion;
         private System.Windows.Forms.Timer btnToolClick;
-        private System.Windows.Forms.Panel panel6;
         private CustomControls.CircularPicturebox cpbUserImg;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelUserProfile;
         private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Timer UserProfileClick;
     }
 }

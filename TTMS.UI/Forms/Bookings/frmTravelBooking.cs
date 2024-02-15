@@ -28,9 +28,10 @@ namespace TTMS.UI
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True";
         }
 
-        private void cbTypeofvehicle_SelectedValueChanged(object sender, EventArgs e)
+
+        private void cbTravels_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string SelectedItem = cbTypeofvehicle.SelectedItem.ToString();
+            string SelectedItem = cbTravels.SelectedItem.ToString();
             if (SelectedItem == "Sitting")
             {
                 layoutSittingbus sit = new layoutSittingbus();

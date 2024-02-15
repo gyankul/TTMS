@@ -223,7 +223,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtUsername.Location = new System.Drawing.Point(181, 149);
+            this.txtUsername.Location = new System.Drawing.Point(181, 147);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(260, 23);
             this.txtUsername.TabIndex = 1;
@@ -233,10 +233,11 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_25__1_;
-            this.btnClose.Location = new System.Drawing.Point(417, 18);
+            this.btnClose.Location = new System.Drawing.Point(428, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
             this.btnClose.TabIndex = 1;
@@ -248,7 +249,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtPassword.Location = new System.Drawing.Point(182, 206);
+            this.txtPassword.Location = new System.Drawing.Point(182, 204);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(260, 23);
@@ -259,6 +260,7 @@
             // btnSignup
             // 
             this.btnSignup.BackColor = System.Drawing.Color.White;
+            this.btnSignup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignup.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnSignup.Location = new System.Drawing.Point(36, 351);
@@ -272,6 +274,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -288,6 +291,7 @@
             // btnForgotpassword
             // 
             this.btnForgotpassword.BackColor = System.Drawing.Color.White;
+            this.btnForgotpassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnForgotpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgotpassword.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnForgotpassword.Location = new System.Drawing.Point(245, 351);

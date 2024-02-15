@@ -8,43 +8,74 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTMS.UI;
+using TTMS.UI.Forms;
 using TTMS.UI.Forms.Tours;
 using TTMS.UI.Tours;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TTMS.UI
 {
     public partial class frmMainForm : Form
     {
+        public string username;
         private string loggedInUsername;
         private byte[] loggedInUserImage;
 
         public frmMainForm(string username, byte[] userImage) 
         {  
-
-            
             loggedInUsername = username;
             loggedInUserImage = userImage;
             DisplayUserData();
-
-            this.MouseDown += new MouseEventHandler(MainForm_MouseDown);
-            this.MouseUp += new MouseEventHandler(MainForm_MouseUp);
-            this.MouseMove += new MouseEventHandler(MainForm_MouseMove);
-        }
-
-        public frmMainForm()
-        {
             InitializeComponent();
         }
+
+
 
         private void frmMainForm_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False");
+
+            string staffType = GetUserStaffType(username);
+
+            if (staffType != "admin")
+            {
+                // Disable or hide the button that is not allowed for non-admin users
+                btnCustomer.Enabled = false; // or yourButton.Visible = false;
+            }
         }
 
+        #region Function for Button Click Validation
+        private string GetUserStaffType(string username)
+        {
+            string staffType = "";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False"))
+                {
+                    connection.Open();
+                    string query = "SELECT st.StaffTypeName " +
+                                   "FROM SignupDetails sd " +
+                                   "INNER JOIN StaffTypeName st ON sd.StaffTypeId = st.StaffTypeId " +
+                                   "WHERE sd.Username = @Username";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Username", username);
+                    staffType = (string)command.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving user details: " + ex.Message);
+            }
+            return staffType;
+        }
+
+
+        #endregion
 
         #region Function for Displaying Name&Image after login
         private void DisplayUserData()
@@ -75,87 +106,6 @@ namespace TTMS.UI
                     Console.WriteLine("Error converting byte array to Image: " + ex.Message);
                     return null;
                 }
-            }
-        }
-        #endregion
-
-        #region something idk
-        private bool isDragging = false;
-        private int xOffset;
-        private int yOffset;
-
-        private const int WM_NCLBUTTONDOWN = 0xA1;
-        private const int HT_CAPTION = 0x2;
-
-        [DllImportAttribute("user32.dll")]
-        private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int Param);
-
-        [DllImportAttribute("user32.dll")]
-        private static extern bool ReleaseCapture();
-        #endregion
-
-        #region min,max,close buttons
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState != FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        #endregion
-
-        #region something idk
-
-        private void MainForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            if(e.Button == MouseButtons.Left)
-            {
-                isDragging = true;
-                xOffset = e.X;
-                yOffset = e.Y;
-            }
-        }
-
-        private void MainForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            if(e.Button == MouseButtons.Left)
-            {
-                isDragging = false;
-            }
-        }
-
-        private void MainForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-                this.Left = Cursor.Position.X - xOffset;
-                this.Top = Cursor.Position.Y - yOffset;
-            }
-        }
-
-        protected override void WndProc(ref Message m)
-        {
-            base.WndProc(ref m);
-
-            if(m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HT_CAPTION)
-            {
-                ReleaseCapture();
-                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
         #endregion
@@ -436,13 +386,14 @@ namespace TTMS.UI
         }
 
 
-        
+
 
 
 
 
         #endregion
 
+        #region Buttons for Sidebar
         private void btnTourPackage_Click(object sender, EventArgs e)
         {
             frmTourPackages package = new frmTourPackages();
@@ -456,6 +407,29 @@ namespace TTMS.UI
         {
             frmTourBooking tourbkg = new frmTourBooking();
             tourbkg.TopLevel = false;
+        }
+
+
+        #endregion
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmLogin().Show();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            // Check if the user is authorized to perform the action
+            string staffType = GetUserStaffType(username);
+            if (staffType != "Admin")
+            {
+                MessageBox.Show("You are not authorized to perform this action.");
+                return;
+            }
+
+            // Proceed with the action if the user is authorized
+            // Add your button click logic here
         }
     }
 

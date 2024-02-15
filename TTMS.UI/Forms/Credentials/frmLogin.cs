@@ -77,7 +77,7 @@ namespace TTMS.UI
                 string username = RetrieveUsernameFromDatabase();
                 byte[] userImage = RetrieveUserImageFromDatabase();
 
-                frmMainForm dashboardForm = new frmMainForm( username, userImage);
+                frmMainForm dashboardForm = new frmMainForm(username, userImage);
 
                 sqlStr = "Select * from SignupDetails where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
 
@@ -115,12 +115,12 @@ namespace TTMS.UI
                 connection.Open();
 
                 // Adjust the query based on your table structure and login criteria
-                string query = "SELECT username FROM SignupDetails WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT Username FROM SignupDetails WHERE Username = @Username";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username",txtUsername.Text);
-                    command.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    //command.Parameters.AddWithValue("@Password", txtPassword.Text);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -144,12 +144,12 @@ namespace TTMS.UI
                 connection.Open();
 
                 // Adjust the query based on your table structure and login criteria
-                string query = "SELECT UserImage FROM SignupDetails WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT UserImage FROM SignupDetails WHERE Username = @Username";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", txtUsername.Text);
-                    command.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    //command.Parameters.AddWithValue("@Password", txtPassword.Text);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {

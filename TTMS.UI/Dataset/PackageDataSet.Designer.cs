@@ -20,17 +20,17 @@ namespace TTMS.UI.Dataset {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ttmsDBDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PackageDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ttmsDBDataSet1 : global::System.Data.DataSet {
+    public partial class PackageDataSet : global::System.Data.DataSet {
         
-        private CountryDetailsDataTable tableCountryDetails;
+        private TourDestinationsDataTable tableTourDestinations;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ttmsDBDataSet1() {
+        public PackageDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TTMS.UI.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected ttmsDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PackageDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TTMS.UI.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["CountryDetails"] != null)) {
-                    base.Tables.Add(new CountryDetailsDataTable(ds.Tables["CountryDetails"]));
+                if ((ds.Tables["TourDestinations"] != null)) {
+                    base.Tables.Add(new TourDestinationsDataTable(ds.Tables["TourDestinations"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TTMS.UI.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CountryDetailsDataTable CountryDetails {
+        public TourDestinationsDataTable TourDestinations {
             get {
-                return this.tableCountryDetails;
+                return this.tableTourDestinations;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TTMS.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ttmsDBDataSet1 cln = ((ttmsDBDataSet1)(base.Clone()));
+            PackageDataSet cln = ((PackageDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TTMS.UI.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["CountryDetails"] != null)) {
-                    base.Tables.Add(new CountryDetailsDataTable(ds.Tables["CountryDetails"]));
+                if ((ds.Tables["TourDestinations"] != null)) {
+                    base.Tables.Add(new TourDestinationsDataTable(ds.Tables["TourDestinations"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TTMS.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCountryDetails = ((CountryDetailsDataTable)(base.Tables["CountryDetails"]));
+            this.tableTourDestinations = ((TourDestinationsDataTable)(base.Tables["TourDestinations"]));
             if ((initTable == true)) {
-                if ((this.tableCountryDetails != null)) {
-                    this.tableCountryDetails.InitVars();
+                if ((this.tableTourDestinations != null)) {
+                    this.tableTourDestinations.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TTMS.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ttmsDBDataSet1";
+            this.DataSetName = "PackageDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ttmsDBDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/PackageDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCountryDetails = new CountryDetailsDataTable();
-            base.Tables.Add(this.tableCountryDetails);
+            this.tableTourDestinations = new TourDestinationsDataTable();
+            base.Tables.Add(this.tableTourDestinations);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeCountryDetails() {
+        private bool ShouldSerializeTourDestinations() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TTMS.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ttmsDBDataSet1 ds = new ttmsDBDataSet1();
+            PackageDataSet ds = new PackageDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,21 +270,29 @@ namespace TTMS.UI.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void CountryDetailsRowChangeEventHandler(object sender, CountryDetailsRowChangeEvent e);
+        public delegate void TourDestinationsRowChangeEventHandler(object sender, TourDestinationsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CountryDetailsDataTable : global::System.Data.TypedTableBase<CountryDetailsRow> {
+        public partial class TourDestinationsDataTable : global::System.Data.TypedTableBase<TourDestinationsRow> {
             
-            private global::System.Data.DataColumn columnCountryName;
+            private global::System.Data.DataColumn columnDestinationId;
+            
+            private global::System.Data.DataColumn columnDestinationName;
+            
+            private global::System.Data.DataColumn columnDescription;
+            
+            private global::System.Data.DataColumn columnDestinationImg;
+            
+            private global::System.Data.DataColumn columnPackageId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsDataTable() {
-                this.TableName = "CountryDetails";
+            public TourDestinationsDataTable() {
+                this.TableName = "TourDestinations";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +300,7 @@ namespace TTMS.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CountryDetailsDataTable(global::System.Data.DataTable table) {
+            internal TourDestinationsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +317,48 @@ namespace TTMS.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected CountryDetailsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TourDestinationsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CountryNameColumn {
+            public global::System.Data.DataColumn DestinationIdColumn {
                 get {
-                    return this.columnCountryName;
+                    return this.columnDestinationId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DestinationNameColumn {
+                get {
+                    return this.columnDestinationName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DescriptionColumn {
+                get {
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DestinationImgColumn {
+                get {
+                    return this.columnDestinationImg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PackageIdColumn {
+                get {
+                    return this.columnPackageId;
                 }
             }
             
@@ -333,45 +373,56 @@ namespace TTMS.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow this[int index] {
+            public TourDestinationsRow this[int index] {
                 get {
-                    return ((CountryDetailsRow)(this.Rows[index]));
+                    return ((TourDestinationsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowChanging;
+            public event TourDestinationsRowChangeEventHandler TourDestinationsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowChanged;
+            public event TourDestinationsRowChangeEventHandler TourDestinationsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowDeleting;
+            public event TourDestinationsRowChangeEventHandler TourDestinationsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CountryDetailsRowChangeEventHandler CountryDetailsRowDeleted;
+            public event TourDestinationsRowChangeEventHandler TourDestinationsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddCountryDetailsRow(CountryDetailsRow row) {
+            public void AddTourDestinationsRow(TourDestinationsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow AddCountryDetailsRow(string CountryName) {
-                CountryDetailsRow rowCountryDetailsRow = ((CountryDetailsRow)(this.NewRow()));
+            public TourDestinationsRow AddTourDestinationsRow(int DestinationId, string DestinationName, string Description, byte[] DestinationImg, int PackageId) {
+                TourDestinationsRow rowTourDestinationsRow = ((TourDestinationsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        CountryName};
-                rowCountryDetailsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCountryDetailsRow);
-                return rowCountryDetailsRow;
+                        DestinationId,
+                        DestinationName,
+                        Description,
+                        DestinationImg,
+                        PackageId};
+                rowTourDestinationsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTourDestinationsRow);
+                return rowTourDestinationsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TourDestinationsRow FindByDestinationId(int DestinationId) {
+                return ((TourDestinationsRow)(this.Rows.Find(new object[] {
+                            DestinationId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CountryDetailsDataTable cln = ((CountryDetailsDataTable)(base.Clone()));
+                TourDestinationsDataTable cln = ((TourDestinationsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,48 +430,67 @@ namespace TTMS.UI.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CountryDetailsDataTable();
+                return new TourDestinationsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnCountryName = base.Columns["CountryName"];
+                this.columnDestinationId = base.Columns["DestinationId"];
+                this.columnDestinationName = base.Columns["DestinationName"];
+                this.columnDescription = base.Columns["Description"];
+                this.columnDestinationImg = base.Columns["DestinationImg"];
+                this.columnPackageId = base.Columns["PackageId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnCountryName = new global::System.Data.DataColumn("CountryName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCountryName);
-                this.columnCountryName.AllowDBNull = false;
-                this.columnCountryName.MaxLength = 50;
+                this.columnDestinationId = new global::System.Data.DataColumn("DestinationId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDestinationId);
+                this.columnDestinationName = new global::System.Data.DataColumn("DestinationName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDestinationName);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
+                this.columnDestinationImg = new global::System.Data.DataColumn("DestinationImg", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDestinationImg);
+                this.columnPackageId = new global::System.Data.DataColumn("PackageId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPackageId);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnDestinationId}, true));
+                this.columnDestinationId.AllowDBNull = false;
+                this.columnDestinationId.Unique = true;
+                this.columnDestinationName.AllowDBNull = false;
+                this.columnDestinationName.MaxLength = 30;
+                this.columnDescription.AllowDBNull = false;
+                this.columnDescription.MaxLength = 2147483647;
+                this.columnPackageId.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow NewCountryDetailsRow() {
-                return ((CountryDetailsRow)(this.NewRow()));
+            public TourDestinationsRow NewTourDestinationsRow() {
+                return ((TourDestinationsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CountryDetailsRow(builder);
+                return new TourDestinationsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CountryDetailsRow);
+                return typeof(TourDestinationsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CountryDetailsRowChanged != null)) {
-                    this.CountryDetailsRowChanged(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.TourDestinationsRowChanged != null)) {
+                    this.TourDestinationsRowChanged(this, new TourDestinationsRowChangeEvent(((TourDestinationsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -428,8 +498,8 @@ namespace TTMS.UI.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CountryDetailsRowChanging != null)) {
-                    this.CountryDetailsRowChanging(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.TourDestinationsRowChanging != null)) {
+                    this.TourDestinationsRowChanging(this, new TourDestinationsRowChangeEvent(((TourDestinationsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -437,8 +507,8 @@ namespace TTMS.UI.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CountryDetailsRowDeleted != null)) {
-                    this.CountryDetailsRowDeleted(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.TourDestinationsRowDeleted != null)) {
+                    this.TourDestinationsRowDeleted(this, new TourDestinationsRowChangeEvent(((TourDestinationsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -446,14 +516,14 @@ namespace TTMS.UI.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CountryDetailsRowDeleting != null)) {
-                    this.CountryDetailsRowDeleting(this, new CountryDetailsRowChangeEvent(((CountryDetailsRow)(e.Row)), e.Action));
+                if ((this.TourDestinationsRowDeleting != null)) {
+                    this.TourDestinationsRowDeleting(this, new TourDestinationsRowChangeEvent(((TourDestinationsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveCountryDetailsRow(CountryDetailsRow row) {
+            public void RemoveTourDestinationsRow(TourDestinationsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -462,7 +532,7 @@ namespace TTMS.UI.Dataset {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ttmsDBDataSet1 ds = new ttmsDBDataSet1();
+                PackageDataSet ds = new PackageDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -480,7 +550,7 @@ namespace TTMS.UI.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CountryDetailsDataTable";
+                attribute2.FixedValue = "TourDestinationsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -524,26 +594,87 @@ namespace TTMS.UI.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CountryDetailsRow : global::System.Data.DataRow {
+        public partial class TourDestinationsRow : global::System.Data.DataRow {
             
-            private CountryDetailsDataTable tableCountryDetails;
+            private TourDestinationsDataTable tableTourDestinations;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CountryDetailsRow(global::System.Data.DataRowBuilder rb) : 
+            internal TourDestinationsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCountryDetails = ((CountryDetailsDataTable)(this.Table));
+                this.tableTourDestinations = ((TourDestinationsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CountryName {
+            public int DestinationId {
                 get {
-                    return ((string)(this[this.tableCountryDetails.CountryNameColumn]));
+                    return ((int)(this[this.tableTourDestinations.DestinationIdColumn]));
                 }
                 set {
-                    this[this.tableCountryDetails.CountryNameColumn] = value;
+                    this[this.tableTourDestinations.DestinationIdColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DestinationName {
+                get {
+                    return ((string)(this[this.tableTourDestinations.DestinationNameColumn]));
+                }
+                set {
+                    this[this.tableTourDestinations.DestinationNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Description {
+                get {
+                    return ((string)(this[this.tableTourDestinations.DescriptionColumn]));
+                }
+                set {
+                    this[this.tableTourDestinations.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public byte[] DestinationImg {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableTourDestinations.DestinationImgColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DestinationImg\' in table \'TourDestinations\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTourDestinations.DestinationImgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int PackageId {
+                get {
+                    return ((int)(this[this.tableTourDestinations.PackageIdColumn]));
+                }
+                set {
+                    this[this.tableTourDestinations.PackageIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDestinationImgNull() {
+                return this.IsNull(this.tableTourDestinations.DestinationImgColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDestinationImgNull() {
+                this[this.tableTourDestinations.DestinationImgColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -551,22 +682,22 @@ namespace TTMS.UI.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class CountryDetailsRowChangeEvent : global::System.EventArgs {
+        public class TourDestinationsRowChangeEvent : global::System.EventArgs {
             
-            private CountryDetailsRow eventRow;
+            private TourDestinationsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRowChangeEvent(CountryDetailsRow row, global::System.Data.DataRowAction action) {
+            public TourDestinationsRowChangeEvent(TourDestinationsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CountryDetailsRow Row {
+            public TourDestinationsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -582,7 +713,7 @@ namespace TTMS.UI.Dataset {
         }
     }
 }
-namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
+namespace TTMS.UI.Dataset.PackageDataSetTableAdapters {
     
     
     /// <summary>
@@ -594,7 +725,7 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CountryDetailsTableAdapter : global::System.ComponentModel.Component {
+    public partial class TourDestinationsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -608,7 +739,7 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public CountryDetailsTableAdapter() {
+        public TourDestinationsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -705,9 +836,45 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "CountryDetails";
-            tableMapping.ColumnMappings.Add("CountryName", "CountryName");
+            tableMapping.DataSetTable = "TourDestinations";
+            tableMapping.ColumnMappings.Add("DestinationId", "DestinationId");
+            tableMapping.ColumnMappings.Add("DestinationName", "DestinationName");
+            tableMapping.ColumnMappings.Add("Description", "Description");
+            tableMapping.ColumnMappings.Add("DestinationImg", "DestinationImg");
+            tableMapping.ColumnMappings.Add("PackageId", "PackageId");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TourDestinations] WHERE (([DestinationId] = @Original_Destinat" +
+                "ionId) AND ([DestinationName] = @Original_DestinationName) AND ([PackageId] = @O" +
+                "riginal_PackageId))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DestinationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DestinationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PackageId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PackageId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TourDestinations] ([DestinationId], [DestinationName], [Description], [DestinationImg], [PackageId]) VALUES (@DestinationId, @DestinationName, @Description, @DestinationImg, @PackageId);
+SELECT DestinationId, DestinationName, Description, DestinationImg, PackageId FROM TourDestinations WHERE (DestinationId = @DestinationId)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DestinationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DestinationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DestinationImg", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationImg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PackageId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PackageId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TourDestinations] SET [DestinationId] = @DestinationId, [DestinationName] = @DestinationName, [Description] = @Description, [DestinationImg] = @DestinationImg, [PackageId] = @PackageId WHERE (([DestinationId] = @Original_DestinationId) AND ([DestinationName] = @Original_DestinationName) AND ([PackageId] = @Original_PackageId));
+SELECT DestinationId, DestinationName, Description, DestinationImg, PackageId FROM TourDestinations WHERE (DestinationId = @DestinationId)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DestinationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DestinationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DestinationImg", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationImg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PackageId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PackageId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DestinationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DestinationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DestinationName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PackageId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PackageId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -723,7 +890,8 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CountryName FROM dbo.CountryDetails";
+            this._commandCollection[0].CommandText = "SELECT DestinationId, DestinationName, Description, DestinationImg, PackageId FRO" +
+                "M dbo.TourDestinations";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -731,7 +899,7 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ttmsDBDataSet1.CountryDetailsDataTable dataTable) {
+        public virtual int Fill(PackageDataSet.TourDestinationsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -744,11 +912,167 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ttmsDBDataSet1.CountryDetailsDataTable GetData() {
+        public virtual PackageDataSet.TourDestinationsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ttmsDBDataSet1.CountryDetailsDataTable dataTable = new ttmsDBDataSet1.CountryDetailsDataTable();
+            PackageDataSet.TourDestinationsDataTable dataTable = new PackageDataSet.TourDestinationsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(PackageDataSet.TourDestinationsDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(PackageDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "TourDestinations");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_DestinationId, string Original_DestinationName, int Original_PackageId) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_DestinationId));
+            if ((Original_DestinationName == null)) {
+                throw new global::System.ArgumentNullException("Original_DestinationName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_DestinationName));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PackageId));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int DestinationId, string DestinationName, string Description, byte[] DestinationImg, int PackageId) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(DestinationId));
+            if ((DestinationName == null)) {
+                throw new global::System.ArgumentNullException("DestinationName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DestinationName));
+            }
+            if ((Description == null)) {
+                throw new global::System.ArgumentNullException("Description");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Description));
+            }
+            if ((DestinationImg == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((byte[])(DestinationImg));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(PackageId));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int DestinationId, string DestinationName, string Description, byte[] DestinationImg, int PackageId, int Original_DestinationId, string Original_DestinationName, int Original_PackageId) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(DestinationId));
+            if ((DestinationName == null)) {
+                throw new global::System.ArgumentNullException("DestinationName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DestinationName));
+            }
+            if ((Description == null)) {
+                throw new global::System.ArgumentNullException("Description");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Description));
+            }
+            if ((DestinationImg == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((byte[])(DestinationImg));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(PackageId));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_DestinationId));
+            if ((Original_DestinationName == null)) {
+                throw new global::System.ArgumentNullException("Original_DestinationName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DestinationName));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_PackageId));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string DestinationName, string Description, byte[] DestinationImg, int PackageId, int Original_DestinationId, string Original_DestinationName, int Original_PackageId) {
+            return this.Update(Original_DestinationId, DestinationName, Description, DestinationImg, PackageId, Original_DestinationId, Original_DestinationName, Original_PackageId);
         }
     }
     
@@ -764,6 +1088,8 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
+        private TourDestinationsTableAdapter _tourDestinationsTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -776,6 +1102,20 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public TourDestinationsTableAdapter TourDestinationsTableAdapter {
+            get {
+                return this._tourDestinationsTableAdapter;
+            }
+            set {
+                this._tourDestinationsTableAdapter = value;
             }
         }
         
@@ -798,6 +1138,10 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._tourDestinationsTableAdapter != null) 
+                            && (this._tourDestinationsTableAdapter.Connection != null))) {
+                    return this._tourDestinationsTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -811,6 +1155,9 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._tourDestinationsTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -820,8 +1167,17 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(ttmsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PackageDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._tourDestinationsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TourDestinations.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tourDestinationsTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -830,8 +1186,16 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(ttmsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PackageDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._tourDestinationsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TourDestinations.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tourDestinationsTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -840,8 +1204,16 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(ttmsDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PackageDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._tourDestinationsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TourDestinations.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tourDestinationsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -874,12 +1246,17 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(ttmsDBDataSet1 dataSet) {
+        public virtual int UpdateAll(PackageDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._tourDestinationsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tourDestinationsTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -913,6 +1290,15 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._tourDestinationsTableAdapter != null)) {
+                    revertConnections.Add(this._tourDestinationsTableAdapter, this._tourDestinationsTableAdapter.Connection);
+                    this._tourDestinationsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tourDestinationsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tourDestinationsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tourDestinationsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tourDestinationsTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -970,6 +1356,10 @@ namespace TTMS.UI.Dataset.ttmsDBDataSet1TableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._tourDestinationsTableAdapter != null)) {
+                    this._tourDestinationsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tourDestinationsTableAdapter]));
+                    this._tourDestinationsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

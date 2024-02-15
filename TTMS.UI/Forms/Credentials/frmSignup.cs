@@ -26,21 +26,22 @@ namespace TTMS.UI
 
         private void Signup_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'verificationDataSet.VerificationDetails' table. You can move, or remove it, as needed.
-            this.verificationDetailsTableAdapter.Fill(this.verificationDataSet.VerificationDetails);
-            // TODO: This line of code loads data into the 'staffTypeDataSet.StaffTypes' table. You can move, or remove it, as needed.
-            this.staffTypesTableAdapter.Fill(this.staffTypeDataSet.StaffTypes);
-            // TODO: This line of code loads data into the 'ttmsDBDataSet.StaffTypes' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'signupDetail.StaffTypes' table. You can move, or remove it, as needed.
+            this.staffTypesTableAdapter.Fill(this.signupDetail.StaffTypes);
+            // TODO: This line of code loads data into the 'signupDetail.VerificationDetails' table. You can move, or remove it, as needed.
+            this.verificationDetailsTableAdapter.Fill(this.signupDetail.VerificationDetails);
+            // TODO: This line of code loads data into the 'verificationDetailsDataSet.VerificationDetails' table. You can move, or remove it, as needed.
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True";
 
             ActiveControl = cbStaffType;
         }
 
         #region Functions
-        private void SelectData()
+
+        #region Functions for User Info
+        private void SelectDataForUserInfo()
         {
             cmd = new SqlCommand("SELECT * FROM SignupDetails", con);
-        
 
             con.Open();
 
@@ -51,21 +52,24 @@ namespace TTMS.UI
 
             da.Fill(ds, "SignupDetails");
         }
-        private void InsertData()
+
+        private void InsertDataForUserInfo()
         {
+            // for user info
             try
             {
-                string query = @"INSERT INTO SignupDetails (StaffTypeId, Username, Password, SecurityQuestion, SecurityAnswer, UserImage)VALUES (@StaffTypeId, @Username, @Password, @SecurityQuestion, @SecurityAnswer, @UserImage)";
+                string query = @"INSERT INTO SignupDetails (UserId, StaffTypeId, Username, Password, SecurityQuestion, SecurityAnswer, UserImage)VALUES (@UserId, @StaffTypeId, @Username, @Password, @SecurityQuestion, @SecurityAnswer, @UserImage)";
 
                 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@StaffTypeId", cbStaffType.Text);
+                command.Parameters.AddWithValue("@UserId", lblUserInfoID.Text);
+                command.Parameters.AddWithValue("@StaffTypeId", cbStaffType.SelectedValue);
                 command.Parameters.AddWithValue("@Username", tbUsername.Text);
                 command.Parameters.AddWithValue("@Password", tbPassword.Text);
                 command.Parameters.AddWithValue("@SecurityQuestion", cbSecurityQuestion.Text);
                 command.Parameters.AddWithValue("@SecurityAnswer", tbSecurityAnswer.Text);
-                command.Parameters.AddWithValue("@UserImage", getImage());
+                command.Parameters.AddWithValue("@UserImage", getImageforUser());
                 
 
                 con.Open();
@@ -78,37 +82,9 @@ namespace TTMS.UI
             {
                 MessageBox.Show(e.Message);
             }
-
-            try
-            {
-                string query = @"INSERT INTO UserPersonalInfo (Id, Name, DOB, Gender, PhoneNo, Email, VerificationId, VerifiactionImg)VALUES (@Id, @Name, @DOB, @Gender, @PhoneNo, @Email, @VerificationId, @VerifiactionImg)";
-
-
-                SqlCommand command = new SqlCommand(query, con);
-
-                
-                command.Parameters.AddWithValue("@Name", tbName.Text);
-                command.Parameters.AddWithValue("@DOB", dtpDOB.Value);
-                command.Parameters.AddWithValue("@Gender", cbSecurityQuestion.Text);
-                command.Parameters.AddWithValue("@Email", tbSecurityAnswer.Text);
-                command.Parameters.AddWithValue("@VerificationId", tbSecurityAnswer.Text);
-                command.Parameters.AddWithValue("@VerifiactionImg", tbSecurityAnswer.Text);
-                
-
-                con.Open();
-                command.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("New User's Signup Details are Saved Successfully");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
         }
 
-        private byte[] getImage()
+        private byte[] getImageforUser()
         {
             MemoryStream stream = new MemoryStream();
             cpbUserImage.Image.Save(stream, cpbUserImage.Image.RawFormat);
@@ -141,6 +117,74 @@ namespace TTMS.UI
                 cpbConfirmPassword.Image = Properties.Resources.icons8_railroad_crossing_30;
             }
         }
+        #endregion
+
+        #region Function for Personal Info
+        private void SelectDataForPersonalInfo()
+        {
+            cmd = new SqlCommand("SELECT * FROM UserPersonalInfo", con);
+
+            con.Open();
+
+            ds.Clear();
+            da = new SqlDataAdapter(cmd);
+
+            con.Close();
+
+            da.Fill(ds, "UserPersonalInfo");
+        }
+
+        private void InsertDataForPersonalInfo()
+        {
+            // for personal info
+            try
+            {
+                string query = @"INSERT INTO UserPersonalInfo (Id, Name, DOB, Gender, PhoneNo, Email, VerificationId, VerificationImg)VALUES (@Id, @Name, @DOB, @Gender, @PhoneNo, @Email, @VerificationId, @VerificationImg)";
+
+
+                SqlCommand command = new SqlCommand(query, con);
+
+                command.Parameters.AddWithValue("@Id", lblPersonalInfoID.Text);
+                command.Parameters.AddWithValue("@Name", tbName.Text);
+                command.Parameters.AddWithValue("@DOB", dtpDOB.Value);
+                if (rbMale.Checked)
+                {
+                    command.Parameters.AddWithValue("@Gender", "Male");
+                }
+                else if (rbFemale.Checked)
+                {
+                    command.Parameters.AddWithValue("@Gender", "Female");
+                }
+                else if (rbOther.Checked)
+                {
+                    command.Parameters.AddWithValue("@Gender", "Other");
+                }
+                command.Parameters.AddWithValue("@PhoneNo", tbPhoneNo.Text);
+                command.Parameters.AddWithValue("@Email", tbEmail.Text);
+                command.Parameters.AddWithValue("@VerificationId", cbVerificationType.SelectedValue);
+                command.Parameters.AddWithValue("@VerificationImg", getImageforVerification());
+
+
+                con.Open();
+                command.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("New User's Info Details are Saved Successfully");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private byte[] getImageforVerification()
+        {
+            MemoryStream stream = new MemoryStream();
+            pbVerificationImg.Image.Save(stream, pbVerificationImg.Image.RawFormat);
+            return stream.GetBuffer();
+
+        }
+
+        #endregion
 
         #endregion
 
@@ -163,10 +207,31 @@ namespace TTMS.UI
                 MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnAddVerificationImg_Click(object sender, EventArgs e)
+        {
+            string imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+                    pbVerificationImg.ImageLocation = imageLocation;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            InsertData();
-            SelectData();
+            InsertDataForUserInfo();
+            SelectDataForUserInfo();
+            InsertDataForPersonalInfo();
+            SelectDataForPersonalInfo();
             this.Close();
             new frmLogin().Show();
         }
@@ -244,8 +309,43 @@ namespace TTMS.UI
             }
         }
 
+
+
+
         #endregion
 
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AutoIncrement inc = new AutoIncrement();
+            AutoIncrement incre = new AutoIncrement();
+
+            int a, b;
+            inc.increment("SELECT max(Id) FROM UserPersonalInfo");
+            if (inc.dr.Read())
+            {
+                if (inc.dr[0] != System.DBNull.Value)
+                {
+                    a = Convert.ToInt32(inc.dr[0].ToString());
+                    lblPersonalInfoID.Text = (a + 1).ToString();
+                }
+                else
+                {
+                    lblPersonalInfoID.Text = "1";
+                }
+            }
+            incre.increment("SELECT max(UserId) FROM SignupDetails");
+            if (incre.dr.Read())
+            {
+                if (incre.dr[0] != System.DBNull.Value)
+                {
+                    b = Convert.ToInt32(incre.dr[0].ToString());
+                    lblUserInfoID.Text = (b + 1).ToString();
+                }
+                else
+                {
+                    lblUserInfoID.Text = "1";
+                }
+            }
+        }
     }
 }

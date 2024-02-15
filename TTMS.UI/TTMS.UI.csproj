@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -55,6 +56,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoIncrement.cs" />
+    <Compile Include="Dataset\CustomerDetailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DriverDetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriverDetailsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PackageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PackageDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\SignupDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SignupDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\VerificationDetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Credentials\frmStaffType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +92,12 @@
     </Compile>
     <Compile Include="Forms\Credentials\frmForgotPassword.Designer.cs">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Credentials\frmVerificationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Credentials\frmVerificationType.Designer.cs">
+      <DependentUpon>frmVerificationType.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard\frmLoading.cs">
       <SubType>Form</SubType>
@@ -90,6 +122,12 @@
     </Compile>
     <Compile Include="Forms\Customer\frmCustomerDetails.Designer.cs">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Driver &amp; Vehicle\frmDriverDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Driver &amp; Vehicle\frmDriverDetails.Designer.cs">
+      <DependentUpon>frmDriverDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Payments\frmPaymentStatus.cs">
       <SubType>Form</SubType>
@@ -139,16 +177,10 @@
     <Compile Include="Forms\Travels\frmTravelDetails.Designer.cs">
       <DependentUpon>frmTravelDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Vehicle &amp; Driver\frmDriverDetails.cs">
+    <Compile Include="Forms\Driver &amp; Vehicle\frmVehicleDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Vehicle &amp; Driver\frmDriverDetails.Designer.cs">
-      <DependentUpon>frmDriverDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Vehicle &amp; Driver\frmVehicleDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Vehicle &amp; Driver\frmVehicleDetails.Designer.cs">
+    <Compile Include="Forms\Driver &amp; Vehicle\frmVehicleDetails.Designer.cs">
       <DependentUpon>frmVehicleDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -189,36 +221,14 @@
     <Compile Include="Forms\Tours\frmTourItinerary.Designer.cs">
       <DependentUpon>frmTourItinerary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dataset\ttmsDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Dataset\ttmsDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Dataset\VerificationDetailsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Dataset\StaffTypeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StaffTypeDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Dataset\VerificationDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VerificationDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\Credentials\frmStaffType.resx">
       <DependentUpon>frmStaffType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credentials\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Credentials\frmVerificationType.resx">
+      <DependentUpon>frmVerificationType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
@@ -231,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customer\frmCustomerDetails.resx">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Driver &amp; Vehicle\frmDriverDetails.resx">
+      <DependentUpon>frmDriverDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payments\frmPaymentStatus.resx">
       <DependentUpon>frmPaymentStatus.cs</DependentUpon>
@@ -256,10 +269,7 @@
     <EmbeddedResource Include="Forms\Travels\frmTravelDetails.resx">
       <DependentUpon>frmTravelDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Vehicle &amp; Driver\frmDriverDetails.resx">
-      <DependentUpon>frmDriverDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Vehicle &amp; Driver\frmVehicleDetails.resx">
+    <EmbeddedResource Include="Forms\Driver &amp; Vehicle\frmVehicleDetails.resx">
       <DependentUpon>frmVehicleDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -291,6 +301,61 @@
       <DependentUpon>frmTourItinerary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
+    <None Include="Dataset\CustomerDetailDataSet.xsc">
+      <DependentUpon>CustomerDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerDetailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDetailDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerDetailDataSet.xss">
+      <DependentUpon>CustomerDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverDetailsDataSet.xsc">
+      <DependentUpon>DriverDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DriverDetailsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DriverDetailsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DriverDetailsDataSet.xss">
+      <DependentUpon>DriverDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PackageDataSet.xsc">
+      <DependentUpon>PackageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PackageDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PackageDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\PackageDataSet.xss">
+      <DependentUpon>PackageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\SignupDetail.xsc">
+      <DependentUpon>SignupDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\SignupDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SignupDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\SignupDetail.xss">
+      <DependentUpon>SignupDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\VerificationDetailsDataSet.xsc">
+      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\VerificationDetailsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VerificationDetailsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\VerificationDetailsDataSet.xss">
+      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -300,61 +365,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Dataset\ttmsDBDataSet.xsc">
-      <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\ttmsDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ttmsDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Dataset\ttmsDBDataSet.xss">
-      <DependentUpon>ttmsDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\ttmsDBDataSet1.xsc">
-      <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\ttmsDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ttmsDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Dataset\ttmsDBDataSet1.xss">
-      <DependentUpon>ttmsDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\VerificationDetailsDataSet.xsc">
-      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\VerificationDetailsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VerificationDetailsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Dataset\VerificationDetailsDataSet.xss">
-      <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\StaffTypeDataSet.xsc">
-      <DependentUpon>StaffTypeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\StaffTypeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StaffTypeDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Dataset\StaffTypeDataSet.xss">
-      <DependentUpon>StaffTypeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\VerificationDataSet.xsc">
-      <DependentUpon>VerificationDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\VerificationDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VerificationDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Dataset\VerificationDataSet.xss">
-      <DependentUpon>VerificationDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -539,6 +549,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-plus-20.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

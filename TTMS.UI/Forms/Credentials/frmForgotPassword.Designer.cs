@@ -44,6 +44,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblSecurityQuestion = new System.Windows.Forms.Label();
             this.cpbConfirmPassword = new TTMS.CustomControls.CircularPicturebox();
             this.panelConfirmPassword = new System.Windows.Forms.Panel();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtCPAnswer = new System.Windows.Forms.TextBox();
-            this.lblSecurityQuestion = new System.Windows.Forms.Label();
             this.btnCPSearchUsername = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -85,6 +85,7 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
@@ -188,6 +189,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(136)))), ((int)(((byte)(237)))));
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.White;
@@ -202,6 +204,7 @@
             // btnChangePassword
             // 
             this.btnChangePassword.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
@@ -216,6 +219,7 @@
             // btnFPSearchUserName
             // 
             this.btnFPSearchUserName.BackColor = System.Drawing.Color.White;
+            this.btnFPSearchUserName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFPSearchUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFPSearchUserName.Image = global::TTMS.UI.Properties.Resources.icons8_magnifying_glass_30;
             this.btnFPSearchUserName.Location = new System.Drawing.Point(259, 61);
@@ -273,6 +277,17 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Change Password";
+            // 
+            // lblSecurityQuestion
+            // 
+            this.lblSecurityQuestion.AutoSize = true;
+            this.lblSecurityQuestion.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecurityQuestion.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblSecurityQuestion.Location = new System.Drawing.Point(11, 98);
+            this.lblSecurityQuestion.Name = "lblSecurityQuestion";
+            this.lblSecurityQuestion.Size = new System.Drawing.Size(305, 16);
+            this.lblSecurityQuestion.TabIndex = 19;
+            this.lblSecurityQuestion.Text = "Your Security Question Will Appear Here!";
             // 
             // cpbConfirmPassword
             // 
@@ -387,20 +402,10 @@
             this.txtCPAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCPAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCPAnswer_KeyDown);
             // 
-            // lblSecurityQuestion
-            // 
-            this.lblSecurityQuestion.AutoSize = true;
-            this.lblSecurityQuestion.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSecurityQuestion.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblSecurityQuestion.Location = new System.Drawing.Point(11, 98);
-            this.lblSecurityQuestion.Name = "lblSecurityQuestion";
-            this.lblSecurityQuestion.Size = new System.Drawing.Size(305, 16);
-            this.lblSecurityQuestion.TabIndex = 19;
-            this.lblSecurityQuestion.Text = "Your Security Question Will Appear Here!";
-            // 
             // btnCPSearchUsername
             // 
             this.btnCPSearchUsername.BackColor = System.Drawing.Color.White;
+            this.btnCPSearchUsername.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCPSearchUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCPSearchUsername.Image = global::TTMS.UI.Properties.Resources.icons8_magnifying_glass_30;
             this.btnCPSearchUsername.Location = new System.Drawing.Point(280, 47);
@@ -471,6 +476,7 @@
             // btnFPSearchAnswer
             // 
             this.btnFPSearchAnswer.BackColor = System.Drawing.Color.White;
+            this.btnFPSearchAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFPSearchAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFPSearchAnswer.Image = global::TTMS.UI.Properties.Resources.icons8_magnifying_glass_30;
             this.btnFPSearchAnswer.Location = new System.Drawing.Point(259, 208);
