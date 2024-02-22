@@ -1,11 +1,12 @@
 ﻿CREATE TABLE [dbo].[TravelPassengers]
 (
-	[PassengerId] INT NOT NULL PRIMARY KEY, 
+	[PassengerId] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
     [CustomerId] INT NOT NULL, 
-    [Name] VARCHAR(30) NOT NULL, 
-    [Age] INT NOT NULL, 
-    [Gender] VARCHAR(10) NOT NULL, 
-    [VerificationId] VARCHAR(20) NOT NULL, 
-    [Contact] VARCHAR(20) NOT NULL, 
-    [VerificationNumber] VARCHAR(20) NOT NULL
+    [SRNO] INT NULL,
+    [Name] VARCHAR(30) NULL, 
+    [Age] INT NULL, 
+    [Gender] VARCHAR(20) NULL, 
+    [Contact] VARCHAR(20) NULL, 
+    [VerificationId] INT NOT NULL, 
+    [VerificationNumber] VARCHAR(20) NULL, 
 )

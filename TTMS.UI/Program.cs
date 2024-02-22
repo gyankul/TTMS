@@ -24,8 +24,7 @@ namespace TTMS.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTourPackages());
-            
+            Application.Run(new frmCustomerDetails());   
         }
     }
 }

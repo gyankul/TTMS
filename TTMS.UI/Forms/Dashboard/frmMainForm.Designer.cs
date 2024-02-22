@@ -32,46 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainForm));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.panelTools = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.btnTools = new System.Windows.Forms.Button();
             this.panelReports = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
             this.panelBookings = new System.Windows.Forms.Panel();
-            this.btnTravelBkg = new System.Windows.Forms.Button();
-            this.btnTourBkg = new System.Windows.Forms.Button();
-            this.btnBookings = new System.Windows.Forms.Button();
             this.panelTravels = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnTravels = new System.Windows.Forms.Button();
             this.panelTours = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnTourPackage = new System.Windows.Forms.Button();
-            this.btnTours = new System.Windows.Forms.Button();
             this.panelMaster = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnCustomer = new System.Windows.Forms.Button();
-            this.btnMaster = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pbHamburger = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelTTMS = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.cpbUserImg = new TTMS.CustomControls.CircularPicturebox();
             this.btnMasterClick = new System.Windows.Forms.Timer(this.components);
             this.btnToursClick = new System.Windows.Forms.Timer(this.components);
             this.btnTravelsClick = new System.Windows.Forms.Timer(this.components);
@@ -83,6 +57,33 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.btnToolClick = new System.Windows.Forms.Timer(this.components);
             this.UserProfileClick = new System.Windows.Forms.Timer(this.components);
+            this.cpbUserImg = new TTMS.CustomControls.CircularPicturebox();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.btnTools = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnTravelBkg = new System.Windows.Forms.Button();
+            this.btnTourBkg = new System.Windows.Forms.Button();
+            this.btnBookings = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnTravelDetails = new System.Windows.Forms.Button();
+            this.btnTravels = new System.Windows.Forms.Button();
+            this.btnTourItinerary = new System.Windows.Forms.Button();
+            this.btnTourDestinations = new System.Windows.Forms.Button();
+            this.btnTourPackage = new System.Windows.Forms.Button();
+            this.btnTours = new System.Windows.Forms.Button();
+            this.btnCredentials = new System.Windows.Forms.Button();
+            this.btnPayments = new System.Windows.Forms.Button();
+            this.btnDriverVehicle = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnMaster = new System.Windows.Forms.Button();
+            this.pbHamburger = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSidebar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelReports.SuspendLayout();
@@ -91,14 +92,14 @@
             this.panelTours.SuspendLayout();
             this.panelMaster.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHamburger)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).BeginInit();
             this.panelMainformCenterRegion.SuspendLayout();
             this.panelUserProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHamburger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -127,12 +128,269 @@
             this.panelTools.Controls.Add(this.button16);
             this.panelTools.Controls.Add(this.btnTools);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTools.Location = new System.Drawing.Point(0, 389);
+            this.panelTools.Location = new System.Drawing.Point(0, 689);
             this.panelTools.MaximumSize = new System.Drawing.Size(0, 200);
             this.panelTools.MinimumSize = new System.Drawing.Size(0, 50);
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(285, 50);
             this.panelTools.TabIndex = 6;
+            // 
+            // panelReports
+            // 
+            this.panelReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.panelReports.Controls.Add(this.button15);
+            this.panelReports.Controls.Add(this.button14);
+            this.panelReports.Controls.Add(this.button13);
+            this.panelReports.Controls.Add(this.btnReports);
+            this.panelReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReports.Location = new System.Drawing.Point(0, 639);
+            this.panelReports.MaximumSize = new System.Drawing.Size(0, 200);
+            this.panelReports.MinimumSize = new System.Drawing.Size(0, 50);
+            this.panelReports.Name = "panelReports";
+            this.panelReports.Size = new System.Drawing.Size(285, 50);
+            this.panelReports.TabIndex = 5;
+            // 
+            // panelBookings
+            // 
+            this.panelBookings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.panelBookings.Controls.Add(this.btnTravelBkg);
+            this.panelBookings.Controls.Add(this.btnTourBkg);
+            this.panelBookings.Controls.Add(this.btnBookings);
+            this.panelBookings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBookings.Location = new System.Drawing.Point(0, 489);
+            this.panelBookings.MaximumSize = new System.Drawing.Size(0, 150);
+            this.panelBookings.MinimumSize = new System.Drawing.Size(0, 50);
+            this.panelBookings.Name = "panelBookings";
+            this.panelBookings.Size = new System.Drawing.Size(285, 150);
+            this.panelBookings.TabIndex = 4;
+            // 
+            // panelTravels
+            // 
+            this.panelTravels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.panelTravels.Controls.Add(this.button9);
+            this.panelTravels.Controls.Add(this.button8);
+            this.panelTravels.Controls.Add(this.btnTravelDetails);
+            this.panelTravels.Controls.Add(this.btnTravels);
+            this.panelTravels.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTravels.Location = new System.Drawing.Point(0, 439);
+            this.panelTravels.MaximumSize = new System.Drawing.Size(0, 200);
+            this.panelTravels.MinimumSize = new System.Drawing.Size(0, 50);
+            this.panelTravels.Name = "panelTravels";
+            this.panelTravels.Size = new System.Drawing.Size(285, 50);
+            this.panelTravels.TabIndex = 3;
+            // 
+            // panelTours
+            // 
+            this.panelTours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.panelTours.Controls.Add(this.btnTourItinerary);
+            this.panelTours.Controls.Add(this.btnTourDestinations);
+            this.panelTours.Controls.Add(this.btnTourPackage);
+            this.panelTours.Controls.Add(this.btnTours);
+            this.panelTours.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTours.Location = new System.Drawing.Point(0, 389);
+            this.panelTours.MaximumSize = new System.Drawing.Size(0, 200);
+            this.panelTours.MinimumSize = new System.Drawing.Size(0, 50);
+            this.panelTours.Name = "panelTours";
+            this.panelTours.Size = new System.Drawing.Size(285, 50);
+            this.panelTours.TabIndex = 2;
+            // 
+            // panelMaster
+            // 
+            this.panelMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.panelMaster.Controls.Add(this.btnCredentials);
+            this.panelMaster.Controls.Add(this.btnPayments);
+            this.panelMaster.Controls.Add(this.btnDriverVehicle);
+            this.panelMaster.Controls.Add(this.btnCustomer);
+            this.panelMaster.Controls.Add(this.btnMaster);
+            this.panelMaster.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMaster.Location = new System.Drawing.Point(0, 139);
+            this.panelMaster.MaximumSize = new System.Drawing.Size(0, 250);
+            this.panelMaster.MinimumSize = new System.Drawing.Size(0, 50);
+            this.panelMaster.Name = "panelMaster";
+            this.panelMaster.Size = new System.Drawing.Size(285, 250);
+            this.panelMaster.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel4.Controls.Add(this.pbHamburger);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(285, 139);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel5.Controls.Add(this.labelTTMS);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Location = new System.Drawing.Point(10, 9);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(228, 70);
+            this.panel5.TabIndex = 0;
+            // 
+            // labelTTMS
+            // 
+            this.labelTTMS.AutoSize = true;
+            this.labelTTMS.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTTMS.ForeColor = System.Drawing.Color.Black;
+            this.labelTTMS.Location = new System.Drawing.Point(95, 11);
+            this.labelTTMS.Name = "labelTTMS";
+            this.labelTTMS.Size = new System.Drawing.Size(118, 49);
+            this.labelTTMS.TabIndex = 1;
+            this.labelTTMS.Text = "TTMS";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(290, 82);
+            this.panel7.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(104, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 38);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "MENU";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(285, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1056, 41);
+            this.panel2.TabIndex = 1;
+            // 
+            // SidebarTransition
+            // 
+            this.SidebarTransition.Interval = 10;
+            this.SidebarTransition.Tick += new System.EventHandler(this.SidebarTransition_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(285, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1056, 41);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.cpbUserImg);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(1015, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(41, 41);
+            this.panel8.TabIndex = 0;
+            // 
+            // btnMasterClick
+            // 
+            this.btnMasterClick.Interval = 5;
+            this.btnMasterClick.Tick += new System.EventHandler(this.btnMasterClick_Tick);
+            // 
+            // btnToursClick
+            // 
+            this.btnToursClick.Interval = 5;
+            this.btnToursClick.Tick += new System.EventHandler(this.btnToursClick_Tick);
+            // 
+            // btnTravelsClick
+            // 
+            this.btnTravelsClick.Interval = 5;
+            this.btnTravelsClick.Tick += new System.EventHandler(this.btnTravelsClick_Tick);
+            // 
+            // btnBookingsClick
+            // 
+            this.btnBookingsClick.Interval = 5;
+            this.btnBookingsClick.Tick += new System.EventHandler(this.btnBookingsClick_Tick);
+            // 
+            // btnReportsClick
+            // 
+            this.btnReportsClick.Interval = 5;
+            this.btnReportsClick.Tick += new System.EventHandler(this.btnReportsClick_Tick);
+            // 
+            // panelMainformCenterRegion
+            // 
+            this.panelMainformCenterRegion.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelMainformCenterRegion.Controls.Add(this.panelUserProfile);
+            this.panelMainformCenterRegion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainformCenterRegion.Location = new System.Drawing.Point(285, 82);
+            this.panelMainformCenterRegion.Name = "panelMainformCenterRegion";
+            this.panelMainformCenterRegion.Size = new System.Drawing.Size(1056, 643);
+            this.panelMainformCenterRegion.TabIndex = 3;
+            // 
+            // panelUserProfile
+            // 
+            this.panelUserProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelUserProfile.BackColor = System.Drawing.Color.LightBlue;
+            this.panelUserProfile.Controls.Add(this.btnLogout);
+            this.panelUserProfile.Controls.Add(this.lblUserName);
+            this.panelUserProfile.Location = new System.Drawing.Point(876, 0);
+            this.panelUserProfile.MaximumSize = new System.Drawing.Size(180, 200);
+            this.panelUserProfile.MinimumSize = new System.Drawing.Size(180, 0);
+            this.panelUserProfile.Name = "panelUserProfile";
+            this.panelUserProfile.Size = new System.Drawing.Size(180, 200);
+            this.panelUserProfile.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Snow;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Image = global::TTMS.UI.Properties.Resources.logout_button_30px;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.Location = new System.Drawing.Point(3, 154);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(174, 43);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Futura Md BT", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(34, 11);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(118, 20);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "-USERNAME-";
+            // 
+            // btnToolClick
+            // 
+            this.btnToolClick.Interval = 5;
+            this.btnToolClick.Tick += new System.EventHandler(this.btnToolClick_Tick);
+            // 
+            // UserProfileClick
+            // 
+            this.UserProfileClick.Interval = 5;
+            this.UserProfileClick.Tick += new System.EventHandler(this.UserProfileClick_Tick);
+            // 
+            // cpbUserImg
+            // 
+            this.cpbUserImg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cpbUserImg.Image = global::TTMS.UI.Properties.Resources.user_img_41px;
+            this.cpbUserImg.Location = new System.Drawing.Point(0, 0);
+            this.cpbUserImg.Name = "cpbUserImg";
+            this.cpbUserImg.Size = new System.Drawing.Size(41, 41);
+            this.cpbUserImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpbUserImg.TabIndex = 0;
+            this.cpbUserImg.TabStop = false;
+            this.cpbUserImg.Click += new System.EventHandler(this.cpbUserImg_Click);
             // 
             // button18
             // 
@@ -216,21 +474,6 @@
             this.btnTools.UseVisualStyleBackColor = false;
             this.btnTools.Click += new System.EventHandler(this.btnTools_Click);
             // 
-            // panelReports
-            // 
-            this.panelReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.panelReports.Controls.Add(this.button15);
-            this.panelReports.Controls.Add(this.button14);
-            this.panelReports.Controls.Add(this.button13);
-            this.panelReports.Controls.Add(this.btnReports);
-            this.panelReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReports.Location = new System.Drawing.Point(0, 339);
-            this.panelReports.MaximumSize = new System.Drawing.Size(0, 200);
-            this.panelReports.MinimumSize = new System.Drawing.Size(0, 50);
-            this.panelReports.Name = "panelReports";
-            this.panelReports.Size = new System.Drawing.Size(285, 50);
-            this.panelReports.TabIndex = 5;
-            // 
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
@@ -312,20 +555,6 @@
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // panelBookings
-            // 
-            this.panelBookings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.panelBookings.Controls.Add(this.btnTravelBkg);
-            this.panelBookings.Controls.Add(this.btnTourBkg);
-            this.panelBookings.Controls.Add(this.btnBookings);
-            this.panelBookings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBookings.Location = new System.Drawing.Point(0, 289);
-            this.panelBookings.MaximumSize = new System.Drawing.Size(0, 150);
-            this.panelBookings.MinimumSize = new System.Drawing.Size(0, 50);
-            this.panelBookings.Name = "panelBookings";
-            this.panelBookings.Size = new System.Drawing.Size(285, 50);
-            this.panelBookings.TabIndex = 4;
-            // 
             // btnTravelBkg
             // 
             this.btnTravelBkg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
@@ -345,6 +574,7 @@
             this.btnTravelBkg.TabIndex = 3;
             this.btnTravelBkg.Text = "   TRAVEL";
             this.btnTravelBkg.UseVisualStyleBackColor = false;
+            this.btnTravelBkg.Click += new System.EventHandler(this.btnTravelBkg_Click);
             // 
             // btnTourBkg
             // 
@@ -388,21 +618,6 @@
             this.btnBookings.UseVisualStyleBackColor = false;
             this.btnBookings.Click += new System.EventHandler(this.btnBookings_Click);
             // 
-            // panelTravels
-            // 
-            this.panelTravels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.panelTravels.Controls.Add(this.button9);
-            this.panelTravels.Controls.Add(this.button8);
-            this.panelTravels.Controls.Add(this.button7);
-            this.panelTravels.Controls.Add(this.btnTravels);
-            this.panelTravels.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTravels.Location = new System.Drawing.Point(0, 239);
-            this.panelTravels.MaximumSize = new System.Drawing.Size(0, 200);
-            this.panelTravels.MinimumSize = new System.Drawing.Size(0, 50);
-            this.panelTravels.Name = "panelTravels";
-            this.panelTravels.Size = new System.Drawing.Size(285, 50);
-            this.panelTravels.TabIndex = 3;
-            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
@@ -443,25 +658,26 @@
             this.button8.Text = "   TRAVELS";
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnTravelDetails
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 50);
-            this.button7.MaximumSize = new System.Drawing.Size(285, 50);
-            this.button7.MinimumSize = new System.Drawing.Size(285, 50);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(285, 50);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "   TRAVELS";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnTravelDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.btnTravelDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTravelDetails.FlatAppearance.BorderSize = 0;
+            this.btnTravelDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTravelDetails.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTravelDetails.ForeColor = System.Drawing.Color.Black;
+            this.btnTravelDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnTravelDetails.Image")));
+            this.btnTravelDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTravelDetails.Location = new System.Drawing.Point(0, 50);
+            this.btnTravelDetails.MaximumSize = new System.Drawing.Size(285, 50);
+            this.btnTravelDetails.MinimumSize = new System.Drawing.Size(285, 50);
+            this.btnTravelDetails.Name = "btnTravelDetails";
+            this.btnTravelDetails.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTravelDetails.Size = new System.Drawing.Size(285, 50);
+            this.btnTravelDetails.TabIndex = 2;
+            this.btnTravelDetails.Text = "    TRAVEL \r\n    DETAILS";
+            this.btnTravelDetails.UseVisualStyleBackColor = false;
+            this.btnTravelDetails.Click += new System.EventHandler(this.btnTravelDetails_Click);
             // 
             // btnTravels
             // 
@@ -484,60 +700,47 @@
             this.btnTravels.UseVisualStyleBackColor = false;
             this.btnTravels.Click += new System.EventHandler(this.btnTravels_Click);
             // 
-            // panelTours
+            // btnTourItinerary
             // 
-            this.panelTours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.panelTours.Controls.Add(this.button6);
-            this.panelTours.Controls.Add(this.button5);
-            this.panelTours.Controls.Add(this.btnTourPackage);
-            this.panelTours.Controls.Add(this.btnTours);
-            this.panelTours.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTours.Location = new System.Drawing.Point(0, 189);
-            this.panelTours.MaximumSize = new System.Drawing.Size(0, 200);
-            this.panelTours.MinimumSize = new System.Drawing.Size(0, 50);
-            this.panelTours.Name = "panelTours";
-            this.panelTours.Size = new System.Drawing.Size(285, 50);
-            this.panelTours.TabIndex = 2;
+            this.btnTourItinerary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.btnTourItinerary.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTourItinerary.FlatAppearance.BorderSize = 0;
+            this.btnTourItinerary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTourItinerary.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTourItinerary.ForeColor = System.Drawing.Color.Black;
+            this.btnTourItinerary.Image = ((System.Drawing.Image)(resources.GetObject("btnTourItinerary.Image")));
+            this.btnTourItinerary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTourItinerary.Location = new System.Drawing.Point(0, 150);
+            this.btnTourItinerary.MaximumSize = new System.Drawing.Size(285, 50);
+            this.btnTourItinerary.MinimumSize = new System.Drawing.Size(285, 50);
+            this.btnTourItinerary.Name = "btnTourItinerary";
+            this.btnTourItinerary.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTourItinerary.Size = new System.Drawing.Size(285, 50);
+            this.btnTourItinerary.TabIndex = 4;
+            this.btnTourItinerary.Text = "      ITINERARIES";
+            this.btnTourItinerary.UseVisualStyleBackColor = false;
+            this.btnTourItinerary.Click += new System.EventHandler(this.btnTourItinerary_Click);
             // 
-            // button6
+            // btnTourDestinations
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 150);
-            this.button6.MaximumSize = new System.Drawing.Size(285, 50);
-            this.button6.MinimumSize = new System.Drawing.Size(285, 50);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(285, 50);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "   TOURS";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 100);
-            this.button5.MaximumSize = new System.Drawing.Size(285, 50);
-            this.button5.MinimumSize = new System.Drawing.Size(285, 50);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(285, 50);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "   TOURS";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnTourDestinations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.btnTourDestinations.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTourDestinations.FlatAppearance.BorderSize = 0;
+            this.btnTourDestinations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTourDestinations.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTourDestinations.ForeColor = System.Drawing.Color.Black;
+            this.btnTourDestinations.Image = ((System.Drawing.Image)(resources.GetObject("btnTourDestinations.Image")));
+            this.btnTourDestinations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTourDestinations.Location = new System.Drawing.Point(0, 100);
+            this.btnTourDestinations.MaximumSize = new System.Drawing.Size(285, 50);
+            this.btnTourDestinations.MinimumSize = new System.Drawing.Size(285, 50);
+            this.btnTourDestinations.Name = "btnTourDestinations";
+            this.btnTourDestinations.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTourDestinations.Size = new System.Drawing.Size(285, 50);
+            this.btnTourDestinations.TabIndex = 3;
+            this.btnTourDestinations.Text = "         DESTINATIONS";
+            this.btnTourDestinations.UseVisualStyleBackColor = false;
+            this.btnTourDestinations.Click += new System.EventHandler(this.btnTourDestinations_Click);
             // 
             // btnTourPackage
             // 
@@ -581,60 +784,68 @@
             this.btnTours.UseVisualStyleBackColor = false;
             this.btnTours.Click += new System.EventHandler(this.btnTours_Click);
             // 
-            // panelMaster
+            // btnCredentials
             // 
-            this.panelMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.panelMaster.Controls.Add(this.button3);
-            this.panelMaster.Controls.Add(this.button2);
-            this.panelMaster.Controls.Add(this.btnCustomer);
-            this.panelMaster.Controls.Add(this.btnMaster);
-            this.panelMaster.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMaster.Location = new System.Drawing.Point(0, 139);
-            this.panelMaster.MaximumSize = new System.Drawing.Size(0, 200);
-            this.panelMaster.MinimumSize = new System.Drawing.Size(0, 50);
-            this.panelMaster.Name = "panelMaster";
-            this.panelMaster.Size = new System.Drawing.Size(285, 50);
-            this.panelMaster.TabIndex = 1;
+            this.btnCredentials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.btnCredentials.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCredentials.FlatAppearance.BorderSize = 0;
+            this.btnCredentials.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCredentials.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCredentials.ForeColor = System.Drawing.Color.Black;
+            this.btnCredentials.Image = ((System.Drawing.Image)(resources.GetObject("btnCredentials.Image")));
+            this.btnCredentials.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCredentials.Location = new System.Drawing.Point(0, 200);
+            this.btnCredentials.MaximumSize = new System.Drawing.Size(285, 50);
+            this.btnCredentials.MinimumSize = new System.Drawing.Size(285, 50);
+            this.btnCredentials.Name = "btnCredentials";
+            this.btnCredentials.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCredentials.Size = new System.Drawing.Size(285, 50);
+            this.btnCredentials.TabIndex = 5;
+            this.btnCredentials.Text = "         CREDENTIALS";
+            this.btnCredentials.UseVisualStyleBackColor = false;
+            this.btnCredentials.Click += new System.EventHandler(this.btnCredentials_Click);
             // 
-            // button3
+            // btnPayments
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 150);
-            this.button3.MaximumSize = new System.Drawing.Size(285, 50);
-            this.button3.MinimumSize = new System.Drawing.Size(285, 50);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(285, 50);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "   MASTER";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.btnPayments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPayments.FlatAppearance.BorderSize = 0;
+            this.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayments.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.ForeColor = System.Drawing.Color.Black;
+            this.btnPayments.Image = ((System.Drawing.Image)(resources.GetObject("btnPayments.Image")));
+            this.btnPayments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayments.Location = new System.Drawing.Point(0, 150);
+            this.btnPayments.MaximumSize = new System.Drawing.Size(285, 50);
+            this.btnPayments.MinimumSize = new System.Drawing.Size(285, 50);
+            this.btnPayments.Name = "btnPayments";
+            this.btnPayments.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnPayments.Size = new System.Drawing.Size(285, 50);
+            this.btnPayments.TabIndex = 4;
+            this.btnPayments.Text = "     PAYMENTS";
+            this.btnPayments.UseVisualStyleBackColor = false;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
-            // button2
+            // btnDriverVehicle
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 100);
-            this.button2.MaximumSize = new System.Drawing.Size(285, 50);
-            this.button2.MinimumSize = new System.Drawing.Size(285, 50);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(285, 50);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "   MASTER";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDriverVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(85)))), ((int)(((byte)(192)))));
+            this.btnDriverVehicle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDriverVehicle.FlatAppearance.BorderSize = 0;
+            this.btnDriverVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDriverVehicle.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDriverVehicle.ForeColor = System.Drawing.Color.Black;
+            this.btnDriverVehicle.Image = ((System.Drawing.Image)(resources.GetObject("btnDriverVehicle.Image")));
+            this.btnDriverVehicle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDriverVehicle.Location = new System.Drawing.Point(0, 100);
+            this.btnDriverVehicle.MaximumSize = new System.Drawing.Size(285, 50);
+            this.btnDriverVehicle.MinimumSize = new System.Drawing.Size(285, 50);
+            this.btnDriverVehicle.Name = "btnDriverVehicle";
+            this.btnDriverVehicle.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDriverVehicle.Size = new System.Drawing.Size(285, 50);
+            this.btnDriverVehicle.TabIndex = 3;
+            this.btnDriverVehicle.Text = "    DRIVER and\r\n    VEHICLE";
+            this.btnDriverVehicle.UseVisualStyleBackColor = false;
+            this.btnDriverVehicle.Click += new System.EventHandler(this.btnDriverVehicle_Click);
             // 
             // btnCustomer
             // 
@@ -678,50 +889,16 @@
             this.btnMaster.UseVisualStyleBackColor = false;
             this.btnMaster.Click += new System.EventHandler(this.btnMaster_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel4.Controls.Add(this.pbHamburger);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(285, 139);
-            this.panel4.TabIndex = 0;
-            // 
             // pbHamburger
             // 
-            this.pbHamburger.Image = global::TTMS.UI.Properties.Resources.icons8_hamburger_menu_48__1_;
-            this.pbHamburger.Location = new System.Drawing.Point(23, 87);
+            this.pbHamburger.Image = global::TTMS.UI.Properties.Resources.hamburger_menu_black;
+            this.pbHamburger.Location = new System.Drawing.Point(18, 87);
             this.pbHamburger.Name = "pbHamburger";
             this.pbHamburger.Size = new System.Drawing.Size(48, 48);
             this.pbHamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbHamburger.TabIndex = 0;
             this.pbHamburger.TabStop = false;
             this.pbHamburger.Click += new System.EventHandler(this.pbHamburger_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel5.Controls.Add(this.labelTTMS);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Location = new System.Drawing.Point(12, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(228, 70);
-            this.panel5.TabIndex = 0;
-            // 
-            // labelTTMS
-            // 
-            this.labelTTMS.AutoSize = true;
-            this.labelTTMS.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTTMS.ForeColor = System.Drawing.Color.Black;
-            this.labelTTMS.Location = new System.Drawing.Point(95, 11);
-            this.labelTTMS.Name = "labelTTMS";
-            this.labelTTMS.Size = new System.Drawing.Size(118, 49);
-            this.labelTTMS.TabIndex = 1;
-            this.labelTTMS.Text = "TTMS";
             // 
             // pictureBox1
             // 
@@ -734,158 +911,10 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(290, 82);
-            this.panel7.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(104, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "MENU";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(285, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1056, 41);
-            this.panel2.TabIndex = 1;
-            // 
-            // SidebarTransition
-            // 
-            this.SidebarTransition.Interval = 10;
-            this.SidebarTransition.Tick += new System.EventHandler(this.SidebarTransition_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(285, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1056, 41);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.cpbUserImg);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(1015, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(41, 41);
-            this.panel8.TabIndex = 0;
-            // 
-            // cpbUserImg
-            // 
-            this.cpbUserImg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cpbUserImg.Image = global::TTMS.UI.Properties.Resources.icons8_user_41;
-            this.cpbUserImg.Location = new System.Drawing.Point(0, 0);
-            this.cpbUserImg.Name = "cpbUserImg";
-            this.cpbUserImg.Size = new System.Drawing.Size(41, 41);
-            this.cpbUserImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpbUserImg.TabIndex = 0;
-            this.cpbUserImg.TabStop = false;
-            this.cpbUserImg.Click += new System.EventHandler(this.cpbUserImg_Click);
-            // 
-            // btnMasterClick
-            // 
-            this.btnMasterClick.Interval = 5;
-            this.btnMasterClick.Tick += new System.EventHandler(this.btnMasterClick_Tick);
-            // 
-            // btnToursClick
-            // 
-            this.btnToursClick.Interval = 5;
-            this.btnToursClick.Tick += new System.EventHandler(this.btnToursClick_Tick);
-            // 
-            // btnTravelsClick
-            // 
-            this.btnTravelsClick.Interval = 5;
-            this.btnTravelsClick.Tick += new System.EventHandler(this.btnTravelsClick_Tick);
-            // 
-            // btnBookingsClick
-            // 
-            this.btnBookingsClick.Interval = 5;
-            this.btnBookingsClick.Tick += new System.EventHandler(this.btnBookingsClick_Tick);
-            // 
-            // btnReportsClick
-            // 
-            this.btnReportsClick.Interval = 5;
-            this.btnReportsClick.Tick += new System.EventHandler(this.btnReportsClick_Tick);
-            // 
-            // panelMainformCenterRegion
-            // 
-            this.panelMainformCenterRegion.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelMainformCenterRegion.Controls.Add(this.panelUserProfile);
-            this.panelMainformCenterRegion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainformCenterRegion.Location = new System.Drawing.Point(285, 82);
-            this.panelMainformCenterRegion.Name = "panelMainformCenterRegion";
-            this.panelMainformCenterRegion.Size = new System.Drawing.Size(1056, 643);
-            this.panelMainformCenterRegion.TabIndex = 3;
-            // 
-            // panelUserProfile
-            // 
-            this.panelUserProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelUserProfile.BackColor = System.Drawing.Color.LightBlue;
-            this.panelUserProfile.Controls.Add(this.btnLogout);
-            this.panelUserProfile.Controls.Add(this.lblUserName);
-            this.panelUserProfile.Location = new System.Drawing.Point(876, 0);
-            this.panelUserProfile.MaximumSize = new System.Drawing.Size(180, 200);
-            this.panelUserProfile.MinimumSize = new System.Drawing.Size(180, 0);
-            this.panelUserProfile.Name = "panelUserProfile";
-            this.panelUserProfile.Size = new System.Drawing.Size(180, 200);
-            this.panelUserProfile.TabIndex = 0;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Snow;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Image = global::TTMS.UI.Properties.Resources.icons8_logout_30;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.Location = new System.Drawing.Point(3, 154);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(174, 43);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "LOGOUT";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Futura Md BT", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(34, 11);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(118, 20);
-            this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "-USERNAME-";
-            // 
-            // btnToolClick
-            // 
-            this.btnToolClick.Interval = 5;
-            this.btnToolClick.Tick += new System.EventHandler(this.btnToolClick_Tick);
-            // 
-            // UserProfileClick
-            // 
-            this.UserProfileClick.Interval = 5;
-            this.UserProfileClick.Tick += new System.EventHandler(this.UserProfileClick_Tick);
-            // 
             // frmMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1341, 725);
             this.Controls.Add(this.panelMainformCenterRegion);
             this.Controls.Add(this.panel1);
@@ -904,16 +933,16 @@
             this.panelMaster.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHamburger)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).EndInit();
             this.panelMainformCenterRegion.ResumeLayout(false);
             this.panelUserProfile.ResumeLayout(false);
             this.panelUserProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbUserImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHamburger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -943,11 +972,11 @@
         private System.Windows.Forms.Panel panelTravels;
         private System.Windows.Forms.Panel panelTours;
         private System.Windows.Forms.Panel panelMaster;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPayments;
+        private System.Windows.Forms.Button btnDriverVehicle;
         private System.Windows.Forms.Button btnCustomer;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnTourItinerary;
+        private System.Windows.Forms.Button btnTourDestinations;
         private System.Windows.Forms.Button btnTourPackage;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button17;
@@ -959,7 +988,7 @@
         private System.Windows.Forms.Button btnTourBkg;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnTravelDetails;
         private System.Windows.Forms.Timer btnMasterClick;
         private System.Windows.Forms.Timer btnToursClick;
         private System.Windows.Forms.Timer btnTravelsClick;
@@ -973,5 +1002,6 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Timer UserProfileClick;
+        private System.Windows.Forms.Button btnCredentials;
     }
 }

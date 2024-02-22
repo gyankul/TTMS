@@ -189,4 +189,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="VerificationId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="072edf0a-827f-4232-b51d-b9f606e7dd86" ChangeDateTime="02/17/2024 01:13:43">
+    <Property Name="ElementName" Value="[dbo].[TravelDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TravelDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TravelId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f18e6824-8457-494d-a813-757187eb630a" ChangeDateTime="02/17/2024 03:31:04">
+    <Property Name="ElementName" Value="[dbo].[TourBookings].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TourBookings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookingId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="745abcaa-026b-479c-99aa-85d652f5c12d" ChangeDateTime="02/17/2024 04:58:43">
+    <Property Name="ElementName" Value="[dbo].[TravelBookings].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TravelBookings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TravelId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7af2211a-0a98-4122-b319-df9af2a67ade" ChangeDateTime="02/17/2024 04:58:55">
+    <Property Name="ElementName" Value="[dbo].[TravelBookings].[TravelId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TravelBookings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookingId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bf526020-4b8c-4036-9808-5ebbf0a9857a" ChangeDateTime="02/20/2024 14:25:59">
+    <Property Name="ElementName" Value="[dbo].[CustomerDetails].[Age]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CustomerDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DOB" />
+  </Operation>
 </Operations>

@@ -1,4 +1,6 @@
-﻿namespace TTMS.UI.Forms.Credentials
+﻿using System.Windows.Forms;
+
+namespace TTMS.UI.Forms.Credentials
 {
     partial class frmVerificationType
     {
@@ -219,7 +221,7 @@
             this.btnClose.BackColor = System.Drawing.Color.White;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_25__1_;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_blue;
             this.btnClose.Location = new System.Drawing.Point(572, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 38);

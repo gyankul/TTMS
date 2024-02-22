@@ -36,12 +36,6 @@ namespace TTMS.UI
             sqlCommand.ExecuteNonQuery();
             con.Close();
 
-            //cbRole.Items.Add(new {Text = "-Select-",Value = -1});
-            //cbRole.DataSource = ds.Tables[0];
-            //cbRole.DisplayMember = "Role";
-
-            //cbRole.DisplayMember = Text;
-            
 
         }
 

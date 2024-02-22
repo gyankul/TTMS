@@ -304,7 +304,7 @@
         jzHb9K9UKpX/Aawt8fckmjqxAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnTravelDetails.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA0RJREFUWEftmEmoFUcUhq8TUUExwehKhCwUBZXoSsxCxYW6EFwIDiAiIWg2ogEV
@@ -344,7 +344,7 @@
         jzHb9K9UKpX/Aawt8fckmjqxAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnTourItinerary.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAqtJREFUWEft11moTHEAx/GxyxYRsmctPMiWInngxVrKeqU8ICmkeJAHT4qQJSJ5
@@ -361,7 +361,7 @@
         MRxFpw38N2MBLOip9QrzJ5AT5i5Y0tm8TuIA9RtXUkkdJJX6DQgZ9TFY07shAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnTourDestinations.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAqtJREFUWEft11moTHEAx/GxyxYRsmctPMiWInngxVrKeqU8ICmkeJAHT4qQJSJ5
@@ -412,7 +412,7 @@
         MRxFpw38N2MBLOip9QrzJ5AT5i5Y0tm8TuIA9RtXUkkdJJX6DQgZ9TFY07shAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCredentials.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAb5JREFUWEft1TlKBFEQxvExVBBMvIOZiRgIooGIuN5ATAxEExMP4I7igomRBpoZ
@@ -425,7 +425,20 @@
         4C3w3ODKcQvvfs8jOuFmAd/wFoYm58wjM9O4h/15D0n2vcMkTFqtXzoyc8ZVcmHyAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnPayments.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAb5JREFUWEft1TlKBFEQxvExVBBMvIOZiRgIooGIuN5ATAxEExMP4I7igomRBpoZ
+        egeXS3gFl8gNl381U1J0V6+8BoP+4MfYM/3e+yjamVaTf5A+jGEguqop23jBVnTlZxhf+GlbRvAcQg8Q
+        R/Aih9v7zhA0O7AHKCnUAZsV2HuCljmAbvyGzfarvhefUG1l5BnRTd8xC8kEXqGf2QnVUmYfuqFMYgqS
+        nvarXHsTCl4mbSLjeMZMdOVPKGiZPehGdiL2YHmVa0l8Qg/mb1G5jHx/6CbxidgJ6OdpE7IqlZH/Et0g
+        r4i9L69Q6TJViqi8QqXK2C+0tGckj9yX9gxdo1A2oIvKTiQua0LyT5GZkEVUpUJ1FFGlCq3DLgxZRBUq
+        tAh9s+rDWpTsJ/tK4g/1Ev5+b+ouotIKncob3VjFoFyQIkU+IN8Vu45zfMJbp2yhIcjz2htdmRSdyDGy
+        cgJvnWULJdKPIkXEGrIin3vr4uQ8OTeROXgLPKHKCDk3kaYMmjJpmjJp3DKj8G72XCArl/DWeUaQSBee
+        4C3w3ODKcQvvfs8jOuFmAd/wFoYm58wjM9O4h/15D0n2vcMkTFqtXzoyc8ZVcmHyAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnDriverVehicle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAb5JREFUWEft1TlKBFEQxvExVBBMvIOZiRgIooGIuN5ATAxEExMP4I7igomRBpoZ

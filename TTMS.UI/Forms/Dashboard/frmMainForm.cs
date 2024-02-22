@@ -14,7 +14,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTMS.UI;
 using TTMS.UI.Forms;
+using TTMS.UI.Forms.Bookings;
+using TTMS.UI.Forms.Dashboard;
 using TTMS.UI.Forms.Tours;
+using TTMS.UI.Forms.Travels;
 using TTMS.UI.Tours;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -34,45 +37,41 @@ namespace TTMS.UI
             InitializeComponent();
         }
 
-
+        public frmMainForm()
+        {
+            InitializeComponent();
+        }
 
         private void frmMainForm_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False");
 
-            string staffType = GetUserStaffType(username);
-
-            if (staffType != "admin")
-            {
-                // Disable or hide the button that is not allowed for non-admin users
-                btnCustomer.Enabled = false; // or yourButton.Visible = false;
-            }
         }
 
         #region Function for Button Click Validation
-        private string GetUserStaffType(string username)
-        {
-            string staffType = "";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False"))
-                {
-                    connection.Open();
-                    string query = "SELECT st.StaffTypeName " +
-                                   "FROM SignupDetails sd " +
-                                   "INNER JOIN StaffTypeName st ON sd.StaffTypeId = st.StaffTypeId " +
-                                   "WHERE sd.Username = @Username";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Username", username);
-                    staffType = (string)command.ExecuteScalar();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error retrieving user details: " + ex.Message);
-            }
-            return staffType;
-        }
+        //private string GetUserStaffType(string username)
+        //{
+        //    string staffType = "";
+        //    try
+        //    {
+        //        using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False"))
+        //        {
+        //            connection.Open();
+        //            string query = "SELECT st.StaffTypeName " +
+        //                           "FROM SignupDetails sd " +
+        //                           "INNER JOIN StaffTypeName st ON sd.StaffTypeId = st.StaffTypeId " +
+        //                           "WHERE sd.Username = @Username";
+        //            SqlCommand command = new SqlCommand(query, connection);
+        //            command.Parameters.AddWithValue("@Username", username);
+        //            staffType = (string)command.ExecuteScalar();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error retrieving user details: " + ex.Message);
+        //    }
+        //    return staffType;
+        //}
 
 
         #endregion
@@ -394,21 +393,115 @@ namespace TTMS.UI
         #endregion
 
         #region Buttons for Sidebar
+
+        #region Button Master
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            frmCustomerDetails customer= new frmCustomerDetails();
+            customer.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(customer);
+            customer.BringToFront();
+            customer.Show();
+            // Check if the user is authorized to perform the action
+            //string staffType = GetUserStaffType(username);
+            //if (staffType != "Admin")
+            //{
+            //    MessageBox.Show("You are not authorized to perform this action.");
+            //    return;
+            //}
+
+            // Proceed with the action if the user is authorized
+            // Add your button click logic here
+        }
+
+        private void btnDriverVehicle_Click(object sender, EventArgs e)
+        {
+            frmDriverVehicle dv = new frmDriverVehicle();
+            dv.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(dv);
+            dv.BringToFront();
+            dv.Show();
+        }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            frmPayment pay = new frmPayment();
+            pay.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(pay);
+            pay.BringToFront();
+            pay.Show();
+        }
+
+
+        #endregion
+
+        #region Button Tour
         private void btnTourPackage_Click(object sender, EventArgs e)
         {
-            frmTourPackages package = new frmTourPackages();
+            frmTourPackage package = new frmTourPackage();
             package.TopLevel = false;
             panelMainformCenterRegion.Controls.Add(package);
             package.BringToFront();
             package.Show(); 
         }
 
-        private void btnTourBkg_Click(object sender, EventArgs e)
+        private void btnTourDestinations_Click(object sender, EventArgs e)
         {
-            frmTourBooking tourbkg = new frmTourBooking();
-            tourbkg.TopLevel = false;
+            frmTourDestination destination = new frmTourDestination();
+            destination.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(destination);
+            destination.BringToFront();
+            destination.Show();
         }
 
+        private void btnTourItinerary_Click(object sender, EventArgs e)
+        {
+            frmTourItinerary package = new frmTourItinerary();
+            package.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(package);
+            package.BringToFront();
+            package.Show();
+        }
+        #endregion
+
+        #region Button Travel
+        private void btnTravelDetails_Click(object sender, EventArgs e)
+        {
+            frmTravelDetails td = new frmTravelDetails();
+            td.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(td);
+            td.BringToFront();
+            td.Show();
+        }
+        #endregion
+
+        #region Button Booking
+        private void btnTourBkg_Click(object sender, EventArgs e)
+        {
+            frmTourBooking tb = new frmTourBooking();
+            tb.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(tb);
+            tb.BringToFront();
+            tb.Show();
+        }
+
+        private void btnTravelBkg_Click(object sender, EventArgs e)
+        {
+            frmTravelBooking tb = new frmTravelBooking();
+            tb.TopLevel = false;
+            panelMainformCenterRegion.Controls.Add(tb);
+            tb.BringToFront();
+            tb.Show();
+        }
+        #endregion
+
+        #region Button Reports
+
+        #endregion
+
+        #region Button Tools
+
+        #endregion
 
         #endregion
 
@@ -418,19 +511,11 @@ namespace TTMS.UI
             new frmLogin().Show();
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
+        private void btnCredentials_Click(object sender, EventArgs e)
         {
-            // Check if the user is authorized to perform the action
-            string staffType = GetUserStaffType(username);
-            if (staffType != "Admin")
-            {
-                MessageBox.Show("You are not authorized to perform this action.");
-                return;
-            }
 
-            // Proceed with the action if the user is authorized
-            // Add your button click logic here
         }
+
     }
 
 }

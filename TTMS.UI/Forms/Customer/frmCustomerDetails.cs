@@ -24,11 +24,7 @@ namespace TTMS.UI.Forms
             InitializeComponent();
         }
 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        #region Functions
 
         private void frmCustomerDetails_Load(object sender, EventArgs e)
         {
@@ -42,6 +38,8 @@ namespace TTMS.UI.Forms
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True";
 
             SelectData();
+
+            ActiveControl = btnAdd;
 
         }
 
@@ -72,7 +70,7 @@ namespace TTMS.UI.Forms
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@CustomerId", lblCustomerId.Text);
+                command.Parameters.AddWithValue("@CustomerId", tbCustomerId.Text);
                 command.Parameters.AddWithValue("@CustomerName", tbCustomerName.Text);
                 command.Parameters.AddWithValue("@DOB", dtpDOB.Value);
                 if (rbMale.Checked)
@@ -119,7 +117,7 @@ namespace TTMS.UI.Forms
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@CustomerId", lblCustomerId.Text);
+                command.Parameters.AddWithValue("@CustomerId", tbCustomerId.Text);
                 command.Parameters.AddWithValue("@CustomerName", tbCustomerName.Text);
                 command.Parameters.AddWithValue("@DOB", dtpDOB.Value);
                 if (rbMale.Checked)
@@ -161,7 +159,7 @@ namespace TTMS.UI.Forms
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@CustomerId", lblCustomerId.Text);
+                command.Parameters.AddWithValue("@CustomerId", tbCustomerId.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -175,10 +173,12 @@ namespace TTMS.UI.Forms
             }
         }
 
+        #endregion
+
         #region Buttons
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            lblCustomerId.Text = "";
+            tbCustomerId.Text = "";
             tbCustomerName.Text = "";
             dtpDOB.Value = DateTime.Now;
             tbAddress.Text = "";
@@ -196,11 +196,11 @@ namespace TTMS.UI.Forms
                 if (inc.dr[0] != System.DBNull.Value)
                 {
                     a = Convert.ToInt32(inc.dr[0].ToString());
-                    lblCustomerId.Text = (a + 1).ToString();
+                    tbCustomerId.Text = (a + 1).ToString();
                 }
                 else
                 {
-                    lblCustomerId.Text = "1";
+                    tbCustomerId.Text = "1";
                 }
             }
         }
@@ -226,6 +226,125 @@ namespace TTMS.UI.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        #endregion
+
+        #region Events
+
+        private void tbCustomerId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbCustomerName.Focus();
+            }
+        }
+
+        private void tbCustomerName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtpDOB.Focus();
+            }
+        }
+
+        private void dtpDOB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                rbMale.Focus();
+            }
+        }
+
+        private void rbMale_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right)
+            {
+                rbFemale.Focus();
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                rbMale.Checked = true;
+                cbNationality.Focus();
+            }
+        }
+
+        private void rbFemale_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right)
+            {
+                rbOther.Focus();
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                rbMale.Focus();
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                rbFemale.Checked = true;
+                cbNationality.Focus();
+            }
+        }
+
+        private void rbOther_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                rbFemale.Focus();
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                rbOther.Checked = true;
+                cbNationality.Focus();
+            }
+        }
+
+        private void cbNationality_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbAddress.Focus();
+            }
+        }
+
+        private void tbAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbPhoneNo.Focus();
+            }
+        }
+
+        private void tbPhoneNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbEmail.Focus();
+            }
+        }
+
+        private void tbEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cbVerificationType.Focus();
+            }
+        }
+
+        private void cbVerificationType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbVerificationNo.Focus();
+            }
+        }
+
+        private void tbVerificationNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
         }
 
         #endregion

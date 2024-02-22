@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnAddPackage = new System.Windows.Forms.Button();
             this.btnAddNewCustomer = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dgvTourBooking = new System.Windows.Forms.DataGridView();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
+            this.customerDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tourDataSet = new TTMS.UI.Dataset.TourDataSet();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -60,12 +61,16 @@
             this.clmGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmVerificationType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.verificationDetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.verificationDetailsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.verificationDetailsDataSet = new TTMS.UI.Dataset.VerificationDetailsDataSet();
             this.clmVerificationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmVerificationImg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteParticipant = new System.Windows.Forms.Button();
             this.btnAddParticipant = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tbBookingId = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tbPackageName = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,10 +80,17 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.verificationDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerDetailsTableAdapter = new TTMS.UI.Dataset.TourDataSetTableAdapters.CustomerDetailsTableAdapter();
+            this.verificationDetailsTableAdapter = new TTMS.UI.Dataset.VerificationDetailsDataSetTableAdapters.VerificationDetailsTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTourBooking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipants)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSet)).BeginInit();
             this.panelTourBookingTitlebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource)).BeginInit();
@@ -87,11 +99,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnAddPackage);
             this.panel1.Controls.Add(this.btnAddNewCustomer);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.dgvTourBooking);
+            this.panel1.Controls.Add(this.cbCustomer);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnSave);
@@ -105,6 +116,8 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.tbBookingId);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.tbPackageName);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.label2);
@@ -115,19 +128,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(991, 715);
             this.panel1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(228, 74);
-            this.label5.MinimumSize = new System.Drawing.Size(165, 0);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(165, 25);
-            this.label5.TabIndex = 70;
             // 
             // btnAddPackage
             // 
@@ -149,32 +149,45 @@
             this.btnAddNewCustomer.UseVisualStyleBackColor = true;
             this.btnAddNewCustomer.Click += new System.EventHandler(this.btnAddNewCustomer_Click);
             // 
-            // dataGridView1
+            // dgvTourBooking
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 444);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(958, 197);
-            this.dataGridView1.TabIndex = 67;
+            this.dgvTourBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTourBooking.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvTourBooking.Location = new System.Drawing.Point(17, 444);
+            this.dgvTourBooking.Name = "dgvTourBooking";
+            this.dgvTourBooking.RowHeadersWidth = 51;
+            this.dgvTourBooking.RowTemplate.Height = 24;
+            this.dgvTourBooking.Size = new System.Drawing.Size(958, 197);
+            this.dgvTourBooking.TabIndex = 67;
             // 
-            // comboBox2
+            // cbCustomer
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(216, 158);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(313, 33);
-            this.comboBox2.TabIndex = 66;
+            this.cbCustomer.DataSource = this.customerDetailsBindingSource;
+            this.cbCustomer.DisplayMember = "CustomerName";
+            this.cbCustomer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.cbCustomer.FormattingEnabled = true;
+            this.cbCustomer.Location = new System.Drawing.Point(216, 158);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(313, 33);
+            this.cbCustomer.TabIndex = 66;
+            this.cbCustomer.ValueMember = "CustomerId";
+            // 
+            // customerDetailsBindingSource
+            // 
+            this.customerDetailsBindingSource.DataMember = "CustomerDetails";
+            this.customerDetailsBindingSource.DataSource = this.tourDataSet;
+            // 
+            // tourDataSet
+            // 
+            this.tourDataSet.DataSetName = "TourDataSet";
+            this.tourDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnDelete
             // 
@@ -317,14 +330,14 @@
             this.dgvParticipants.AllowUserToAddRows = false;
             this.dgvParticipants.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvParticipants.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParticipants.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParticipants.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvParticipants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmAction,
@@ -334,13 +347,13 @@
             this.clmGender,
             this.clmPhoneNo,
             this.clmVerificationType,
-            this.clmVerificationNumber,
-            this.clmVerificationImg});
+            this.clmVerificationNumber});
             this.dgvParticipants.Location = new System.Drawing.Point(16, 31);
             this.dgvParticipants.Name = "dgvParticipants";
+            this.dgvParticipants.RowHeadersVisible = false;
             this.dgvParticipants.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.dgvParticipants.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvParticipants.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvParticipants.RowTemplate.Height = 24;
             this.dgvParticipants.Size = new System.Drawing.Size(888, 181);
             this.dgvParticipants.TabIndex = 3;
@@ -348,9 +361,9 @@
             // 
             // clmAction
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.clmAction.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.clmAction.DefaultCellStyle = dataGridViewCellStyle9;
             this.clmAction.HeaderText = "Action";
             this.clmAction.MinimumWidth = 6;
             this.clmAction.Name = "clmAction";
@@ -362,8 +375,8 @@
             // 
             // clmSerialNo
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.clmSerialNo.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.clmSerialNo.DefaultCellStyle = dataGridViewCellStyle10;
             this.clmSerialNo.HeaderText = "Sr. No";
             this.clmSerialNo.MinimumWidth = 6;
             this.clmSerialNo.Name = "clmSerialNo";
@@ -371,8 +384,8 @@
             // 
             // clmName
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.clmName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.clmName.DefaultCellStyle = dataGridViewCellStyle11;
             this.clmName.HeaderText = "Name";
             this.clmName.MinimumWidth = 6;
             this.clmName.Name = "clmName";
@@ -401,12 +414,30 @@
             // 
             // clmVerificationType
             // 
+            this.clmVerificationType.DataSource = this.verificationDetailsBindingSource1;
+            this.clmVerificationType.DisplayMember = "VerificationName";
             this.clmVerificationType.HeaderText = "Verification Type";
             this.clmVerificationType.MinimumWidth = 6;
             this.clmVerificationType.Name = "clmVerificationType";
             this.clmVerificationType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clmVerificationType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clmVerificationType.ValueMember = "VerificationId";
             this.clmVerificationType.Width = 150;
+            // 
+            // verificationDetailsBindingSource1
+            // 
+            this.verificationDetailsBindingSource1.DataMember = "VerificationDetails";
+            this.verificationDetailsBindingSource1.DataSource = this.verificationDetailsDataSetBindingSource;
+            // 
+            // verificationDetailsDataSetBindingSource
+            // 
+            this.verificationDetailsDataSetBindingSource.DataSource = this.verificationDetailsDataSet;
+            this.verificationDetailsDataSetBindingSource.Position = 0;
+            // 
+            // verificationDetailsDataSet
+            // 
+            this.verificationDetailsDataSet.DataSetName = "VerificationDetailsDataSet";
+            this.verificationDetailsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clmVerificationNumber
             // 
@@ -414,13 +445,6 @@
             this.clmVerificationNumber.MinimumWidth = 6;
             this.clmVerificationNumber.Name = "clmVerificationNumber";
             this.clmVerificationNumber.Width = 150;
-            // 
-            // clmVerificationImg
-            // 
-            this.clmVerificationImg.HeaderText = "Verification Image";
-            this.clmVerificationImg.MinimumWidth = 6;
-            this.clmVerificationImg.Name = "clmVerificationImg";
-            this.clmVerificationImg.Width = 150;
             // 
             // btnDeleteParticipant
             // 
@@ -461,6 +485,27 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(313, 3);
             this.panel4.TabIndex = 49;
+            // 
+            // tbBookingId
+            // 
+            this.tbBookingId.BackColor = System.Drawing.Color.White;
+            this.tbBookingId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbBookingId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBookingId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbBookingId.Location = new System.Drawing.Point(228, 68);
+            this.tbBookingId.Name = "tbBookingId";
+            this.tbBookingId.Size = new System.Drawing.Size(145, 25);
+            this.tbBookingId.TabIndex = 46;
+            this.tbBookingId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(228, 96);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(145, 3);
+            this.panel2.TabIndex = 45;
             // 
             // tbPackageName
             // 
@@ -557,6 +602,14 @@
             // 
             this.verificationDetailsBindingSource.DataMember = "VerificationDetails";
             // 
+            // customerDetailsTableAdapter
+            // 
+            this.customerDetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // verificationDetailsTableAdapter
+            // 
+            this.verificationDetailsTableAdapter.ClearBeforeFill = true;
+            // 
             // frmTourBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -569,9 +622,14 @@
             this.Load += new System.EventHandler(this.frmTourBooking_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTourBooking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipants)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSet)).EndInit();
             this.panelTourBookingTitlebar.ResumeLayout(false);
             this.panelTourBookingTitlebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -603,16 +661,22 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cbCustomer;
+        private System.Windows.Forms.DataGridView dgvTourBooking;
         private System.Windows.Forms.Button btnAddParticipant;
         private System.Windows.Forms.Button btnDeleteParticipant;
         private System.Windows.Forms.Button btnAddPackage;
         private System.Windows.Forms.Button btnAddNewCustomer;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource verificationDetailsBindingSource;
         private System.Windows.Forms.DataGridView dgvParticipants;
+        private Dataset.TourDataSet tourDataSet;
+        private System.Windows.Forms.BindingSource customerDetailsBindingSource;
+        private Dataset.TourDataSetTableAdapters.CustomerDetailsTableAdapter customerDetailsTableAdapter;
+        private Dataset.VerificationDetailsDataSet verificationDetailsDataSet;
+        private System.Windows.Forms.BindingSource verificationDetailsDataSetBindingSource;
+        private System.Windows.Forms.BindingSource verificationDetailsBindingSource1;
+        private Dataset.VerificationDetailsDataSetTableAdapters.VerificationDetailsTableAdapter verificationDetailsTableAdapter;
         private System.Windows.Forms.DataGridViewButtonColumn clmAction;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSerialNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
@@ -621,6 +685,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPhoneNo;
         private System.Windows.Forms.DataGridViewComboBoxColumn clmVerificationType;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmVerificationNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmVerificationImg;
+        private System.Windows.Forms.TextBox tbBookingId;
+        private System.Windows.Forms.Panel panel2;
     }
 }

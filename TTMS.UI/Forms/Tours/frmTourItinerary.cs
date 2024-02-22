@@ -17,9 +17,8 @@ namespace TTMS.UI.Tours
         SqlConnection con = new SqlConnection();
         SqlDataAdapter da;
         SqlCommand cmd;
-
-
         DataSet ds = new DataSet();
+
         public frmTourItinerary()
         {
             InitializeComponent();
@@ -27,6 +26,8 @@ namespace TTMS.UI.Tours
 
         private void TourItinerary_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tourDataSet.TourDestinations' table. You can move, or remove it, as needed.
+            this.tourDestinationsTableAdapter.Fill(this.tourDataSet.TourDestinations);
             con.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ttmsDB;Integrated Security=True;Encrypt=False";
 
             SelectData();
@@ -50,34 +51,6 @@ namespace TTMS.UI.Tours
             dgvTourItinerary.DataSource = ds.Tables["TourItinerary"];
         }
 
-        //private bool isvalidate()
-        //{
-
-        //    if (lblItineraryId.Text != "")
-        //    {
-        //        return false;
-        //    }
-        //    else if (tbDestination.Text != "")
-        //    {
-        //        return false;
-        //    }
-        //    else if (tbDayNumber.Text != "")
-        //    {
-        //        return false;
-        //    }
-        //    else if (tbActivity.Text != "")
-        //    {
-        //        return false;
-        //    }
-
-        //    //else if (dtpStart.Value >= dtpEnd.Value)
-        //    //{
-        //    //    return false;
-        //    //}
-
-        //    return true;
-        //}
-
         private byte[] getImage() //to save the image
         {
             MemoryStream stream = new MemoryStream();
@@ -87,24 +60,26 @@ namespace TTMS.UI.Tours
 
         private void InsertData()
         {
-            //if (isvalidate())
-            //{
+            
                 try
                 {
 
-                    string query = @"INSERT INTO TourItinerary (ItineraryId, DestinationId, DayNumber, Activities, StartDateTime, EndDateTime, ItineraryImg)VALUES (@ItineraryId, @DestinationId, @DayNumber, @Activities, @StartDateTime, @EndDateTime, @ItineraryImg)";
+                    string query = @"INSERT INTO TourItinerary (ItineraryId, SrNo, ItineraryName, DestinationId, DayNumber, Activities, StartDateTime, EndDateTime, ItineraryImg, Cost)VALUES (@ItineraryId, @SrNo, @ItineraryName, @DestinationId, @DayNumber, @Activities, @StartDateTime, @EndDateTime, @ItineraryImg, @Cost)";
 
                     SqlCommand command = new SqlCommand(query, con);
 
-                    command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
-                    command.Parameters.AddWithValue("@DestinationId", tbDestination.Text);
+                    command.Parameters.AddWithValue("@ItineraryId", tbItineraryId.Text);
+                    command.Parameters.AddWithValue("@SrNo", tbSRNO.Text);
+                    command.Parameters.AddWithValue("@ItineraryName", tbItineraryName.Text);
+                    command.Parameters.AddWithValue("@DestinationId", cbDestination.SelectedValue);
                     command.Parameters.AddWithValue("@DayNumber", tbDayNumber.Text);
                     command.Parameters.AddWithValue("@Activities", tbActivity.Text);
                     command.Parameters.AddWithValue("@StartDateTime", dtpStart.Value);
                     command.Parameters.AddWithValue("@EndDateTime", dtpEnd.Value);
                     command.Parameters.AddWithValue("@ItineraryImg", getImage());
+                    command.Parameters.AddWithValue("@Cost", tbCost.Text);
 
-                    con.Open();
+                con.Open();
                     command.ExecuteNonQuery();
                     con.Close();
 
@@ -114,28 +89,26 @@ namespace TTMS.UI.Tours
                 {
                     MessageBox.Show(e.Message);
                 }
-            
-            //else
-            //{
-            //    MessageBox.Show("Please Enter All the Fields......", "Registeration Failed!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
         }
 
         private void UpdateData()
         {
             try
             {
-                string query = @"UPDATE TourItinerary SET DestinationId=@DestinationId, DayNumber=@DayNumber, Activities=@Activities, StartDateTime=@StartDateTime, EndDateTime=@EndDateTime, ItineraryImg=@ItineraryImg WHERE ItineraryId=@ItineraryId";
+                string query = @"UPDATE TourItinerary SET SrNo=@SrNo, ItineraryName=@ItineraryName, DestinationId=@DestinationId, DayNumber=@DayNumber, Activities=@Activities, StartDateTime=@StartDateTime, EndDateTime=@EndDateTime, ItineraryImg=@ItineraryImg, Cost=@Cost WHERE ItineraryId=@ItineraryId";
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
-                command.Parameters.AddWithValue("@DestinationId", tbDestination.Text);
+                command.Parameters.AddWithValue("@ItineraryId", tbItineraryId.Text);
+                command.Parameters.AddWithValue("@SrNo", tbSRNO.Text);
+                command.Parameters.AddWithValue("@ItineraryName", tbItineraryName.Text);
+                command.Parameters.AddWithValue("@DestinationId", cbDestination.SelectedValue);
                 command.Parameters.AddWithValue("@DayNumber", tbDayNumber.Text);
                 command.Parameters.AddWithValue("@Activities", tbActivity.Text);
-                command.Parameters.AddWithValue("@StartDateTime", dtpStart.Text);
-                command.Parameters.AddWithValue("@EndDateTime", panel.Text);
+                command.Parameters.AddWithValue("@StartDateTime", dtpStart.Value);
+                command.Parameters.AddWithValue("@EndDateTime", dtpEnd.Value);
                 command.Parameters.AddWithValue("@ItineraryImg", getImage());
+                command.Parameters.AddWithValue("@Cost", tbCost.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -157,7 +130,7 @@ namespace TTMS.UI.Tours
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
+                command.Parameters.AddWithValue("@ItineraryId", tbItineraryId.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -176,7 +149,7 @@ namespace TTMS.UI.Tours
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvTourItinerary.Rows[e.RowIndex];
-                lblItineraryId.Text = row.Cells[0].Value.ToString();
+                tbItineraryId.Text = row.Cells[0].Value.ToString();
             }
         }
         #endregion
@@ -184,6 +157,15 @@ namespace TTMS.UI.Tours
         #region Buttons
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            tbItineraryId.Text = "";
+            cbDestination.DisplayMember = "- SELECT -";
+            tbDayNumber.Text = "";
+            tbActivity.Text = "";
+            ImgItinerary.Image = null;
+            dtpStart.Value = DateTime.Now;
+            dtpEnd.Value = DateTime.Now;
+            tbCost.Text = "";
+
             AutoIncrement inc = new AutoIncrement();
             int a;
             inc.increment("SELECT max(ItineraryId) FROM TourItinerary");
@@ -192,11 +174,11 @@ namespace TTMS.UI.Tours
                 if (inc.dr[0] != System.DBNull.Value)
                 {
                     a = Convert.ToInt32(inc.dr[0].ToString());
-                    lblItineraryId.Text = (a + 1).ToString();
+                    tbItineraryId.Text = (a + 1).ToString();
                 }
                 else
                 {
-                    lblItineraryId.Text = "1";
+                    tbItineraryId.Text = "1";
                 }
             }
         }
@@ -205,11 +187,16 @@ namespace TTMS.UI.Tours
         {
             InsertData();
             SelectData();
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
+            tbItineraryId.Text = "";
+            tbItineraryNo.Text = "";
+            tbItineraryName.Text = "";
+            cbDestination.DisplayMember = "- SELECT -";
             tbDayNumber.Text = "";
             tbActivity.Text = "";
             ImgItinerary.Image = null;
+            dtpStart.Value = DateTime.Now;
+            dtpEnd.Value = DateTime.Now;
+            tbCost.Text = "";
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -217,11 +204,16 @@ namespace TTMS.UI.Tours
             UpdateData();
             SelectData();
 
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
+            tbItineraryId.Text = "";
+            tbItineraryNo.Text = "";
+            tbItineraryName.Text = "";
+            cbDestination.DisplayMember = "- SELECT -";
             tbDayNumber.Text = "";
             tbActivity.Text = "";
             ImgItinerary.Image = null;
+            dtpStart.Value = DateTime.Now;
+            dtpEnd.Value = DateTime.Now;
+            tbCost.Text = "";
 
         }
 
@@ -229,12 +221,17 @@ namespace TTMS.UI.Tours
         {
             DeleteData();
             SelectData();
-            lblItineraryId.Text = "";
-            tbDestination.Text = "";
+            tbItineraryId.Text = "";
+            tbItineraryNo.Text = "";
+            tbItineraryName.Text = "";
+            cbDestination.DisplayMember = "- SELECT -";
             tbDayNumber.Text = "";
             tbActivity.Text = "";
             ImgItinerary.Image = null;
+            dtpStart.Value = DateTime.Now;
+            dtpEnd.Value = DateTime.Now;
             btnAdd.Focus();
+            tbCost.Text = "";
         }
 
         private void btnAddImg_Click(object sender, EventArgs e)
@@ -255,8 +252,12 @@ namespace TTMS.UI.Tours
                 MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
 
-        
     }
 }

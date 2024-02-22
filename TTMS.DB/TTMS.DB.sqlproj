@@ -86,7 +86,6 @@
     <Build Include="Credentials\VerificationDetails.sql" />
     <Build Include="Credentials\StaffTypes.sql" />
     <Build Include="Customer\CountryDetails.sql" />
-    <Build Include="Credentials\UserPersonalInfo.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TTMS.DB.refactorlog" />

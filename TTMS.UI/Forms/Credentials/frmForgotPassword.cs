@@ -138,16 +138,15 @@ namespace TTMS.UI
             #endregion
 
             #region Change Password Functions
+
             private void txtNewPassword_TextChanged(object sender, EventArgs e)
             {
                 UpdatePasswordMatchStatus();
             }
-
             private void txtCnfPassword_TextChanged(object sender, EventArgs e)
             {
                 UpdatePasswordMatchStatus();
             }
-
             private void UpdatePasswordMatchStatus()
             {
                 string password = txtNewPassword.Text;
@@ -155,12 +154,12 @@ namespace TTMS.UI
 
                 if (password == confirmPassword && !string.IsNullOrEmpty(password))
                 {
-                    cpbConfirmPassword.Image = Properties.Resources.icons8_tick_30__1_;
+                    cpbConfirmPassword.Image = Properties.Resources.tick;
 
                 }
                 else
                 {
-                    cpbConfirmPassword.Image = Properties.Resources.icons8_railroad_crossing_30;
+                    cpbConfirmPassword.Image = Properties.Resources.cross;
                 }
             }
 

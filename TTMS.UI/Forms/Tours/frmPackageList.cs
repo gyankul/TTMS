@@ -15,7 +15,7 @@ namespace TTMS.UI.Forms.Tours
     public partial class frmPackageList : Form
     {
         // Define SQL connection
-        SqlConnection connection = new SqlConnection("ttmsDBConnectionString");
+        SqlConnection connection = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = ttmsDB; Integrated Security = True; Encrypt=False");
 
         // Array to store fetched images
         Image[] images;
@@ -28,15 +28,23 @@ namespace TTMS.UI.Forms.Tours
             InitializeComponent();
         }
 
-        public string SelectedPackage { get; private set; }
+        public int SelectedPackageId;
+        public string SelectedPackage; //{ get; private set; }
 
         private void btnBookPackage_Click(object sender, EventArgs e)
         {
             // Set SelectedPackage to the selected item in the combo box
-            SelectedPackage = cbChoosePackage.SelectedItem?.ToString();
+            //SelectedPackage = cbChoosePackage.SelectedItem.ToString();
+            SelectedPackageId = int.Parse(cbChoosePackage.SelectedValue.ToString());
+            SelectedPackage = cbChoosePackage.GetItemText(cbChoosePackage.SelectedItem).ToString();
+
+            //DataGridViewRow row = (DataGridViewRow)cbChoosePackage.SelectedItem;
+            //SelectedPackage = row.Cells["PackageName"].Value.ToString();
+
             this.Close(); // Close the TourPackageList form
         }
 
+        #region show selected package images
         private void FetchImagesForPackage(string selectedPackage)
         {
             try
@@ -123,5 +131,14 @@ namespace TTMS.UI.Forms.Tours
                 pbPackageImg.Image = images[currentIndex];
             }
         }
+        #endregion
+
+        private void frmPackageList_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'tourDataSet.TourPackages' table. You can move, or remove it, as needed.
+            this.tourPackagesTableAdapter.Fill(this.tourDataSet.TourPackages);
+
+        }
+
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBookPackage = new System.Windows.Forms.Button();
             this.pbPackageImg = new System.Windows.Forms.PictureBox();
@@ -39,14 +40,19 @@
             this.btnSearchPackage = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbChoosePackage = new System.Windows.Forms.ComboBox();
+            this.tourPackagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tourDataSet = new TTMS.UI.Dataset.TourDataSet();
             this.cbPackageName = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.tourPackagesTableAdapter = new TTMS.UI.Dataset.TourDataSetTableAdapters.TourPackagesTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPackageImg)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tourPackagesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).BeginInit();
             this.cbPackageName.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,17 +178,25 @@
             // 
             // cbChoosePackage
             // 
+            this.cbChoosePackage.DataSource = this.tourPackagesBindingSource;
+            this.cbChoosePackage.DisplayMember = "PackageName";
             this.cbChoosePackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChoosePackage.FormattingEnabled = true;
-            this.cbChoosePackage.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d"});
             this.cbChoosePackage.Location = new System.Drawing.Point(192, 3);
             this.cbChoosePackage.Name = "cbChoosePackage";
             this.cbChoosePackage.Size = new System.Drawing.Size(189, 28);
             this.cbChoosePackage.TabIndex = 0;
+            this.cbChoosePackage.ValueMember = "PackageId";
+            // 
+            // tourPackagesBindingSource
+            // 
+            this.tourPackagesBindingSource.DataMember = "TourPackages";
+            this.tourPackagesBindingSource.DataSource = this.tourDataSet;
+            // 
+            // tourDataSet
+            // 
+            this.tourDataSet.DataSetName = "TourDataSet";
+            this.tourDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbPackageName
             // 
@@ -213,11 +227,15 @@
             this.label6.BackColor = System.Drawing.Color.RoyalBlue;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(388, 6);
+            this.label6.Location = new System.Drawing.Point(388, 5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(278, 50);
             this.label6.TabIndex = 13;
             this.label6.Text = "PACKAGES";
+            // 
+            // tourPackagesTableAdapter
+            // 
+            this.tourPackagesTableAdapter.ClearBeforeFill = true;
             // 
             // frmPackageList
             // 
@@ -229,12 +247,15 @@
             this.Name = "frmPackageList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PackageList";
+            this.Load += new System.EventHandler(this.frmPackageList_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPackageImg)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tourPackagesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).EndInit();
             this.cbPackageName.ResumeLayout(false);
             this.cbPackageName.PerformLayout();
             this.ResumeLayout(false);
@@ -257,5 +278,8 @@
         private System.Windows.Forms.ComboBox cbChoosePackage;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSearchPackage;
+        private Dataset.TourDataSet tourDataSet;
+        private System.Windows.Forms.BindingSource tourPackagesBindingSource;
+        private Dataset.TourDataSetTableAdapters.TourPackagesTableAdapter tourPackagesTableAdapter;
     }
 }

@@ -33,12 +33,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnShowpass = new System.Windows.Forms.Button();
-            this.btnHidepass = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,10 +45,13 @@
             this.btnSignup = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnForgotpassword = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnShowpass = new System.Windows.Forms.Button();
+            this.btnHidepass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,16 +111,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "T T M S";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TTMS.UI.Properties.Resources.logottmswhite1;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 69);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel4);
@@ -159,30 +149,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(260, 3);
             this.panel6.TabIndex = 14;
-            // 
-            // btnShowpass
-            // 
-            this.btnShowpass.FlatAppearance.BorderSize = 0;
-            this.btnShowpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowpass.Image = global::TTMS.UI.Properties.Resources.icons8_show_password_25;
-            this.btnShowpass.Location = new System.Drawing.Point(408, 200);
-            this.btnShowpass.Name = "btnShowpass";
-            this.btnShowpass.Size = new System.Drawing.Size(34, 29);
-            this.btnShowpass.TabIndex = 10;
-            this.btnShowpass.UseVisualStyleBackColor = true;
-            this.btnShowpass.Click += new System.EventHandler(this.btnShowpass_Click);
-            // 
-            // btnHidepass
-            // 
-            this.btnHidepass.FlatAppearance.BorderSize = 0;
-            this.btnHidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHidepass.Image = global::TTMS.UI.Properties.Resources.icons8_hide_password_25__1_;
-            this.btnHidepass.Location = new System.Drawing.Point(408, 200);
-            this.btnHidepass.Name = "btnHidepass";
-            this.btnHidepass.Size = new System.Drawing.Size(33, 29);
-            this.btnHidepass.TabIndex = 10;
-            this.btnHidepass.UseVisualStyleBackColor = true;
-            this.btnHidepass.Click += new System.EventHandler(this.btnHidepass_Click);
             // 
             // label3
             // 
@@ -236,8 +202,8 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_25__1_;
-            this.btnClose.Location = new System.Drawing.Point(428, 0);
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_blue;
+            this.btnClose.Location = new System.Drawing.Point(427, 1);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
             this.btnClose.TabIndex = 1;
@@ -263,7 +229,7 @@
             this.btnSignup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignup.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnSignup.Location = new System.Drawing.Point(36, 351);
+            this.btnSignup.Location = new System.Drawing.Point(36, 355);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(203, 39);
             this.btnSignup.TabIndex = 2;
@@ -294,13 +260,47 @@
             this.btnForgotpassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnForgotpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgotpassword.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnForgotpassword.Location = new System.Drawing.Point(245, 351);
+            this.btnForgotpassword.Location = new System.Drawing.Point(245, 355);
             this.btnForgotpassword.Name = "btnForgotpassword";
             this.btnForgotpassword.Size = new System.Drawing.Size(194, 39);
             this.btnForgotpassword.TabIndex = 2;
             this.btnForgotpassword.Text = "Forgot Password ?";
             this.btnForgotpassword.UseVisualStyleBackColor = false;
             this.btnForgotpassword.Click += new System.EventHandler(this.btnForgotpassword_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TTMS.UI.Properties.Resources.logottmswhite;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 69);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnShowpass
+            // 
+            this.btnShowpass.FlatAppearance.BorderSize = 0;
+            this.btnShowpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowpass.Image = global::TTMS.UI.Properties.Resources.show_pass_button;
+            this.btnShowpass.Location = new System.Drawing.Point(407, 200);
+            this.btnShowpass.Name = "btnShowpass";
+            this.btnShowpass.Size = new System.Drawing.Size(34, 29);
+            this.btnShowpass.TabIndex = 10;
+            this.btnShowpass.UseVisualStyleBackColor = true;
+            this.btnShowpass.Click += new System.EventHandler(this.btnShowpass_Click);
+            // 
+            // btnHidepass
+            // 
+            this.btnHidepass.FlatAppearance.BorderSize = 0;
+            this.btnHidepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHidepass.Image = global::TTMS.UI.Properties.Resources.hide_pass_button;
+            this.btnHidepass.Location = new System.Drawing.Point(408, 200);
+            this.btnHidepass.Name = "btnHidepass";
+            this.btnHidepass.Size = new System.Drawing.Size(33, 29);
+            this.btnHidepass.TabIndex = 10;
+            this.btnHidepass.UseVisualStyleBackColor = true;
+            this.btnHidepass.Click += new System.EventHandler(this.btnHidepass_Click);
             // 
             // frmLogin
             // 
@@ -318,9 +318,9 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

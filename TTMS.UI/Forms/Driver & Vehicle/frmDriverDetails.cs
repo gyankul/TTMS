@@ -23,6 +23,8 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             InitializeComponent();
         }
+
+        #region Functions
         private void frmDriverDetails_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'verificationDetailsDataSet.VerificationDetails' table. You can move, or remove it, as needed.
@@ -56,7 +58,6 @@ namespace TTMS.UI.Forms.Driver___Vehicle
             return stream.GetBuffer();
         }
 
-
         private void InsertData()
         {
             //if (isvalidate())
@@ -68,7 +69,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@DriverId",lblDriverId.Text);
+                command.Parameters.AddWithValue("@DriverId",tbDriverId.Text);
                 command.Parameters.AddWithValue("@DriverName", tbDriverName.Text);
                 command.Parameters.AddWithValue("@DOB", dtpDOB.Value);
                 if (rbMale.Checked)
@@ -115,7 +116,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@DriverId", lblDriverId.Text);
+                command.Parameters.AddWithValue("@DriverId", tbDriverId.Text);
                 command.Parameters.AddWithValue("@DriverName", tbDriverName.Text);
                 command.Parameters.AddWithValue("@DOB", dtpDOB.Value);
                 if (rbMale.Checked)
@@ -157,7 +158,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                command.Parameters.AddWithValue("@ItineraryId", lblDriverId.Text);
+                command.Parameters.AddWithValue("@ItineraryId", tbDriverId.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -170,6 +171,8 @@ namespace TTMS.UI.Forms.Driver___Vehicle
                 MessageBox.Show(e.Message);
             }
         }
+
+        #endregion
 
         #region Buttons
         private void btnUploadImg_Click(object sender, EventArgs e)
@@ -193,7 +196,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            lblDriverId.Text = "";
+            tbDriverId.Text = "";
             tbDriverName.Text = "";
             dtpDOB.Value = DateTime.Now;
             tbPhoneNo.Text = "";
@@ -210,11 +213,11 @@ namespace TTMS.UI.Forms.Driver___Vehicle
                 if (inc.dr[0] != System.DBNull.Value)
                 {
                     a = Convert.ToInt32(inc.dr[0].ToString());
-                    lblDriverId.Text = (a + 1).ToString();
+                    tbDriverId.Text = (a + 1).ToString();
                 }
                 else
                 {
-                    lblDriverId.Text = "1";
+                    tbDriverId.Text = "1";
                 }
             }
         }
@@ -242,5 +245,105 @@ namespace TTMS.UI.Forms.Driver___Vehicle
             this.Close();
         }
         #endregion
+
+        #region Events
+
+        private void tbDriverId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void tbDriverName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void dtpDOB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void rbMale_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void rbFemale_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void rbOther_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void tbPhoneNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void tbEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void cbVerificationType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void btnUploadImg_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void cbExperience_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+
+        private void dtpDOJ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbDriverName.Focus();
+            }
+        }
+        #endregion
+
     }
 }

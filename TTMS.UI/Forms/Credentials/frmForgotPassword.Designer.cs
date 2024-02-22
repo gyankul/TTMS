@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,12 +39,10 @@
             this.txtFPPassword = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.btnFPSearchUserName = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblSecurityQuestion = new System.Windows.Forms.Label();
-            this.cpbConfirmPassword = new TTMS.CustomControls.CircularPicturebox();
             this.panelConfirmPassword = new System.Windows.Forms.Panel();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.txtCnfPassword = new System.Windows.Forms.TextBox();
@@ -64,10 +61,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.cpbConfirmPassword = new TTMS.CustomControls.CircularPicturebox();
+            this.btnFPSearchUserName = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbConfirmPassword)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbConfirmPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -81,20 +81,6 @@
             this.label6.Size = new System.Drawing.Size(559, 35);
             this.label6.TabIndex = 11;
             this.label6.Text = "FORGOT OR CHANGE PASSWORD";
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
-            this.btnClose.Location = new System.Drawing.Point(685, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(42, 39);
-            this.btnClose.TabIndex = 12;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label1
             // 
@@ -216,19 +202,6 @@
             this.btnChangePassword.UseVisualStyleBackColor = false;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
-            // btnFPSearchUserName
-            // 
-            this.btnFPSearchUserName.BackColor = System.Drawing.Color.White;
-            this.btnFPSearchUserName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFPSearchUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFPSearchUserName.Image = global::TTMS.UI.Properties.Resources.icons8_magnifying_glass_30;
-            this.btnFPSearchUserName.Location = new System.Drawing.Point(259, 61);
-            this.btnFPSearchUserName.Name = "btnFPSearchUserName";
-            this.btnFPSearchUserName.Size = new System.Drawing.Size(37, 37);
-            this.btnFPSearchUserName.TabIndex = 3;
-            this.btnFPSearchUserName.UseVisualStyleBackColor = false;
-            this.btnFPSearchUserName.Click += new System.EventHandler(this.btnFPSearchUserName_Click);
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
@@ -288,15 +261,6 @@
             this.lblSecurityQuestion.Size = new System.Drawing.Size(305, 16);
             this.lblSecurityQuestion.TabIndex = 19;
             this.lblSecurityQuestion.Text = "Your Security Question Will Appear Here!";
-            // 
-            // cpbConfirmPassword
-            // 
-            this.cpbConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpbConfirmPassword.Location = new System.Drawing.Point(296, 282);
-            this.cpbConfirmPassword.Name = "cpbConfirmPassword";
-            this.cpbConfirmPassword.Size = new System.Drawing.Size(30, 30);
-            this.cpbConfirmPassword.TabIndex = 29;
-            this.cpbConfirmPassword.TabStop = false;
             // 
             // panelConfirmPassword
             // 
@@ -407,7 +371,7 @@
             this.btnCPSearchUsername.BackColor = System.Drawing.Color.White;
             this.btnCPSearchUsername.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCPSearchUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCPSearchUsername.Image = global::TTMS.UI.Properties.Resources.icons8_magnifying_glass_30;
+            this.btnCPSearchUsername.Image = global::TTMS.UI.Properties.Resources.magnifying_glass_30px;
             this.btnCPSearchUsername.Location = new System.Drawing.Point(280, 47);
             this.btnCPSearchUsername.Name = "btnCPSearchUsername";
             this.btnCPSearchUsername.Size = new System.Drawing.Size(37, 37);
@@ -478,7 +442,7 @@
             this.btnFPSearchAnswer.BackColor = System.Drawing.Color.White;
             this.btnFPSearchAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFPSearchAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFPSearchAnswer.Image = global::TTMS.UI.Properties.Resources.icons8_magnifying_glass_30;
+            this.btnFPSearchAnswer.Image = global::TTMS.UI.Properties.Resources.magnifying_glass_30px;
             this.btnFPSearchAnswer.Location = new System.Drawing.Point(259, 208);
             this.btnFPSearchAnswer.Name = "btnFPSearchAnswer";
             this.btnFPSearchAnswer.Size = new System.Drawing.Size(37, 37);
@@ -513,6 +477,42 @@
             this.panel2.Size = new System.Drawing.Size(272, 3);
             this.panel2.TabIndex = 15;
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
+            this.btnClose.Location = new System.Drawing.Point(685, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(42, 39);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // cpbConfirmPassword
+            // 
+            this.cpbConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpbConfirmPassword.Location = new System.Drawing.Point(296, 282);
+            this.cpbConfirmPassword.Name = "cpbConfirmPassword";
+            this.cpbConfirmPassword.Size = new System.Drawing.Size(30, 30);
+            this.cpbConfirmPassword.TabIndex = 29;
+            this.cpbConfirmPassword.TabStop = false;
+            // 
+            // btnFPSearchUserName
+            // 
+            this.btnFPSearchUserName.BackColor = System.Drawing.Color.White;
+            this.btnFPSearchUserName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFPSearchUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFPSearchUserName.Image = global::TTMS.UI.Properties.Resources.magnifying_glass_30px;
+            this.btnFPSearchUserName.Location = new System.Drawing.Point(259, 61);
+            this.btnFPSearchUserName.Name = "btnFPSearchUserName";
+            this.btnFPSearchUserName.Size = new System.Drawing.Size(37, 37);
+            this.btnFPSearchUserName.TabIndex = 3;
+            this.btnFPSearchUserName.UseVisualStyleBackColor = false;
+            this.btnFPSearchUserName.Click += new System.EventHandler(this.btnFPSearchUserName_Click);
+            // 
             // frmForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -530,9 +530,9 @@
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbConfirmPassword)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbConfirmPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

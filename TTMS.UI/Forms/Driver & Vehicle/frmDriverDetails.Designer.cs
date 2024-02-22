@@ -39,6 +39,9 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.cbExperience = new System.Windows.Forms.ComboBox();
             this.cbVerificationType = new System.Windows.Forms.ComboBox();
+            this.verificationDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.verificationDetailsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.verificationDetailsDataSet = new TTMS.UI.Dataset.VerificationDetailsDataSet();
             this.rbOther = new System.Windows.Forms.RadioButton();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
@@ -58,7 +61,6 @@
             this.tbPhoneNo = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblDriverId = new System.Windows.Forms.Label();
             this.tbDriverName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -66,21 +68,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.verificationDetailsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.verificationDetailsDataSet = new TTMS.UI.Dataset.VerificationDetailsDataSet();
-            this.verificationDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.verificationDetailsTableAdapter = new TTMS.UI.Dataset.VerificationDetailsDataSetTableAdapters.VerificationDetailsTableAdapter();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tbDriverId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgVerification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDriverDetails)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnUploadImg);
             this.panel1.Controls.Add(this.ImgVerification);
             this.panel1.Controls.Add(this.dgvDriverDetails);
@@ -109,8 +111,9 @@
             this.panel1.Controls.Add(this.tbPhoneNo);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.lblDriverId);
+            this.panel1.Controls.Add(this.tbDriverId);
             this.panel1.Controls.Add(this.tbDriverName);
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label1);
@@ -125,17 +128,18 @@
             // btnUploadImg
             // 
             this.btnUploadImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUploadImg.Image = global::TTMS.UI.Properties.Resources.icons8_plus_20;
-            this.btnUploadImg.Location = new System.Drawing.Point(678, 220);
+            this.btnUploadImg.Image = global::TTMS.UI.Properties.Resources.plus20px;
+            this.btnUploadImg.Location = new System.Drawing.Point(686, 223);
             this.btnUploadImg.Name = "btnUploadImg";
             this.btnUploadImg.Size = new System.Drawing.Size(45, 32);
             this.btnUploadImg.TabIndex = 47;
             this.btnUploadImg.UseVisualStyleBackColor = true;
             this.btnUploadImg.Click += new System.EventHandler(this.btnUploadImg_Click);
+            this.btnUploadImg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnUploadImg_KeyDown);
             // 
             // ImgVerification
             // 
-            this.ImgVerification.Location = new System.Drawing.Point(678, 220);
+            this.ImgVerification.Location = new System.Drawing.Point(686, 223);
             this.ImgVerification.Name = "ImgVerification";
             this.ImgVerification.Size = new System.Drawing.Size(45, 33);
             this.ImgVerification.TabIndex = 53;
@@ -221,6 +225,7 @@
             this.cbExperience.Name = "cbExperience";
             this.cbExperience.Size = new System.Drawing.Size(227, 33);
             this.cbExperience.TabIndex = 46;
+            this.cbExperience.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbExperience_KeyDown);
             // 
             // cbVerificationType
             // 
@@ -234,6 +239,22 @@
             this.cbVerificationType.Size = new System.Drawing.Size(268, 33);
             this.cbVerificationType.TabIndex = 46;
             this.cbVerificationType.ValueMember = "VerificationId";
+            this.cbVerificationType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbVerificationType_KeyDown);
+            // 
+            // verificationDetailsBindingSource
+            // 
+            this.verificationDetailsBindingSource.DataMember = "VerificationDetails";
+            this.verificationDetailsBindingSource.DataSource = this.verificationDetailsDataSetBindingSource;
+            // 
+            // verificationDetailsDataSetBindingSource
+            // 
+            this.verificationDetailsDataSetBindingSource.DataSource = this.verificationDetailsDataSet;
+            this.verificationDetailsDataSetBindingSource.Position = 0;
+            // 
+            // verificationDetailsDataSet
+            // 
+            this.verificationDetailsDataSet.DataSetName = "VerificationDetailsDataSet";
+            this.verificationDetailsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rbOther
             // 
@@ -247,6 +268,7 @@
             this.rbOther.TabStop = true;
             this.rbOther.Text = "OTHER";
             this.rbOther.UseVisualStyleBackColor = true;
+            this.rbOther.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rbOther_KeyDown);
             // 
             // rbFemale
             // 
@@ -260,6 +282,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "FEMALE";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rbFemale_KeyDown);
             // 
             // rbMale
             // 
@@ -272,6 +295,7 @@
             this.rbMale.TabIndex = 43;
             this.rbMale.Text = "MALE";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rbMale_KeyDown);
             // 
             // dtpDOJ
             // 
@@ -282,6 +306,7 @@
             this.dtpDOJ.Name = "dtpDOJ";
             this.dtpDOJ.Size = new System.Drawing.Size(160, 28);
             this.dtpDOJ.TabIndex = 42;
+            this.dtpDOJ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpDOJ_KeyDown);
             // 
             // dtpDOB
             // 
@@ -292,6 +317,7 @@
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(187, 28);
             this.dtpDOB.TabIndex = 42;
+            this.dtpDOB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpDOB_KeyDown);
             // 
             // label4
             // 
@@ -380,6 +406,7 @@
             this.tbEmail.Size = new System.Drawing.Size(273, 25);
             this.tbEmail.TabIndex = 37;
             this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbEmail_KeyDown);
             // 
             // panel5
             // 
@@ -420,6 +447,7 @@
             this.tbPhoneNo.Size = new System.Drawing.Size(223, 25);
             this.tbPhoneNo.TabIndex = 35;
             this.tbPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPhoneNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPhoneNo_KeyDown);
             // 
             // panel9
             // 
@@ -439,19 +467,6 @@
             this.panel3.Size = new System.Drawing.Size(223, 3);
             this.panel3.TabIndex = 38;
             // 
-            // lblDriverId
-            // 
-            this.lblDriverId.AutoSize = true;
-            this.lblDriverId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblDriverId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDriverId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDriverId.Location = new System.Drawing.Point(151, 72);
-            this.lblDriverId.Name = "lblDriverId";
-            this.lblDriverId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblDriverId.Size = new System.Drawing.Size(82, 25);
-            this.lblDriverId.TabIndex = 27;
-            this.lblDriverId.Text = "          ";
-            // 
             // tbDriverName
             // 
             this.tbDriverName.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -462,6 +477,7 @@
             this.tbDriverName.Size = new System.Drawing.Size(293, 25);
             this.tbDriverName.TabIndex = 26;
             this.tbDriverName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDriverName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDriverName_KeyDown);
             // 
             // label2
             // 
@@ -510,7 +526,6 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
             this.btnClose.Location = new System.Drawing.Point(736, 1);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
@@ -530,24 +545,30 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "DRIVER DETAILS";
             // 
-            // verificationDetailsDataSetBindingSource
-            // 
-            this.verificationDetailsDataSetBindingSource.DataSource = this.verificationDetailsDataSet;
-            this.verificationDetailsDataSetBindingSource.Position = 0;
-            // 
-            // verificationDetailsDataSet
-            // 
-            this.verificationDetailsDataSet.DataSetName = "VerificationDetailsDataSet";
-            this.verificationDetailsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // verificationDetailsBindingSource
-            // 
-            this.verificationDetailsBindingSource.DataMember = "VerificationDetails";
-            this.verificationDetailsBindingSource.DataSource = this.verificationDetailsDataSetBindingSource;
-            // 
             // verificationDetailsTableAdapter
             // 
             this.verificationDetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(151, 97);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(105, 3);
+            this.panel6.TabIndex = 24;
+            // 
+            // tbDriverId
+            // 
+            this.tbDriverId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDriverId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDriverId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbDriverId.Location = new System.Drawing.Point(151, 69);
+            this.tbDriverId.Name = "tbDriverId";
+            this.tbDriverId.Size = new System.Drawing.Size(105, 25);
+            this.tbDriverId.TabIndex = 26;
+            this.tbDriverId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDriverId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDriverId_KeyDown);
             // 
             // frmDriverDetails
             // 
@@ -563,11 +584,11 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgVerification)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDriverDetails)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verificationDetailsBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -594,7 +615,6 @@
         private System.Windows.Forms.TextBox tbPhoneNo;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblDriverId;
         private System.Windows.Forms.TextBox tbDriverName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
@@ -615,5 +635,7 @@
         private Dataset.VerificationDetailsDataSet verificationDetailsDataSet;
         private System.Windows.Forms.BindingSource verificationDetailsBindingSource;
         private Dataset.VerificationDetailsDataSetTableAdapters.VerificationDetailsTableAdapter verificationDetailsTableAdapter;
+        private System.Windows.Forms.TextBox tbDriverId;
+        private System.Windows.Forms.Panel panel6;
     }
 }

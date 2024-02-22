@@ -55,7 +55,9 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.tbCustomerId = new System.Windows.Forms.TextBox();
             this.tbPhoneNo = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.rbOther = new System.Windows.Forms.RadioButton();
@@ -66,7 +68,6 @@
             this.tbCustomerName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblCustomerId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -106,7 +107,9 @@
             this.panel1.Controls.Add(this.tbEmail);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.tbCustomerId);
             this.panel1.Controls.Add(this.tbPhoneNo);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.rbOther);
@@ -117,7 +120,6 @@
             this.panel1.Controls.Add(this.tbCustomerName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.lblCustomerId);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -135,6 +137,7 @@
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(200, 32);
             this.dtpDOB.TabIndex = 61;
+            this.dtpDOB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpDOB_KeyDown);
             // 
             // btnDelete
             // 
@@ -198,19 +201,22 @@
             this.dgvCustomer.RowTemplate.Height = 24;
             this.dgvCustomer.Size = new System.Drawing.Size(929, 198);
             this.dgvCustomer.TabIndex = 56;
-            this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cbNationality
             // 
             this.cbNationality.DataSource = this.countryDetailsBindingSource;
             this.cbNationality.DisplayMember = "CountryName";
+            this.cbNationality.DropDownHeight = 100;
             this.cbNationality.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.cbNationality.FormattingEnabled = true;
+            this.cbNationality.IntegralHeight = false;
+            this.cbNationality.ItemHeight = 25;
             this.cbNationality.Location = new System.Drawing.Point(206, 172);
             this.cbNationality.Name = "cbNationality";
             this.cbNationality.Size = new System.Drawing.Size(242, 33);
             this.cbNationality.TabIndex = 55;
             this.cbNationality.ValueMember = "CountryId";
+            this.cbNationality.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbNationality_KeyDown);
             // 
             // countryDetailsBindingSource
             // 
@@ -238,6 +244,7 @@
             this.cbVerificationType.Size = new System.Drawing.Size(214, 33);
             this.cbVerificationType.TabIndex = 54;
             this.cbVerificationType.ValueMember = "VerificationId";
+            this.cbVerificationType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbVerificationType_KeyDown);
             // 
             // verificationDetailsBindingSource
             // 
@@ -254,6 +261,7 @@
             this.tbVerificationNo.Size = new System.Drawing.Size(281, 25);
             this.tbVerificationNo.TabIndex = 53;
             this.tbVerificationNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbVerificationNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbVerificationNo_KeyDown);
             // 
             // label11
             // 
@@ -325,6 +333,7 @@
             this.tbAddress.Size = new System.Drawing.Size(357, 25);
             this.tbAddress.TabIndex = 44;
             this.tbAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbAddress_KeyDown);
             // 
             // label8
             // 
@@ -356,6 +365,7 @@
             this.tbEmail.Size = new System.Drawing.Size(357, 25);
             this.tbEmail.TabIndex = 41;
             this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbEmail_KeyDown);
             // 
             // label7
             // 
@@ -377,6 +387,18 @@
             this.panel6.Size = new System.Drawing.Size(357, 3);
             this.panel6.TabIndex = 39;
             // 
+            // tbCustomerId
+            // 
+            this.tbCustomerId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCustomerId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustomerId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbCustomerId.Location = new System.Drawing.Point(211, 73);
+            this.tbCustomerId.Name = "tbCustomerId";
+            this.tbCustomerId.Size = new System.Drawing.Size(118, 25);
+            this.tbCustomerId.TabIndex = 38;
+            this.tbCustomerId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCustomerId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbCustomerId_KeyDown);
+            // 
             // tbPhoneNo
             // 
             this.tbPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -387,6 +409,16 @@
             this.tbPhoneNo.Size = new System.Drawing.Size(237, 25);
             this.tbPhoneNo.TabIndex = 38;
             this.tbPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPhoneNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPhoneNo_KeyDown);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(211, 101);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(118, 3);
+            this.panel3.TabIndex = 36;
             // 
             // label5
             // 
@@ -420,6 +452,7 @@
             this.rbOther.TabStop = true;
             this.rbOther.Text = "Other";
             this.rbOther.UseVisualStyleBackColor = true;
+            this.rbOther.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rbOther_KeyDown);
             // 
             // rbFemale
             // 
@@ -433,6 +466,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rbFemale_KeyDown);
             // 
             // rbMale
             // 
@@ -446,6 +480,7 @@
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rbMale_KeyDown);
             // 
             // label4
             // 
@@ -479,6 +514,7 @@
             this.tbCustomerName.Size = new System.Drawing.Size(343, 25);
             this.tbCustomerName.TabIndex = 27;
             this.tbCustomerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCustomerName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbCustomerName_KeyDown);
             // 
             // label2
             // 
@@ -499,19 +535,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(343, 3);
             this.panel4.TabIndex = 25;
-            // 
-            // lblCustomerId
-            // 
-            this.lblCustomerId.AutoSize = true;
-            this.lblCustomerId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblCustomerId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCustomerId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblCustomerId.Location = new System.Drawing.Point(211, 76);
-            this.lblCustomerId.Name = "lblCustomerId";
-            this.lblCustomerId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCustomerId.Size = new System.Drawing.Size(166, 25);
-            this.lblCustomerId.TabIndex = 24;
-            this.lblCustomerId.Text = "                      ";
             // 
             // label1
             // 
@@ -540,7 +563,7 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
             this.btnClose.Location = new System.Drawing.Point(937, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
@@ -570,8 +593,8 @@
             // 
             // frmCustomerDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(982, 598);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -596,7 +619,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label lblCustomerId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbCustomerName;
         private System.Windows.Forms.Label label2;
@@ -636,5 +658,7 @@
         private System.Windows.Forms.BindingSource verificationDetailsBindingSource;
         private Dataset.CustomerDetailDataSetTableAdapters.VerificationDetailsTableAdapter verificationDetailsTableAdapter;
         private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.TextBox tbCustomerId;
+        private System.Windows.Forms.Panel panel3;
     }
 }
