@@ -262,5 +262,11 @@ namespace TTMS.UI.Forms.Bookings
             this.customerDetailsTableAdapter.Fill(this.travelDetailDataSet.CustomerDetails);
 
         }
+
+        private void dgvParticipants_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

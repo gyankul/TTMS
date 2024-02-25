@@ -238,7 +238,7 @@
             this.btnAddImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddImg.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.icons8_image_plus_48;
+            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.plus_button_40px;
             this.btnAddImg.Location = new System.Drawing.Point(21, 317);
             this.btnAddImg.Name = "btnAddImg";
             this.btnAddImg.Size = new System.Drawing.Size(53, 51);
@@ -362,7 +362,7 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
             this.btnClose.Location = new System.Drawing.Point(825, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);

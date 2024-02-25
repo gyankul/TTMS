@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbDestination = new System.Windows.Forms.ComboBox();
+            this.tourDestinationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tourDataSet = new TTMS.UI.Dataset.TourDataSet();
             this.tbItineraryName = new System.Windows.Forms.TextBox();
             this.tbCost = new System.Windows.Forms.TextBox();
             this.tbSRNO = new System.Windows.Forms.TextBox();
@@ -64,15 +66,13 @@
             this.panel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.tourDataSet = new TTMS.UI.Dataset.TourDataSet();
-            this.tourDestinationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tourDestinationsTableAdapter = new TTMS.UI.Dataset.TourDataSetTableAdapters.TourDestinationsTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDestinationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgItinerary)).BeginInit();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDestinationsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,6 +127,16 @@
             this.cbDestination.Size = new System.Drawing.Size(274, 28);
             this.cbDestination.TabIndex = 24;
             this.cbDestination.ValueMember = "DestinationId";
+            // 
+            // tourDestinationsBindingSource
+            // 
+            this.tourDestinationsBindingSource.DataMember = "TourDestinations";
+            this.tourDestinationsBindingSource.DataSource = this.tourDataSet;
+            // 
+            // tourDataSet
+            // 
+            this.tourDataSet.DataSetName = "TourDataSet";
+            this.tourDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbItineraryName
             // 
@@ -263,10 +273,10 @@
             this.btnAddImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddImg.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.icons8_image_plus_48;
-            this.btnAddImg.Location = new System.Drawing.Point(21, 347);
+            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.plus_button_40px;
+            this.btnAddImg.Location = new System.Drawing.Point(21, 351);
             this.btnAddImg.Name = "btnAddImg";
-            this.btnAddImg.Size = new System.Drawing.Size(53, 51);
+            this.btnAddImg.Size = new System.Drawing.Size(48, 47);
             this.btnAddImg.TabIndex = 20;
             this.btnAddImg.UseVisualStyleBackColor = true;
             this.btnAddImg.Click += new System.EventHandler(this.btnAddImg_Click);
@@ -477,7 +487,7 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
             this.btnClose.Location = new System.Drawing.Point(822, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
@@ -497,16 +507,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "TOUR ITINERARY";
             // 
-            // tourDataSet
-            // 
-            this.tourDataSet.DataSetName = "TourDataSet";
-            this.tourDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tourDestinationsBindingSource
-            // 
-            this.tourDestinationsBindingSource.DataMember = "TourDestinations";
-            this.tourDestinationsBindingSource.DataSource = this.tourDataSet;
-            // 
             // tourDestinationsTableAdapter
             // 
             this.tourDestinationsTableAdapter.ClearBeforeFill = true;
@@ -523,12 +523,12 @@
             this.Load += new System.EventHandler(this.TourItinerary_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDestinationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgItinerary)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDestinationsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

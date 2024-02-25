@@ -92,7 +92,6 @@
             // 
             this.btnPaymentStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPaymentStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentStatus.Image = global::TTMS.UI.Properties.Resources.icons8_card_payment_65;
             this.btnPaymentStatus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPaymentStatus.Location = new System.Drawing.Point(35, 33);
             this.btnPaymentStatus.Name = "btnPaymentStatus";
@@ -107,7 +106,6 @@
             // 
             this.btnPaymentMethod.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPaymentMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentMethod.Image = global::TTMS.UI.Properties.Resources.icons8_payment_method_64;
             this.btnPaymentMethod.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPaymentMethod.Location = new System.Drawing.Point(271, 33);
             this.btnPaymentMethod.Name = "btnPaymentMethod";
@@ -123,7 +121,6 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
             this.btnClose.Location = new System.Drawing.Point(449, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(32, 30);

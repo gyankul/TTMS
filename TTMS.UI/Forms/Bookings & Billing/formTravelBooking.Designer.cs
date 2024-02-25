@@ -229,7 +229,6 @@
             // 
             // btnAddNewCustomer
             // 
-            this.btnAddNewCustomer.Image = global::TTMS.UI.Properties.Resources.icons8_plus_40;
             this.btnAddNewCustomer.Location = new System.Drawing.Point(480, 192);
             this.btnAddNewCustomer.Name = "btnAddNewCustomer";
             this.btnAddNewCustomer.Size = new System.Drawing.Size(42, 42);
@@ -428,7 +427,6 @@
             // 
             // btnDeletePassenger
             // 
-            this.btnDeletePassenger.Image = global::TTMS.UI.Properties.Resources.icons8_remove_401;
             this.btnDeletePassenger.Location = new System.Drawing.Point(842, 145);
             this.btnDeletePassenger.Name = "btnDeletePassenger";
             this.btnDeletePassenger.Size = new System.Drawing.Size(42, 42);
@@ -437,7 +435,6 @@
             // 
             // btnAddPassenger
             // 
-            this.btnAddPassenger.Image = global::TTMS.UI.Properties.Resources.icons8_plus_40;
             this.btnAddPassenger.Location = new System.Drawing.Point(842, 61);
             this.btnAddPassenger.Name = "btnAddPassenger";
             this.btnAddPassenger.Size = new System.Drawing.Size(42, 42);
@@ -485,7 +482,6 @@
             // 
             // btnSearchTravel
             // 
-            this.btnSearchTravel.Image = global::TTMS.UI.Properties.Resources.icons8_magnifying_glass_30;
             this.btnSearchTravel.Location = new System.Drawing.Point(775, 94);
             this.btnSearchTravel.Name = "btnSearchTravel";
             this.btnSearchTravel.Size = new System.Drawing.Size(42, 38);

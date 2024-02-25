@@ -14,7 +14,7 @@ namespace TTMS.UI
     {
         public layoutSittingbus()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void layoutSittingbus_Load(object sender, EventArgs e)

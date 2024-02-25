@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbPackage = new System.Windows.Forms.ComboBox();
+            this.tourPackagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tourDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tourDataSet = new TTMS.UI.Dataset.TourDataSet();
             this.tbDestinationName = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.tbSrNo = new System.Windows.Forms.TextBox();
@@ -54,17 +57,14 @@
             this.ImgDestination = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbItineraryNo = new System.Windows.Forms.Label();
-            this.tourDataSet = new TTMS.UI.Dataset.TourDataSet();
-            this.tourDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tourPackagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tourPackagesTableAdapter = new TTMS.UI.Dataset.TourDataSetTableAdapters.TourPackagesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tourPackagesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).BeginInit();
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgDestination)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourPackagesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbPackage
@@ -78,6 +78,21 @@
             this.cbPackage.Size = new System.Drawing.Size(287, 28);
             this.cbPackage.TabIndex = 24;
             this.cbPackage.ValueMember = "PackageId";
+            // 
+            // tourPackagesBindingSource
+            // 
+            this.tourPackagesBindingSource.DataMember = "TourPackages";
+            this.tourPackagesBindingSource.DataSource = this.tourDataSetBindingSource;
+            // 
+            // tourDataSetBindingSource
+            // 
+            this.tourDataSetBindingSource.DataSource = this.tourDataSet;
+            this.tourDataSetBindingSource.Position = 0;
+            // 
+            // tourDataSet
+            // 
+            this.tourDataSet.DataSetName = "TourDataSet";
+            this.tourDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbDestinationName
             // 
@@ -95,8 +110,8 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
-            this.btnClose.Location = new System.Drawing.Point(822, 3);
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
+            this.btnClose.Location = new System.Drawing.Point(824, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
             this.btnClose.TabIndex = 12;
@@ -193,7 +208,7 @@
             this.btnAddImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddImg.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.icons8_image_plus_48;
+            this.btnAddImg.Image = global::TTMS.UI.Properties.Resources.plus_button_40px;
             this.btnAddImg.Location = new System.Drawing.Point(23, 343);
             this.btnAddImg.Name = "btnAddImg";
             this.btnAddImg.Size = new System.Drawing.Size(53, 51);
@@ -366,21 +381,6 @@
             this.tbItineraryNo.TabIndex = 1;
             this.tbItineraryNo.Text = "Destination No:";
             // 
-            // tourDataSet
-            // 
-            this.tourDataSet.DataSetName = "TourDataSet";
-            this.tourDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tourDataSetBindingSource
-            // 
-            this.tourDataSetBindingSource.DataSource = this.tourDataSet;
-            this.tourDataSetBindingSource.Position = 0;
-            // 
-            // tourPackagesBindingSource
-            // 
-            this.tourPackagesBindingSource.DataMember = "TourPackages";
-            this.tourPackagesBindingSource.DataSource = this.tourDataSetBindingSource;
-            // 
             // tourPackagesTableAdapter
             // 
             this.tourPackagesTableAdapter.ClearBeforeFill = true;
@@ -395,15 +395,15 @@
             this.Name = "frmTourDestination";
             this.Text = "frmTourDestination";
             this.Load += new System.EventHandler(this.frmTourDestination_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tourPackagesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgDestination)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourPackagesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

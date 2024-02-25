@@ -14,7 +14,7 @@ namespace TTMS.UI
     {
         public layoutSleeperbus()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         

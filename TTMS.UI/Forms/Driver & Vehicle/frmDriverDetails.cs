@@ -260,7 +260,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                dtpDOB.Focus();
             }
         }
 
@@ -268,31 +268,50 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                rbMale.Focus();
             }
         }
 
         private void rbMale_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Right)
+            {
+                rbFemale.Focus();
+            }
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                rbMale.Checked = true;
+                tbPhoneNo.Focus();
             }
         }
 
         private void rbFemale_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Right)
+            {
+                rbOther.Focus();
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                rbMale.Focus();
+            }
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                rbFemale.Checked = true;
+                tbPhoneNo.Focus();
             }
         }
 
         private void rbOther_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Left)
+            {
+                rbFemale.Focus();
+            }
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                rbOther.Checked = true;
+                tbPhoneNo.Focus();
             }
         }
 
@@ -300,7 +319,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                tbEmail.Focus();
             }
         }
 
@@ -308,7 +327,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                cbVerificationType.Focus();
             }
         }
 
@@ -316,7 +335,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                btnUploadImg.Focus();
             }
         }
 
@@ -332,7 +351,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                dtpDOJ.Focus();
             }
         }
 
@@ -340,7 +359,7 @@ namespace TTMS.UI.Forms.Driver___Vehicle
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbDriverName.Focus();
+                btnSave.Focus();
             }
         }
         #endregion

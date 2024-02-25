@@ -109,7 +109,7 @@
             this.btnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLeft.FlatAppearance.BorderSize = 0;
             this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeft.Image = global::TTMS.UI.Properties.Resources.icons8_chevron_48;
+            this.btnLeft.Image = global::TTMS.UI.Properties.Resources.left_arrow;
             this.btnLeft.Location = new System.Drawing.Point(0, 229);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(35, 67);
@@ -132,7 +132,7 @@
             this.btnRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRight.FlatAppearance.BorderSize = 0;
             this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRight.Image = global::TTMS.UI.Properties.Resources.icons8_chevron_48__1_;
+            this.btnRight.Image = global::TTMS.UI.Properties.Resources.right_arrow;
             this.btnRight.Location = new System.Drawing.Point(0, 229);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(35, 67);
@@ -157,7 +157,7 @@
             this.btnSearchPackage.BackColor = System.Drawing.Color.FloralWhite;
             this.btnSearchPackage.FlatAppearance.BorderSize = 0;
             this.btnSearchPackage.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchPackage.Image = global::TTMS.UI.Properties.Resources.icons8_search_28;
+            this.btnSearchPackage.Image = global::TTMS.UI.Properties.Resources.magnifying_glass_30px1;
             this.btnSearchPackage.Location = new System.Drawing.Point(954, 0);
             this.btnSearchPackage.Name = "btnSearchPackage";
             this.btnSearchPackage.Size = new System.Drawing.Size(57, 35);
@@ -214,7 +214,7 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
             this.btnClose.Location = new System.Drawing.Point(1001, 6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);

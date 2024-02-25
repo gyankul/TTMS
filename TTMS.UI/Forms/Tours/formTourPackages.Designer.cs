@@ -37,6 +37,7 @@
             this.btnDeleteItinerary = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDestination = new System.Windows.Forms.DataGridView();
+            this.clmDestName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tourDestinationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.packageDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.packageDataSet = new TTMS.UI.Dataset.PackageDataSet();
@@ -57,7 +58,9 @@
             this.btnAddImg = new System.Windows.Forms.Button();
             this.pbPackageImg = new System.Windows.Forms.PictureBox();
             this.lblPackageId = new System.Windows.Forms.Label();
+            this.tbPrice = new System.Windows.Forms.TextBox();
             this.tbPackageName = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,9 +68,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tourDestinationsTableAdapter = new TTMS.UI.Dataset.PackageDataSetTableAdapters.TourDestinationsTableAdapter();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tbPrice = new System.Windows.Forms.TextBox();
-            this.clmDestName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDestination)).BeginInit();
@@ -109,7 +109,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 710);
+            this.panel1.Size = new System.Drawing.Size(1345, 710);
             this.panel1.TabIndex = 0;
             // 
             // label8
@@ -140,7 +140,6 @@
             // 
             // btnDeleteItinerary
             // 
-            this.btnDeleteItinerary.Image = global::TTMS.UI.Properties.Resources.icons8_remove_401;
             this.btnDeleteItinerary.Location = new System.Drawing.Point(407, 135);
             this.btnDeleteItinerary.Name = "btnDeleteItinerary";
             this.btnDeleteItinerary.Size = new System.Drawing.Size(42, 42);
@@ -181,6 +180,16 @@
             this.dgvDestination.Size = new System.Drawing.Size(389, 166);
             this.dgvDestination.TabIndex = 42;
             // 
+            // clmDestName
+            // 
+            this.clmDestName.DataSource = this.tourDestinationsBindingSource;
+            this.clmDestName.DisplayMember = "DestinationName";
+            this.clmDestName.HeaderText = "Destination Name";
+            this.clmDestName.MinimumWidth = 6;
+            this.clmDestName.Name = "clmDestName";
+            this.clmDestName.ValueMember = "DestinationId";
+            this.clmDestName.Width = 250;
+            // 
             // tourDestinationsBindingSource
             // 
             this.tourDestinationsBindingSource.DataMember = "TourDestinations";
@@ -198,7 +207,6 @@
             // 
             // btnAddItinerary
             // 
-            this.btnAddItinerary.Image = global::TTMS.UI.Properties.Resources.icons8_plus_40;
             this.btnAddItinerary.Location = new System.Drawing.Point(407, 51);
             this.btnAddItinerary.Name = "btnAddItinerary";
             this.btnAddItinerary.Size = new System.Drawing.Size(42, 42);
@@ -393,6 +401,17 @@
             this.lblPackageId.TabIndex = 30;
             this.lblPackageId.Text = "          ";
             // 
+            // tbPrice
+            // 
+            this.tbPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPrice.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPrice.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbPrice.Location = new System.Drawing.Point(832, 434);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(77, 25);
+            this.tbPrice.TabIndex = 29;
+            this.tbPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tbPackageName
             // 
             this.tbPackageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -403,6 +422,15 @@
             this.tbPackageName.Size = new System.Drawing.Size(404, 25);
             this.tbPackageName.TabIndex = 29;
             this.tbPackageName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(832, 459);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(77, 3);
+            this.panel3.TabIndex = 24;
             // 
             // label2
             // 
@@ -443,7 +471,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(912, 50);
+            this.panel2.Size = new System.Drawing.Size(1345, 50);
             this.panel2.TabIndex = 0;
             // 
             // btnClose
@@ -452,7 +480,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(866, 3);
+            this.btnClose.Location = new System.Drawing.Point(1301, 1);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
             this.btnClose.TabIndex = 13;
@@ -475,44 +503,14 @@
             // 
             this.tourDestinationsTableAdapter.ClearBeforeFill = true;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(832, 459);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(77, 3);
-            this.panel3.TabIndex = 24;
-            // 
-            // tbPrice
-            // 
-            this.tbPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPrice.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbPrice.Location = new System.Drawing.Point(832, 434);
-            this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(77, 25);
-            this.tbPrice.TabIndex = 29;
-            this.tbPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // clmDestName
-            // 
-            this.clmDestName.DataSource = this.tourDestinationsBindingSource;
-            this.clmDestName.DisplayMember = "DestinationName";
-            this.clmDestName.HeaderText = "Destination Name";
-            this.clmDestName.MinimumWidth = 6;
-            this.clmDestName.Name = "clmDestName";
-            this.clmDestName.ValueMember = "DestinationId";
-            this.clmDestName.Width = 250;
-            // 
-            // frmTourPackages
+            // formTourPackages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 710);
+            this.ClientSize = new System.Drawing.Size(1345, 710);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmTourPackages";
+            this.Name = "formTourPackages";
             this.Text = "TourPackages";
             this.Load += new System.EventHandler(this.frmTourPackages_Load);
             this.panel1.ResumeLayout(false);

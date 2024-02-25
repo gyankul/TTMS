@@ -219,7 +219,7 @@
             this.btnClose.BackColor = System.Drawing.Color.White;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_25__1_;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_blue;
             this.btnClose.Location = new System.Drawing.Point(568, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);
@@ -227,7 +227,7 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // Payment_Method
+            // frmPaymentMethod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -237,7 +237,7 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Payment_Method";
+            this.Name = "frmPaymentMethod";
             this.Text = "Payment_Method";
             this.Load += new System.EventHandler(this.Payment_Method_Load);
             this.panel.ResumeLayout(false);

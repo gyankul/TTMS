@@ -69,7 +69,6 @@
             // 
             this.btnDriver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDriver.Image = global::TTMS.UI.Properties.Resources.icons8_driver_80;
             this.btnDriver.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDriver.Location = new System.Drawing.Point(51, 48);
             this.btnDriver.Name = "btnDriver";
@@ -84,7 +83,6 @@
             // 
             this.btnVehicle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVehicle.Image = global::TTMS.UI.Properties.Resources.icons8_bus_80;
             this.btnVehicle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVehicle.Location = new System.Drawing.Point(277, 43);
             this.btnVehicle.Name = "btnVehicle";
@@ -111,7 +109,6 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
             this.btnClose.Location = new System.Drawing.Point(449, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(32, 30);

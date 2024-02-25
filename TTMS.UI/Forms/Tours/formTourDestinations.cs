@@ -149,7 +149,7 @@ namespace TTMS.UI.Forms.Tours
 
                 SqlCommand command = new SqlCommand(query, con);
 
-                //command.Parameters.AddWithValue("@ItineraryId", lblItineraryId.Text);
+                command.Parameters.AddWithValue("@DestinationId", lblDestinationId.Text);
 
                 con.Open();
                 command.ExecuteNonQuery();
@@ -162,7 +162,7 @@ namespace TTMS.UI.Forms.Tours
                 MessageBox.Show(e.Message);
             }
         }
-
+        
         #endregion
 
         #region Functions for Itinerary
@@ -180,7 +180,7 @@ namespace TTMS.UI.Forms.Tours
                     string Activity = row.Cells["clmActivity"].Value.ToString();
                     string StartDT = (row.Cells["clmSDT"].ToString());
                     string EndDT = (row.Cells["clmEDT"].ToString());
-                    Image image = (Image)row.Cells["clmImage"].Value;
+                    Image image = (Image)row.Cells["clmImage"].Value; 
 
                     // Convert image to byte array
                     byte[] imageData = ImageToByteArray(image);
@@ -231,20 +231,46 @@ namespace TTMS.UI.Forms.Tours
             }
         }
 
+        private void DeleteDataForItinerary()
+        {
+            try
+            {
+                string query = @"DELETE FROM TourItinerary WHERE DestinationId = @DestinationId";
+
+                SqlCommand command = new SqlCommand(query, con);
+
+                command.Parameters.AddWithValue("@ItineraryId", lblDestinationId.Text);
+
+                con.Open();
+                command.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Destination Deleted Successfully");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
         #endregion
 
         #endregion
         private void dgvTourItinerary_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string imageLoc = "";
+            int clmActionIndex = dgvTourItinerary.Columns["clmAction"].Index;
             try
             {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if(e.ColumnIndex == clmActionIndex && e.RowIndex >= 0)
                 {
-                    imageLoc = dialog.FileName;
-                    ImgDestination.ImageLocation = imageLoc;
+                    OpenFileDialog dialog = new OpenFileDialog();
+                    dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLoc = dialog.FileName;
+                        //clmImage = imageLoc;
+                    }
                 }
             }
             catch (Exception)
@@ -307,6 +333,8 @@ namespace TTMS.UI.Forms.Tours
         {
             DeleteDataForDestination();
             SelectDataForDestination();
+            DeleteDataForItinerary();
+            
         }
 
         private void btnAddImg_Click(object sender, EventArgs e)
@@ -346,6 +374,10 @@ namespace TTMS.UI.Forms.Tours
                 dgvTourItinerary.Rows.RemoveAt(lastIndex);
             }
         }
+
+        #endregion
+
+        #region Events
 
         #endregion
     }

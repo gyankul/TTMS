@@ -204,6 +204,8 @@
             // 
             // cbNationality
             // 
+            this.cbNationality.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbNationality.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbNationality.DataSource = this.countryDetailsBindingSource;
             this.cbNationality.DisplayMember = "CountryName";
             this.cbNationality.DropDownHeight = 100;
@@ -235,6 +237,8 @@
             // 
             // cbVerificationType
             // 
+            this.cbVerificationType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbVerificationType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbVerificationType.DataSource = this.verificationDetailsBindingSource;
             this.cbVerificationType.DisplayMember = "VerificationName";
             this.cbVerificationType.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);

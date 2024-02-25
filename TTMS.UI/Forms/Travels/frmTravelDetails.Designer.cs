@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvTravelDetails = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -179,7 +179,7 @@
             // 
             // btnDeleteStops
             // 
-            this.btnDeleteStops.Image = global::TTMS.UI.Properties.Resources.icons8_remove_401;
+            this.btnDeleteStops.Image = global::TTMS.UI.Properties.Resources.Dustbin_40px;
             this.btnDeleteStops.Location = new System.Drawing.Point(454, 147);
             this.btnDeleteStops.Name = "btnDeleteStops";
             this.btnDeleteStops.Size = new System.Drawing.Size(54, 56);
@@ -189,7 +189,7 @@
             // 
             // btnAddStops
             // 
-            this.btnAddStops.Image = global::TTMS.UI.Properties.Resources.icons8_plus_40;
+            this.btnAddStops.Image = global::TTMS.UI.Properties.Resources.plus_button_40px;
             this.btnAddStops.Location = new System.Drawing.Point(454, 65);
             this.btnAddStops.Name = "btnAddStops";
             this.btnAddStops.Size = new System.Drawing.Size(54, 57);
@@ -201,14 +201,14 @@
             // 
             this.dgvStops.AllowUserToAddRows = false;
             this.dgvStops.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStops.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStops.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStops.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStops.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmStopNo,
@@ -599,7 +599,7 @@
             this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
             this.btnClose.Location = new System.Drawing.Point(755, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(42, 39);

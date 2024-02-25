@@ -80,7 +80,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TTMS.UI.Properties.Resources.icons8_billing_45;
             this.pictureBox1.Location = new System.Drawing.Point(3, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 50);

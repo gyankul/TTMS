@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tbDestinationId = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,25 +44,19 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tbItineraryName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).BeginInit();
             this.panel.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,6 +67,63 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(764, 518);
             this.panel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.comboBox3);
+            this.panel5.Controls.Add(this.comboBox2);
+            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.tbDestinationId);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Controls.Add(this.dgvTourItinerary);
+            this.panel5.Controls.Add(this.btnDelete);
+            this.panel5.Controls.Add(this.btnUpdate);
+            this.panel5.Controls.Add(this.btnSave);
+            this.panel5.Controls.Add(this.btnAdd);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.tbItineraryName);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.panel);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(764, 518);
+            this.panel5.TabIndex = 3;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(177, 197);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(311, 33);
+            this.comboBox3.TabIndex = 24;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(194, 135);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(311, 33);
+            this.comboBox2.TabIndex = 24;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(430, 72);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(311, 33);
+            this.comboBox1.TabIndex = 24;
             // 
             // textBox1
             // 
@@ -89,6 +146,24 @@
             this.tbDestinationId.Size = new System.Drawing.Size(93, 25);
             this.tbDestinationId.TabIndex = 23;
             this.tbDestinationId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Location = new System.Drawing.Point(177, 230);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(311, 3);
+            this.panel7.TabIndex = 22;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(194, 168);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(311, 3);
+            this.panel6.TabIndex = 22;
             // 
             // panel3
             // 
@@ -163,30 +238,6 @@
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TTMS.UI.Properties.Resources.icons8_close_302;
-            this.btnClose.Location = new System.Drawing.Point(715, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(42, 39);
-            this.btnClose.TabIndex = 12;
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(195, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(371, 50);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "TOUR DETAILS";
-            // 
             // btnAdd
             // 
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
@@ -199,6 +250,28 @@
             this.btnAdd.TabIndex = 20;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(16, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Guide Name:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Location = new System.Drawing.Point(16, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(172, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Vehicle Name:";
             // 
             // tbItineraryName
             // 
@@ -244,102 +317,29 @@
             this.panel.Size = new System.Drawing.Size(764, 66);
             this.panel.TabIndex = 0;
             // 
-            // panel5
+            // btnClose
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.comboBox3);
-            this.panel5.Controls.Add(this.comboBox2);
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.tbDestinationId);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.panel3);
-            this.panel5.Controls.Add(this.panel4);
-            this.panel5.Controls.Add(this.panel2);
-            this.panel5.Controls.Add(this.dgvTourItinerary);
-            this.panel5.Controls.Add(this.btnDelete);
-            this.panel5.Controls.Add(this.btnUpdate);
-            this.panel5.Controls.Add(this.btnSave);
-            this.panel5.Controls.Add(this.btnAdd);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.tbItineraryName);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.panel);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(764, 518);
-            this.panel5.TabIndex = 3;
+            this.btnClose.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::TTMS.UI.Properties.Resources.close_button_white;
+            this.btnClose.Location = new System.Drawing.Point(715, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(42, 39);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // label6
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(430, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(311, 33);
-            this.comboBox1.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(16, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Vehicle Name:";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(194, 168);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(311, 3);
-            this.panel6.TabIndex = 22;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(194, 135);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(311, 33);
-            this.comboBox2.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(16, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Guide Name:";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(177, 230);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(311, 3);
-            this.panel7.TabIndex = 22;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(177, 197);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(311, 33);
-            this.comboBox3.TabIndex = 24;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(195, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(371, 50);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "TOUR DETAILS";
             // 
             // frmTourDetails
             // 
@@ -355,11 +355,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TourDetails";
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourItinerary)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

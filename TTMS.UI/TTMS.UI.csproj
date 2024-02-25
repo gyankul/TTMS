@@ -91,10 +91,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VerificationDetailsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Bookings\frmTravelBooking.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\frmTravelBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Bookings\frmTravelBooking.Designer.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\frmTravelBooking.Designer.cs">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Credentials\frmStaffType.cs">
@@ -169,16 +169,16 @@
     <Compile Include="Forms\Payments\frmPaymentMethod.Designer.cs">
       <DependentUpon>frmPaymentMethod.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tours\frmTourBilling.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\frmTourBilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tours\frmTourBilling.Designer.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\frmTourBilling.Designer.cs">
       <DependentUpon>frmTourBilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Bookings\frmTourBooking.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\frmTourBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Bookings\frmTourBooking.Designer.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\frmTourBooking.Designer.cs">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tours\frmPackageList.cs">
@@ -255,10 +255,10 @@
     <Compile Include="Forms\Travels\layoutSittingbus.Designer.cs">
       <DependentUpon>layoutSittingbus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Bookings\formTravelBooking.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\formTravelBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Bookings\formTravelBooking.Designer.cs">
+    <Compile Include="Forms\Bookings &amp; Billing\formTravelBooking.Designer.cs">
       <DependentUpon>formTravelBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tours\frmTourItinerary.cs">
@@ -267,7 +267,7 @@
     <Compile Include="Forms\Tours\frmTourItinerary.Designer.cs">
       <DependentUpon>frmTourItinerary.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Bookings\frmTravelBooking.resx">
+    <EmbeddedResource Include="Forms\Bookings &amp; Billing\frmTravelBooking.resx">
       <DependentUpon>frmTravelBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Credentials\frmStaffType.resx">
@@ -306,10 +306,10 @@
     <EmbeddedResource Include="Forms\Payments\frmPaymentMethod.resx">
       <DependentUpon>frmPaymentMethod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tours\frmTourBilling.resx">
+    <EmbeddedResource Include="Forms\Bookings &amp; Billing\frmTourBilling.resx">
       <DependentUpon>frmTourBilling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Bookings\frmTourBooking.resx">
+    <EmbeddedResource Include="Forms\Bookings &amp; Billing\frmTourBooking.resx">
       <DependentUpon>frmTourBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmPackageList.resx">
@@ -353,7 +353,7 @@
     <EmbeddedResource Include="Forms\Travels\layoutSittingbus.resx">
       <DependentUpon>layoutSittingbus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Bookings\formTravelBooking.resx">
+    <EmbeddedResource Include="Forms\Bookings &amp; Billing\formTravelBooking.resx">
       <DependentUpon>formTravelBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours\frmTourItinerary.resx">
@@ -475,6 +475,12 @@
     <None Include="Resources\hamburger menu.png" />
     <None Include="Resources\hamburger menu black.png" />
     <None Include="Resources\logout button 30px.png" />
+    <None Include="Resources\plus button 40px.png" />
+    <None Include="Resources\left arrow.png" />
+    <None Include="Resources\right arrow.png" />
+    <None Include="Resources\magnifying glass 30px1.png" />
+    <None Include="Resources\Dustbin 40px.png" />
+    <None Include="Resources\refresh 30px.png" />
     <Content Include="Resources\tick.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

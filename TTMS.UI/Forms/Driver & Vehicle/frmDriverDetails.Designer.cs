@@ -61,7 +61,9 @@
             this.tbPhoneNo = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tbDriverId = new System.Windows.Forms.TextBox();
             this.tbDriverName = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,8 +71,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.verificationDetailsTableAdapter = new TTMS.UI.Dataset.VerificationDetailsDataSetTableAdapters.VerificationDetailsTableAdapter();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tbDriverId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgVerification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDriverDetails)).BeginInit();
@@ -210,6 +210,8 @@
             // 
             // cbExperience
             // 
+            this.cbExperience.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbExperience.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbExperience.DisplayMember = "VerificationName";
             this.cbExperience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbExperience.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -220,7 +222,10 @@
             "1 - 2 Years",
             "2 - 4 Years",
             "4 - 6 Years",
-            "6 Years <"});
+            "6 Years <",
+            "2",
+            "23",
+            "2223"});
             this.cbExperience.Location = new System.Drawing.Point(172, 272);
             this.cbExperience.Name = "cbExperience";
             this.cbExperience.Size = new System.Drawing.Size(227, 33);
@@ -467,6 +472,18 @@
             this.panel3.Size = new System.Drawing.Size(223, 3);
             this.panel3.TabIndex = 38;
             // 
+            // tbDriverId
+            // 
+            this.tbDriverId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDriverId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDriverId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbDriverId.Location = new System.Drawing.Point(151, 69);
+            this.tbDriverId.Name = "tbDriverId";
+            this.tbDriverId.Size = new System.Drawing.Size(105, 25);
+            this.tbDriverId.TabIndex = 26;
+            this.tbDriverId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDriverId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDriverId_KeyDown);
+            // 
             // tbDriverName
             // 
             this.tbDriverName.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -478,6 +495,15 @@
             this.tbDriverName.TabIndex = 26;
             this.tbDriverName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbDriverName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDriverName_KeyDown);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(151, 97);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(105, 3);
+            this.panel6.TabIndex = 24;
             // 
             // label2
             // 
@@ -548,27 +574,6 @@
             // verificationDetailsTableAdapter
             // 
             this.verificationDetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(151, 97);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(105, 3);
-            this.panel6.TabIndex = 24;
-            // 
-            // tbDriverId
-            // 
-            this.tbDriverId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDriverId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDriverId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbDriverId.Location = new System.Drawing.Point(151, 69);
-            this.tbDriverId.Name = "tbDriverId";
-            this.tbDriverId.Size = new System.Drawing.Size(105, 25);
-            this.tbDriverId.TabIndex = 26;
-            this.tbDriverId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbDriverId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDriverId_KeyDown);
             // 
             // frmDriverDetails
             // 
